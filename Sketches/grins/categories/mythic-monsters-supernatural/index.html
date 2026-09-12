@@ -3,204 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mythic, Kaiju &amp; Supernatural | Ron English Catalogue Raisonn&eacute;</title>
+<title>Mythic, Monsters &amp; Supernatural | Ron English Catalogue Raisonn&eacute;</title>
 <style>
 *{box-sizing:border-box}
-
-body{
-margin:0;
-background:#fff;
-color:#111;
-font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
-
-.wrap{
-max-width:1180px;
-margin:0 auto;
-padding:28px 18px 56px;
-}
-
-.nav-pills,
-.sequence-nav{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-align-items:center;
-gap:10px;
-margin:20px 0;
-text-align:center;
-}
-
-.nav-pill{
-display:inline-block;
-padding:8px 14px;
-border:1px solid #e5e7eb;
-border-radius:999px;
-background:#fff;
-color:#111;
-text-decoration:none;
-font-size:14px;
-}
-
-.page-header{
-text-align:center;
-margin:0 auto 24px;
-}
-
-.page-title{
-margin:0;
-font-size:clamp(2rem,4vw,3rem);
-line-height:1.05;
-}
-
-.catalogue-meta-block,
-.relationship-note,
-.notes-block,
-.text-block{
-max-width:900px;
-margin-left:auto;
-margin-right:auto;
-text-align:center;
-}
-
-.work-meta{
-list-style:none;
-padding:0;
-margin:0 auto;
-line-height:1.7;
-text-align:center;
-}
-
-.work-meta li{
-display:block;
-margin:2px auto;
-}
-
-.section-card{
-background:#fff;
-border:1px solid #e5e7eb;
-border-radius:18px;
-box-shadow:0 8px 26px rgba(0,0,0,.06);
-padding:22px;
-margin:0 0 24px;
-}
-
-.section-card h2{
-text-align:center;
-margin:0 0 16px;
-font-size:1.4rem;
-}
-
-.gallery-grid,
-.index-grid{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-align-items:stretch;
-gap:18px;
-}
-
-.gallery-item,
-.index-card{
-display:block;
-flex:0 1 280px;
-max-width:300px;
-width:100%;
-border:1px solid #e5e7eb;
-border-radius:16px;
-overflow:hidden;
-background:#fff;
-text-decoration:none;
-color:inherit;
-}
-
-.gallery-item img,
-.index-card img{
-display:block;
-width:100%;
-height:300px;
-object-fit:contain;
-background:#f3f4f6;
-padding:8px;
-}
-
-.original-grid .gallery-item{
-flex:0 1 900px;
-max-width:900px;
-}
-
-.original-grid .gallery-item img{
-height:460px;
-}
-
-.card-grid .gallery-item img{
-height:500px;
-}
-
-.index-card img{
-height:280px;
-}
-
-.card-title{
-padding:13px 14px 14px;
-text-align:center;
-font-weight:650;
-line-height:1.35;
-}
-
-.card-subtitle{
-display:block;
-margin-top:4px;
-color:#6b7280;
-font-size:13px;
-font-weight:400;
-}
-
-.category-grid{
-display:grid;
-grid-template-columns:repeat(3,minmax(0,1fr));
-gap:18px;
-}
-
-footer{
-text-align:center;
-margin-top:30px;
-padding-top:16px;
-border-top:1px solid #e5e7eb;
-color:#6b7280;
-font-size:14px;
-}
-
-@media(max-width:900px){
-.category-grid{
-grid-template-columns:repeat(2,minmax(0,1fr));
-}
-}
-
-@media(max-width:620px){
-.category-grid{
-grid-template-columns:1fr;
-}
-}
+:root{--border:#e5e7eb;--muted:#6b7280;--panel:#f3f4f6;--shadow:0 8px 26px rgba(0,0,0,.06)}
+body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
+.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px 0;text-align:center}
+.nav-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px}
+.page-header{text-align:center;margin:0 auto 24px}.page-title{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.05}
+.section-card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:0 0 24px}
+.section-card h2{text-align:center;margin:0 0 16px;font-size:1.4rem}
+.index-grid,.gallery-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px}
+.index-card,.gallery-item{display:block;flex:0 1 280px;max-width:300px;width:100%;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
+.index-card img,.gallery-item img{display:block;width:100%;height:300px;object-fit:contain;background:var(--panel);padding:8px}.index-card img{height:280px}
+.card-title{padding:13px 14px 14px;text-align:center;font-weight:650;line-height:1.35}.card-subtitle{display:block;margin-top:4px;color:var(--muted);font-size:13px;font-weight:400}
+.catalogue-meta-block,.relationship-note,.notes-block,.text-block{max-width:900px;margin-left:auto;margin-right:auto;text-align:center}.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7;text-align:center}.work-meta li{display:block;margin:2px auto}
+.original-grid .gallery-item{flex:0 1 900px;max-width:900px}.original-grid .gallery-item img{height:460px}
+footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav class="nav-pills" aria-label="Site navigation">
-<a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a>
-<a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a>
-<a class="nav-pill" href="../../index.html">&larr; Grins</a>
-</nav>
-
-<header class="page-header">
-<h1 class="page-title">Mythic, Kaiju &amp; Supernatural</h1>
-</header>
-
-<section class="section-card">
-<div class="index-grid">
-<a class="index-card" href="../../works/re-013156--angel-grin-head.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Angel%20Grin%20B%26W.jpg" alt="Angel Grin" loading="lazy"><div class="card-title">Angel Grin</div></a><a class="index-card" href="../../works/re-014626--aqua-ape-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-3/main/sketches/Scan_20260619%20%28102%29.jpg?v=20260620a" alt="aqua ape grin" loading="lazy"><div class="card-title">aqua ape grin</div></a><a class="index-card" href="../../works/re-013354--bat-grin-front.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bat%20Grin%20version%202%20front%20COLOR.jpg" alt="Bat Grin front" loading="lazy"><div class="card-title">Bat Grin front</div></a><a class="index-card" href="../../works/re-013353--bat-grin-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bat%20Grin%20version%202%20side%20COLOR.jpg" alt="Bat Grin side" loading="lazy"><div class="card-title">Bat Grin side</div></a><a class="index-card" href="../../works/re-014766--bat-grin-version-1-front.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Vampire%20Grin%20Front%20COLOR.jpg" alt="bat grin version 1 front" loading="lazy"><div class="card-title">bat grin version 1 front</div></a><a class="index-card" href="../../works/re-016736--bat-grin-version-1-side.html"><img src="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/images/works-on-paper/undated-finished-drawings/Vampire%20Grin%20side%20ORIGINAL.jpg" alt="bat grin version 1 side" loading="lazy"><div class="card-title">bat grin version 1 side</div></a><a class="index-card" href="../../works/re-013306--bat-grin-version-2.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bat%20Grin%20side%20COLOR.jpg" alt="bat grin version 2" loading="lazy"><div class="card-title">bat grin version 2</div></a><a class="index-card" href="../../works/re-016177--batman-grin-version-3-front.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Batman%20Grin%20COLOR.jpg" alt="Batman Grin version 3 front" loading="lazy"><div class="card-title">Batman Grin version 3 front</div></a><a class="index-card" href="../../works/re-016695--batman-grin-version-3-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Batman%20Grin%20side%20COLOR.jpg" alt="Batman Grin version 3 side" loading="lazy"><div class="card-title">Batman Grin version 3 side</div></a><a class="index-card" href="../../works/re-013955--bigfoot-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Urban%20Bigfoot%20Grin%20side%20ORIGINAL.jpg" alt="bigfoot grin" loading="lazy"><div class="card-title">bigfoot grin</div></a><a class="index-card" href="../../works/re-016295--blotchy-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Blotchy%20Grin%20B%26W.jpg" alt="Blotchy Grin" loading="lazy"><div class="card-title">Blotchy Grin</div></a><a class="index-card" href="../../works/re-016197--devil-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Devil%20Grin%20COLOR.jpg" alt="Devil Grin" loading="lazy"><div class="card-title">Devil Grin</div></a><a class="index-card" href="../../works/re-013800--devine-devil.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Devine%20Devil%20COLOR.jpg" alt="Devine Devil" loading="lazy"><div class="card-title">Devine Devil</div></a><a class="index-card" href="../../works/re-012182--ecola-genie.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Kaijus/Ecola%20Genie%20COLOR.jpg" alt="Ecola Genie" loading="lazy"><div class="card-title">Ecola Genie</div></a><a class="index-card" href="../../works/re-016742--firetail-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260404.jpg?v=20260614e" alt="Firetail grin" loading="lazy"><div class="card-title">Firetail grin</div></a><a class="index-card" href="../../works/re-014005--frogman-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/amphibians/frogs/Frogman%20ORIGINAL.jpg" alt="Frogman grin" loading="lazy"><div class="card-title">Frogman grin</div></a><a class="index-card" href="../../works/re-011791--glitter-genie.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/images/Sketches/New/glitter%20genie.jpg?v=20260606" alt="Glitter Genie" loading="lazy"><div class="card-title">Glitter Genie</div></a><a class="index-card" href="../../works/re-012579--grim-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grim%20Reaper%20Grin%20COLOR.jpg" alt="Grim Grin" loading="lazy"><div class="card-title">Grim Grin</div></a><a class="index-card" href="../../works/re-012227--grim-reaper.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grim%20Grin%20(Grin%20Reaper)%20COLOR.jpg" alt="Grim Reaper" loading="lazy"><div class="card-title">Grim Reaper</div></a><a class="index-card" href="../../works/re-013433--grin-reaper.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Reaper%20version%202%20COLOR.jpg" alt="Grin Reaper" loading="lazy"><div class="card-title">Grin Reaper</div></a><a class="index-card" href="../../works/re-016239--grinmonster.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-catalogue-raisonne/main/images/works-on-paper/undated-finished-drawings/Grinmonster.jpg" alt="Grinmonster" loading="lazy"><div class="card-title">Grinmonster</div></a><a class="index-card" href="../../works/re-014875--monster-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260317%20(3).jpg?v=20260614e" alt="Grinmonster 2" loading="lazy"><div class="card-title">Grinmonster 2</div></a><a class="index-card" href="../../works/re-014895--monster-grin-sketch.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260524.jpg?v=20260614e" alt="grinmonster sketch" loading="lazy"><div class="card-title">grinmonster sketch</div></a><a class="index-card" href="../../works/re-012324--jeremiah-grin-1.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Jeremiah%20Grin%201%20ORIGINAL.jpg" alt="Jeremiah Grin 1" loading="lazy"><div class="card-title">Jeremiah Grin 1</div></a><a class="index-card" href="../../works/re-012859--jeremiah-grin-2.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Jeremiah%20Grin%202%20ORIGINAL.jpg" alt="Jeremiah Grin 2" loading="lazy"><div class="card-title">Jeremiah Grin 2</div></a><a class="index-card" href="../../works/re-012860--jeremiah-grin-3.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Jeremiah%20Grin%203%20ORIGINAL.jpg" alt="Jeremiah Grin 3" loading="lazy"><div class="card-title">Jeremiah Grin 3</div></a><a class="index-card" href="../../works/re-013162--jeremiah-grin-4.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Jeremiah%20Grin%204%20ORIGINAL.jpg" alt="Jeremiah Grin 4" loading="lazy"><div class="card-title">Jeremiah Grin 4</div></a><a class="index-card" href="../../works/re-014756--jeremiah-grin-5.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/bkgr.jpg?v=20260614c" alt="Jeremiah Grin 5" loading="lazy"><div class="card-title">Jeremiah Grin 5</div></a><a class="index-card" href="../../works/re-016223--lemon-boy-grin-front.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Lemon%20Boy%20grin%20COLOR.jpg" alt="Lemon Boy Grin front" loading="lazy"><div class="card-title">Lemon Boy Grin front</div></a><a class="index-card" href="../../works/re-016723--lemon-boy-grin-head.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins/Lemon%20Boy%20Grin%20Walking%20face%20ORIGINAL.jpg" alt="Lemon Boy Grin head" loading="lazy"><div class="card-title">Lemon Boy Grin head</div></a><a class="index-card" href="../../works/re-016722--lemon-boy-grin-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Lemon%20Boy%20Grin%20Walking%20COLOR.jpg" alt="Lemon Boy Grin side" loading="lazy"><div class="card-title">Lemon Boy Grin side</div></a><a class="index-card" href="../../works/re-014641--lemon-boy-grin-side-and-back.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-3/main/sketches/Scan_20260620%20%2810%29.jpg?v=20260620b" alt="lemon boy grin side and back" loading="lazy"><div class="card-title">lemon boy grin side and back</div></a><a class="index-card" href="../../works/re-015162--lemon-dissect-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/images/works-on-paper/undated-finished-drawings/Lemon%20Dissect%20grin%2014x17.jpg" alt="Lemon Dissect Grin" loading="lazy"><div class="card-title">Lemon Dissect Grin</div></a><a class="index-card" href="../../works/re-013131--melting-monster-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Melting%20Monster%20Grin%20COLOR.jpg" alt="Melting Monster Grin" loading="lazy"><div class="card-title">Melting Monster Grin</div></a><a class="index-card" href="../../works/re-016230--mentadusa-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mentadusa%20COLOR.jpg" alt="Mentadusa grin" loading="lazy"><div class="card-title">Mentadusa grin</div></a><a class="index-card" href="../../works/re-014431--monster-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260618%20%2868%29x.jpg?v=20260619a" alt="monster grin" loading="lazy"><div class="card-title">monster grin</div></a><a class="index-card" href="../../works/re-014203--mothman.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Kaijus/Mothman_colored-01.jpg" alt="Mothman" loading="lazy"><div class="card-title">Mothman</div></a><a class="index-card" href="../../works/re-016233--modzilla-grin-front.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Modzilla%20Grin%20Front%20B%26W.jpg" alt="Mousezilla Grin" loading="lazy"><div class="card-title">Mousezilla Grin</div></a><a class="index-card" href="../../works/re-014940--mousezilla-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/kaiju/mousezilla%20grin%20ORIGINAL.jpg" alt="Mousezilla Grin" loading="lazy"><div class="card-title">Mousezilla Grin</div></a><a class="index-card" href="../../works/re-016728--modzilla-grin-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Modzilla%20Grin%20Side%20B%26W.jpg" alt="mousezilla Grin" loading="lazy"><div class="card-title">mousezilla Grin</div></a><a class="index-card" href="../../works/re-012661--mummy-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mummy%20Grin%20COLOR.jpg" alt="Mummy Grin" loading="lazy"><div class="card-title">Mummy Grin</div></a><a class="index-card" href="../../works/re-013918--saleju-grin-version-1.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260614%20(89).jpg?v=20260614e" alt="saleju grin version 1" loading="lazy"><div class="card-title">saleju grin version 1</div></a><a class="index-card" href="../../works/re-014095--saleju-grin-version-2.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260616%20%2849%29.jpg?v=20260616b" alt="saleju grin version 2" loading="lazy"><div class="card-title">saleju grin version 2</div></a><a class="index-card" href="../../works/re-013514--santa-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Santa%20Grin%201%20COLOR.jpg" alt="Santa Grin" loading="lazy"><div class="card-title">Santa Grin</div></a><a class="index-card" href="../../works/re-012965--santa-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Santa%20Grin%203%20COLOR.jpg" alt="Santa Grin" loading="lazy"><div class="card-title">Santa Grin</div></a><a class="index-card" href="../../works/re-012829--santa-grin-version-2.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Santa%20Grin%202%20COLOR.jpg" alt="Santa Grin version 2" loading="lazy"><div class="card-title">Santa Grin version 2</div></a><a class="index-card" href="../../works/re-014234--santa-grin-version-3.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2893%29.jpg?v=20260617m" alt="santa grin version 3" loading="lazy"><div class="card-title">santa grin version 3</div></a><a class="index-card" href="../../works/re-013158--skullgrin-sketch.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260610%20%288%29.jpg?v=20260610g" alt="skullgrin sketch" loading="lazy"><div class="card-title">skullgrin sketch</div></a><a class="index-card" href="../../works/re-013106--sugar-clown-grin-back.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20back%20COLOR.jpg" alt="Sugar Clown Grin back" loading="lazy"><div class="card-title">Sugar Clown Grin back</div></a><a class="index-card" href="../../works/re-013091--sugar-clown-grin-left-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20left%20side%20COLOR.jpg" alt="Sugar Clown Grin left side" loading="lazy"><div class="card-title">Sugar Clown Grin left side</div></a><a class="index-card" href="../../works/re-013093--sugar-clown-grin-right-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20right%20side%20COLOR.jpg" alt="Sugar Clown Grin right side" loading="lazy"><div class="card-title">Sugar Clown Grin right side</div></a><a class="index-card" href="../../works/re-014517--clown.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260619%20%2819%29.jpg?v=20260619d" alt="sugar clown grin sketch" loading="lazy"><div class="card-title">sugar clown grin sketch</div></a><a class="index-card" href="../../works/re-012313--sugar-clown-grin-three-quarters.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20COLOR.jpg" alt="Sugar Clown Grin three quarters" loading="lazy"><div class="card-title">Sugar Clown Grin three quarters</div></a><a class="index-card" href="../../works/re-012233--surf-girl-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Surf%20Girl%20Grin%20ORIGINAL%20COLOR.jpg" alt="Surf Girl Grin" loading="lazy"><div class="card-title">Surf Girl Grin</div></a><a class="index-card" href="../../works/re-016240--three-eyed-monster-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/three-eyed%20monster%20grin%20ORIGINAL.jpg" alt="Three-Eyed Monster grin" loading="lazy"><div class="card-title">Three-Eyed Monster grin</div></a><a class="index-card" href="../../works/re-012782--urban-bigfoot-grin-head.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Urban%20Bigfoot%20Grin%20front%20ORIGINAL.jpg" alt="Urban Bigfoot Grin head" loading="lazy"><div class="card-title">Urban Bigfoot Grin head</div></a><a class="index-card" href="../../works/re-016286--yin-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnie%20Sideview%20Eyeball%20COLOR.jpg" alt="Yin Grin" loading="lazy"><div class="card-title">Yin Grin</div></a><a class="index-card" href="../../works/re-014087--yin-yang-grin-head.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260530.jpg?v=20260614e" alt="yin yang grin head" loading="lazy"><div class="card-title">yin yang grin head</div></a><a class="index-card" href="../../works/re-016287--yin-yang-grin-version-1.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Yin%20Yang%20Grin%201%20COLOR.jpg" alt="Yin Yang Grin version 1" loading="lazy"><div class="card-title">Yin Yang Grin version 1</div></a><a class="index-card" href="../../works/re-012947--yin-yang-grin-version-2.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Yin%20Yang%20Grin%202%20COLOR.jpg" alt="Yin Yang Grin version 2" loading="lazy"><div class="card-title">Yin Yang Grin version 2</div></a>
-</div>
-</section>
+<nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../../index.html">&larr; Grins</a></nav>
+<header class="page-header"><h1 class="page-title">Mythic, Monsters &amp; Supernatural</h1></header>
+<section class="section-card"><h2>Subcategories</h2><div class="index-grid"><a class="index-card" href="amphibians/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/amphibians/frogs/Frogman%20ORIGINAL.jpg" alt="amphibians" loading="lazy"><div class="card-title">amphibians</div></a><a class="index-card" href="angel/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Angel%20Grin%20B%26W.jpg" alt="angel" loading="lazy"><div class="card-title">angel</div></a><a class="index-card" href="aqua-ape/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Surf%20Girl%20Grin%20ORIGINAL%20COLOR.jpg" alt="aqua ape" loading="lazy"><div class="card-title">aqua ape</div></a><a class="index-card" href="bats/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Vampire%20Grin%20Front%20COLOR.jpg" alt="bats" loading="lazy"><div class="card-title">bats</div></a><a class="index-card" href="bigfoot/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Urban%20Bigfoot%20Grin%20front%20ORIGINAL.jpg" alt="bigfoot" loading="lazy"><div class="card-title">bigfoot</div></a><a class="index-card" href="devil/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Devil%20Grin%20COLOR.jpg" alt="devil" loading="lazy"><div class="card-title">devil</div></a><a class="index-card" href="grim-reaper/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grim%20Grin%20(Grin%20Reaper)%20COLOR.jpg" alt="grim reaper" loading="lazy"><div class="card-title">grim reaper</div></a><a class="index-card" href="reptiles/index.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260404.jpg?v=20260614e" alt="reptiles" loading="lazy"><div class="card-title">reptiles</div></a><a class="index-card" href="santa/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Santa%20Grin%201%20COLOR.jpg" alt="santa" loading="lazy"><div class="card-title">santa</div></a></div></section><section class="section-card"><h2>Works &amp; Sets</h2><div class="index-grid"><a class="index-card" href="../../sets/batman-grin-version-3.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Batman%20Grin%20COLOR.jpg" alt="Batman Grin" loading="lazy"><div class="card-title">Batman Grin</div></a><a class="index-card" href="../../works/re-016295--blotchy-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Blotchy%20Grin%20B%26W.jpg" alt="Blotchy Grin" loading="lazy"><div class="card-title">Blotchy Grin</div></a><a class="index-card" href="../../sets/genie-grins.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Kaijus/Ecola%20Genie%20COLOR.jpg" alt="Genie grins" loading="lazy"><div class="card-title">Genie grins</div></a><a class="index-card" href="../../sets/monster-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260317%20(3).jpg?v=20260614e" alt="Grinmonsters" loading="lazy"><div class="card-title">Grinmonsters</div></a><a class="index-card" href="../../sets/lemon-boy-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Lemon%20Boy%20Grin%20Walking%20COLOR.jpg" alt="LEmon boy" loading="lazy"><div class="card-title">LEmon boy</div></a><a class="index-card" href="../../works/re-015162--lemon-dissect-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/images/works-on-paper/undated-finished-drawings/Lemon%20Dissect%20grin%2014x17.jpg" alt="Lemon Dissect Grin" loading="lazy"><div class="card-title">Lemon Dissect Grin</div></a><a class="index-card" href="../../works/re-013131--melting-monster-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Melting%20Monster%20Grin%20COLOR.jpg" alt="Melting Monster Grin" loading="lazy"><div class="card-title">Melting Monster Grin</div></a><a class="index-card" href="../../works/re-016230--mentadusa-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mentadusa%20COLOR.jpg" alt="Mentadusa grin" loading="lazy"><div class="card-title">Mentadusa grin</div></a><a class="index-card" href="../../works/re-014431--monster-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260618%20%2868%29x.jpg?v=20260619a" alt="monster grin" loading="lazy"><div class="card-title">monster grin</div></a><a class="index-card" href="../../works/re-014203--mothman.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-mythic-dark/images/Sketches/Kaijus/Mothman_colored-01.jpg" alt="Mothman" loading="lazy"><div class="card-title">Mothman</div></a><a class="index-card" href="../../sets/modzilla-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Modzilla%20Grin%20Side%20B%26W.jpg" alt="mousezilla grin" loading="lazy"><div class="card-title">mousezilla grin</div></a><a class="index-card" href="../../works/re-012661--mummy-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mummy%20Grin%20COLOR.jpg" alt="Mummy Grin" loading="lazy"><div class="card-title">Mummy Grin</div></a><a class="index-card" href="../../sets/saleju-grins.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260614%20(89).jpg?v=20260614e" alt="saleju grins" loading="lazy"><div class="card-title">saleju grins</div></a><a class="index-card" href="../../works/re-013158--skullgrin-sketch.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260610%20%288%29.jpg?v=20260610g" alt="skullgrin sketch" loading="lazy"><div class="card-title">skullgrin sketch</div></a><a class="index-card" href="../../sets/sugar-clown-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20COLOR.jpg" alt="sugar clown grin" loading="lazy"><div class="card-title">sugar clown grin</div></a><a class="index-card" href="../../works/re-016240--three-eyed-monster-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/three-eyed%20monster%20grin%20ORIGINAL.jpg" alt="Three-Eyed Monster grin" loading="lazy"><div class="card-title">Three-Eyed Monster grin</div></a><a class="index-card" href="../../sets/yin-yang-grins.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Yin%20Yang%20Grin%201%20COLOR.jpg" alt="Yin Yang Grins" loading="lazy"><div class="card-title">Yin Yang Grins</div></a></div></section>
 <footer>Published via GitHub Pages<br>for long-term public access.</footer>
 </div>
 </body>
