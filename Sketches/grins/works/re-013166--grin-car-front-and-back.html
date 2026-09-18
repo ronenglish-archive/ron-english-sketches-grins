@@ -85,14 +85,146 @@ footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid v
 }
 /* RON CARD SIZING NORMALIZATION END */
 </style>
-</head>
+<style id="grins-mo-camel-detail-standard-v1">
+/* Detail-page normalization based on the catalogue's Mo Camel page structure. Original Drawing sections are normalized by role so both image originals and missing-original notes are supported. */
+.catalogue-meta-block{
+  width:100%!important;
+  max-width:900px!important;
+  margin:0 auto 24px!important;
+  text-align:center!important;
+}
+.work-meta{
+  list-style:none!important;
+  padding:0!important;
+  margin:0 auto!important;
+  max-width:900px!important;
+  line-height:1.7!important;
+  text-align:center!important;
+}
+.work-meta li{
+  display:block!important;
+  margin:2px auto!important;
+}
+.relationship-note{
+  max-width:900px!important;
+  margin:0 auto 24px!important;
+  padding:12px 16px!important;
+  border:1px solid #e5e7eb!important;
+  border-radius:14px!important;
+  background:#f9fafb!important;
+  line-height:1.6!important;
+  text-align:center!important;
+}
+.section-card{
+  background:#fff!important;
+  border:1px solid #e5e7eb!important;
+  border-radius:18px!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
+  padding:22px!important;
+  margin:0 0 24px!important;
+}
+.section-card h2{
+  text-align:center!important;
+  margin:0 0 16px!important;
+  font-size:1.4rem!important;
+}
+.gallery-grid{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:18px!important;
+  width:auto!important;
+  max-width:none!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+.gallery-item{
+  display:block!important;
+  flex:0 1 290px!important;
+  width:100%!important;
+  max-width:300px!important;
+  border:1px solid #e5e7eb!important;
+  border-radius:16px!important;
+  overflow:hidden!important;
+  background:#fff!important;
+  text-decoration:none!important;
+  color:inherit!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
+}
+.gallery-item img{
+  display:block!important;
+  width:100%!important;
+  height:310px!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  background:#f3f4f6!important;
+  padding:6px!important;
+  margin:0!important;
+}
+/* Original artwork is the large lead image, matching Mo Camel. */
+.original-grid .gallery-item,
+.original-gallery .gallery-item,
+[data-role="original"] .gallery-item{
+  flex:0 1 900px!important;
+  max-width:900px!important;
+}
+.original-grid .gallery-item img,
+.original-gallery .gallery-item img,
+[data-role="original"] .gallery-item img{
+  height:460px!important;
+}
+.sequence-nav{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-items:center!important;
+  gap:10px!important;
+  margin:28px 0 18px!important;
+  text-align:center!important;
+}
+.nav-pill,.sequence-pill{
+  display:inline-block;
+}
+.literature-entry,
+.text-block,
+.notes-block,
+.notes-text,
+.missing-text{
+  max-width:900px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+  line-height:1.65!important;
+}
+@media(max-width:620px){
+  .gallery-item{
+    flex-basis:min(100%,330px)!important;
+    max-width:330px!important;
+  }
+  .original-grid .gallery-item,
+  .original-gallery .gallery-item,
+  [data-role="original"] .gallery-item{
+    max-width:330px!important;
+  }
+  .gallery-item img{
+    height:310px!important;
+  }
+  .original-grid .gallery-item img,
+  .original-gallery .gallery-item img,
+  [data-role="original"] .gallery-item img{
+    height:340px!important;
+  }
+}
+</style></head>
 
 <body>
 <div class="wrap">
 <nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../index.html">Grins</a><a class="nav-pill" href="../categories/vehicles/index.html">Vehicles</a><a class="nav-pill" href="../sets/grin-car.html">&larr; Return to Grin Car</a></nav>
 <header class="page-header"><h1 class="page-title">Grin Car Front and Back</h1></header>
-<section class="section-card catalogue-meta-block"><ul class="work-meta"><li><strong>Title:</strong> Grin Car Front and Back</li><li><strong>Medium:</strong> Ink on paper</li><li><strong>Dimensions:</strong> Sheet: 14 × 17 in.; drawing: 7.5 × 7.5 in.; additional drawing: 5.5 × 6 in.</li><li><strong>Work ID:</strong> RE-013166</li><li><strong>Provenance:</strong> Artist’s private collection</li></ul></section>
-<section class="section-card"><h2>Original Drawing</h2><div class="gallery-grid original-grid"><a class="gallery-item" href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260610%20%2819%29.jpg?v=20260610g" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260610%20%2819%29.jpg?v=20260610g" alt="Grin Car front and back original drawing" loading="lazy"></a></div></section>
+<section class="section-card" data-role="original"><h2>Original Drawing</h2><div class="gallery-grid original-grid"><a class="gallery-item" href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260610%20%2819%29.jpg?v=20260610g" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260610%20%2819%29.jpg?v=20260610g" alt="Grin Car front and back original drawing" loading="lazy"></a></div></section><section class="section-card catalogue-meta-block"><ul class="work-meta"><li><strong>Title:</strong> Grin Car Front and Back</li><li><strong>Medium:</strong> Ink on paper</li><li><strong>Dimensions:</strong> Sheet: 14 × 17 in.; drawing: 7.5 × 7.5 in.; additional drawing: 5.5 × 6 in.</li><li><strong>Work ID:</strong> RE-013166</li><li><strong>Provenance:</strong> Artist’s private collection</li></ul></section>
+
 <footer>Published via GitHub Pages<br>for long-term public access.</footer>
 </div>
 </body>
