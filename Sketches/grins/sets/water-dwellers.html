@@ -21,7 +21,23 @@ body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Se
 .card-subtitle{display:block;margin-top:4px;color:var(--muted);font-size:13px;font-weight:400}
 footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
 </style>
-</head>
+<style id="ron-global-prev-next-center-v2">
+/* Ron catalogue: force Previous / Next navigation to center horizontally as a group. */
+nav.sequence-nav.ron-bottom-prev-next-center{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-items:center!important;
+  gap:12px!important;
+  text-align:center!important;
+}
+nav.sequence-nav.ron-bottom-prev-next-center .sequence-spacer{
+  display:none!important;
+}
+nav.sequence-nav.ron-bottom-prev-next-center > a{
+  flex:0 1 auto!important;
+}
+</style></head>
 <body>
 <div class="wrap">
 <nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../categories/animals/index.html">&larr; Animals</a>  <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
