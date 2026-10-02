@@ -1,24 +1,37 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Buddha Grin Flower Front | Sketches &amp; Drawings | Ron English Catalogue Raisonné</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
+<title>Space Shark Grin Front | Ron English Catalogue Raisonn&eacute;</title>
 <style>
-:root{--border:#e5e7eb;--muted:#6b7280;--shadow:0 8px 26px rgba(0,0,0,.06);--panel:#f3f4f6}
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:1120px;margin:0 auto;padding:28px 18px 56px}.nav-pills{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px 0;text-align:center}
+*{box-sizing:border-box}
+:root{--border:#e5e7eb;--muted:#6b7280;--panel:#f3f4f6;--shadow:0 8px 26px rgba(0,0,0,.06)}
+body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
+.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px 0;text-align:center}
 .nav-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px}
+.nav-pill:hover{background:#f9fafb}
 .page-header{text-align:center;margin:0 auto 24px}.page-title{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.05}
-.catalogue-meta-block{width:100%;max-width:900px;margin:0 auto 28px;text-align:center}.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7;text-align:center}.work-meta li{display:block;margin:2px auto}
-.section-card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:0 0 24px}.section-card h2{text-align:center;margin:0 0 16px}
-.gallery-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px}.gallery-item{display:block;flex:0 1 900px;max-width:900px;width:100%;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff}
-.gallery-item img{display:block;width:100%;height:460px;object-fit:contain;background:var(--panel);padding:8px}
+.section-card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:0 0 24px}
+.section-card h2{text-align:center;margin:0 0 16px;font-size:1.4rem}
+.index-grid,.gallery-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px}
+.index-card,.gallery-item{display:block;flex:0 1 280px;max-width:300px;width:100%;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
+.index-card img,.gallery-item img{display:block;width:100%;height:300px;object-fit:contain;background:var(--panel);padding:8px}.index-card img{height:280px}
+.card-title{padding:13px 14px 14px;text-align:center;font-weight:650;line-height:1.35}.card-subtitle{display:block;margin-top:4px;color:var(--muted);font-size:13px;font-weight:400}
+.catalogue-meta-block,.relationship-note,.notes-block,.text-block{max-width:900px;margin-left:auto;margin-right:auto;text-align:center}.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7;text-align:center}.work-meta li{display:block;margin:2px auto}
+.relationship-note{padding:12px 16px;border:1px solid var(--border);border-radius:14px;background:#f9fafb;line-height:1.6;margin-bottom:24px}
+.original-grid .gallery-item{flex:0 1 900px;max-width:900px}.original-grid .gallery-item img{height:460px}
+.text-block{line-height:1.65}.text-block p{margin:.55rem 0}
 footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
-@media(max-width:620px){.gallery-item img{height:340px}}
+@media(max-width:620px){.wrap{padding:22px 14px 48px}.gallery-item,.index-card{flex-basis:min(100%,330px);max-width:330px}.original-grid .gallery-item img{height:340px}}
 
 /* RON CARD SIZING NORMALIZATION START */
-.gallery-item{
+.gallery-item,.index-card{
   display:block;
-  flex:0 1 900px;
-  max-width:900px;
+  flex:0 1 290px;
+  max-width:300px;
   width:100%;
   border:1px solid #e5e7eb;
   border-radius:16px;
@@ -29,13 +42,28 @@ footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid v
   box-shadow:0 8px 26px rgba(0,0,0,.06);
 }
 
-.gallery-item img{
+.gallery-item img,.index-card img{
   display:block;
   width:100%;
-  height:460px;
+  height:310px;
   object-fit:contain;
   background:#f3f4f6;
   padding:6px;
+}
+
+.original-grid .gallery-item,
+.original-gallery .gallery-item,
+.originals-grid .gallery-item,
+[data-role="original"] .gallery-item{
+  flex:0 1 900px;
+  max-width:900px;
+}
+
+.original-grid .gallery-item img,
+.original-gallery .gallery-item img,
+.originals-grid .gallery-item img,
+[data-role="original"] .gallery-item img{
+  height:460px;
 }
 
 @media(max-width:620px){
@@ -43,17 +71,21 @@ footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid v
     padding:22px 14px 48px;
   }
 
-  .gallery-item{
-    flex-basis:min(100%,900px);
-    max-width:900px;
+  .gallery-item,.index-card{
+    flex-basis:min(100%,330px);
+    max-width:330px;
   }
 
-  .gallery-item img{
+  .original-grid .gallery-item img,
+  .original-gallery .gallery-item img,
+  .originals-grid .gallery-item img,
+  [data-role="original"] .gallery-item img{
     height:340px;
   }
 }
 /* RON CARD SIZING NORMALIZATION END */
-</style><style id="grins-mo-camel-detail-standard-v1">
+</style>
+<style id="grins-mo-camel-detail-standard-v1">
 /* Detail-page normalization based on the catalogue's Mo Camel page structure. Original Drawing sections are normalized by role so both image originals and missing-original notes are supported. */
 .catalogue-meta-block{
   width:100%!important;
@@ -259,11 +291,23 @@ nav.sequence-nav .sequence-spacer{
   display:none!important;
 }
 </style>
-<style id="ron-original-drawing-heading-standard-v1">.original-drawing-heading{text-align:center;margin:0 0 14px;font-size:1.4rem}</style></head><body><main class="wrap">
-<nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../sets/buddha-grin-flower.html">&larr; Return to Buddha Grin Flower</a>  <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
+<style id="ron-original-drawing-heading-standard-v1">.original-drawing-heading{text-align:center;margin:0 0 14px;font-size:1.4rem}</style></head>
+<body>
+<div class="wrap">
+<nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../categories/animals/index.html">Animals</a><a class="nav-pill" href="../categories/animals/sharks/index.html">Sharks</a><a class="nav-pill" href="../sets/space-shark-grin.html">&larr; Return to Space Shark</a>  <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
 </nav>
-<header class="page-header"><h1 class="page-title">Buddha Grin Flower Front</h1></header>
-<h2 class="original-drawing-heading">Original Drawing</h2><section class="section-card" data-role="original-drawing"><div class="gallery-grid original-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/buddha%20grin%20flower%20front%20ORIGINAL.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/buddha%20grin%20flower%20front%20ORIGINAL.jpg" alt="Buddha Grin Flower front original drawing" loading="lazy"></a></div></section><div class="catalogue-meta-block"><ul class="work-meta"><li><strong>Title:</strong> Buddha Grin Flower Front</li><li><strong>Medium:</strong> Ink on paper</li><li><strong>Dimensions:</strong> Sheet: 11 × 17 in.; drawing: 11 × 8.5 in.</li><li><strong>Work ID:</strong> RE-013534</li><li><strong>Provenance:</strong> Artist's Personal Collection</li></ul></div>
+<header class="page-header"><h1 class="page-title">Space Shark Grin Front</h1></header>
+<h2 class="original-drawing-heading">Original Drawing</h2><section class="section-card" data-role="original-drawing"><div class="text-block"><p>The original drawing has not been located. This entry will be updated if further information becomes available.</p></div></section><div class="catalogue-meta-block"><ul class="work-meta"><li><strong>Title:</strong> Space Shark Grin Front</li><li><strong>Medium:</strong> Unknown</li><li><strong>Dimensions:</strong> Unknown</li><li><strong>Work ID:</strong> RE-015747</li></ul></div>
 
-<nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="re-013487--buddha-grin-flower-side.html">Next: Buddha Grin Flower Side &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
-</main></body></html>
+
+
+
+
+
+
+
+
+<section class="section-card" data-role="digital"><h2>Digitized Version</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Space%20Shark%20Grin%20front%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Space%20Shark%20Grin%20front%20COLOR.jpg" alt="Space Shark Grin Front digitized version" loading="lazy"></a></div></section><nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="re-016263--space-shark-grin.html">&larr; Previous: Space Shark Grin Side</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
+</div>
+</body>
+</html>
