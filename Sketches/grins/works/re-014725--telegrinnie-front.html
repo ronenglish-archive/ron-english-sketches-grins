@@ -623,6 +623,43 @@ section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry > .v
   border:0!important;
 }
 </style>
+
+<style id="ron-telegrinnie-rounded-grey-video-card-v2">
+/* Individual video entry -- separate from the wide white Videos panel. */
+main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry {
+  box-sizing:border-box!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  flex:0 1 300px!important;width:300px!important;max-width:100%!important;
+  min-width:0!important;min-height:300px!important;height:300px!important;
+  margin:0!important;padding:8px!important;
+  background:#f3f4f6!important;border:1px solid #e5e7eb!important;
+  border-radius:16px!important;overflow:hidden!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
+}
+main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry > .video-embed {
+  box-sizing:border-box!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  flex:none!important;position:relative!important;inset:auto!important;
+  width:100%!important;max-width:100%!important;height:100%!important;
+  aspect-ratio:auto!important;min-height:0!important;
+  margin:0!important;padding:0!important;
+  background:#f3f4f6!important;border:0!important;
+  border-radius:12px!important;overflow:hidden!important;
+  box-shadow:none!important;
+}
+main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry > .video-embed > iframe {
+  box-sizing:border-box!important;display:block!important;flex:none!important;
+  position:relative!important;inset:auto!important;
+  width:159.75px!important;height:284px!important;
+  max-width:100%!important;max-height:100%!important;
+  aspect-ratio:9/16!important;object-fit:contain!important;
+  margin:0 auto!important;padding:0!important;border:0!important;
+  border-radius:10px!important;
+}
+@media(max-width:640px){
+  main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry {max-width:100%!important;}
+}
+</style>
 </head>
 
 <body>
