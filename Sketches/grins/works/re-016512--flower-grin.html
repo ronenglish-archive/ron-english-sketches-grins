@@ -458,11 +458,28 @@ section.section-card[data-role="videos"] iframe {
   max-width:100%!important;
 }
 </style>
-<style id="ron-sunflower-video-grey-tile-20261012-v1">
-/* One centered, portrait 9:16 video inside an independent grey tile. */
-section.section-card[data-role="videos"] .catalogue-video-grid {display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;gap:18px!important;width:100%!important;}
-section.section-card[data-role="videos"] .catalogue-video-grid > .video-embed {box-sizing:border-box!important;flex:0 1 320px!important;width:100%!important;max-width:320px!important;margin:0!important;padding:10px!important;background:#f3f4f6!important;border:1px solid #e5e7eb!important;border-radius:16px!important;box-shadow:0 8px 26px rgba(0,0,0,.06)!important;}
-section.section-card[data-role="videos"] .catalogue-video-grid > .video-embed > iframe {display:block!important;width:100%!important;aspect-ratio:9/16!important;height:auto!important;border:0!important;border-radius:8px!important;}
+<style id="ron-sunflower-square-video-tile-20261012-v2">
+/* V11: a compact square grey video tile inside the 960px white Videos section. */
+section.section-card[data-role="videos"] .catalogue-video-grid {
+  display:flex!important; flex-wrap:wrap!important; justify-content:center!important;
+  align-items:stretch!important; gap:18px!important; width:100%!important;
+}
+section.section-card[data-role="videos"] .catalogue-video-grid > .video-embed {
+  box-sizing:border-box!important; display:flex!important; flex:0 1 300px!important;
+  align-items:center!important; justify-content:center!important;
+  width:min(300px,100%)!important; max-width:300px!important; min-width:0!important;
+  height:300px!important; min-height:300px!important; max-height:300px!important;
+  margin:0!important; padding:8px!important; background:#f3f4f6!important;
+  border:1px solid #e5e7eb!important; border-radius:16px!important;
+  overflow:hidden!important; box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
+}
+/* Keep the original vertical 9:16 YouTube player centered without cropping/stretching. */
+section.section-card[data-role="videos"] .catalogue-video-grid > .video-embed > iframe {
+  box-sizing:border-box!important; display:block!important; flex:none!important;
+  width:155.25px!important; max-width:100%!important;
+  height:276px!important; max-height:276px!important; aspect-ratio:9/16!important;
+  margin:0 auto!important; padding:0!important; border:0!important; border-radius:6px!important;
+}
 </style>
 </head>
 

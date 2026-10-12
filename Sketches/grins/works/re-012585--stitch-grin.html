@@ -554,6 +554,40 @@ section.section-card[data-role="videos"] .catalogue-video-grid iframe {
   display:block!important;width:100%!important;max-width:100%!important;
 }
 </style>
+
+<style id="ron-stitch-grin-grey-video-tile-v2">
+/* Only the individual Stitch Grin video tile. Keep the white Videos section panel. */
+section[data-role="videos"] .ron-video-grid {
+ display:flex!important; flex-wrap:wrap!important; justify-content:center!important;
+ align-items:stretch!important; gap:18px!important; width:100%!important;
+ max-width:100%!important; margin:0 auto!important;
+}
+section[data-role="videos"] .ron-video-grid > .ron-video-tile {
+ box-sizing:border-box!important; display:flex!important;
+ flex:0 1 300px!important; width:300px!important; max-width:100%!important;
+ min-width:0!important; height:300px!important; min-height:300px!important;
+ max-height:300px!important; margin:0!important; padding:8px!important;
+ justify-content:center!important; align-items:center!important;
+ background:#f3f4f6!important; border:1px solid #e5e7eb!important;
+ border-radius:16px!important; overflow:hidden!important;
+ box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
+}
+section[data-role="videos"] .ron-video-grid > .ron-video-tile > .video-embed {
+ box-sizing:border-box!important; display:flex!important;
+ justify-content:center!important; align-items:center!important;
+ width:100%!important; height:100%!important; max-width:100%!important;
+ margin:0 auto!important; padding:0!important; background:transparent!important;
+}
+section[data-role="videos"] .ron-video-grid > .ron-video-tile iframe {
+ box-sizing:border-box!important; position:relative!important; inset:auto!important;
+ display:block!important; flex:none!important; max-width:100%!important;
+ max-height:284px!important; border:0!important; margin:0 auto!important;
+}
+section[data-role="videos"] .ron-video-grid > .ron-video-tile iframe[style*="9/16"],
+section[data-role="videos"] .ron-video-grid > .ron-video-tile iframe[style*="9 / 16"] {
+ aspect-ratio:9/16!important; width:159.75px!important; height:284px!important;
+}
+</style>
 </head>
 
 <body>
