@@ -485,7 +485,62 @@ section.section-card[data-role="ancillary-documentation"] .ancillary-figure figc
   }
 }
 </style>
-<style id="ron-literature-citations-centered-global-20261012">section[data-role="literature"] .literature-entry,section[data-role="literature"] .literature-entry p,section[data-role="literature"] > p,section[data-role="literature"] .gallery-grid > p{ text-align:center!important; margin-left:auto!important; margin-right:auto!important; }section[data-role="literature"] .literature-entry{max-width:100%;}section[data-role="literature"] .gallery-grid{justify-content:center!important;}</style></head>
+<style id="ron-literature-citations-centered-global-20261012">section[data-role="literature"] .literature-entry,section[data-role="literature"] .literature-entry p,section[data-role="literature"] > p,section[data-role="literature"] .gallery-grid > p{ text-align:center!important; margin-left:auto!important; margin-right:auto!important; }section[data-role="literature"] .literature-entry{max-width:100%;}section[data-role="literature"] .gallery-grid{justify-content:center!important;}</style><style id="ron-approved-square-ancillary-caption-tiles-v1">
+/* Artwork drawings: up to three centered, square ancillary image tiles per row. */
+section[data-role="ancillary-documentation"] .ron-approved-ancillary-grid {
+  display:flex!important; flex-wrap:wrap!important; justify-content:center!important;
+  align-items:stretch!important; gap:18px!important; width:100%!important;
+  max-width:100%!important; margin:0 auto!important;
+}
+section[data-role="ancillary-documentation"] .ron-approved-ancillary-grid > .ron-approved-ancillary-tile {
+  box-sizing:border-box!important; display:flex!important; flex-direction:column!important;
+  flex:0 1 290px!important; width:min(290px,100%)!important;
+  max-width:300px!important; min-width:0!important; margin:0!important;
+  overflow:hidden!important; border:1px solid #e5e7eb!important;
+  border-radius:16px!important; background:#fff!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
+}
+section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile > a {
+  box-sizing:border-box!important; display:flex!important; flex:0 0 auto!important;
+  align-items:center!important; justify-content:center!important;
+  width:100%!important; height:286px!important; max-width:none!important;
+  min-height:0!important; margin:0!important; padding:7px!important;
+  border:0!important; border-bottom:1px solid #e5e7eb!important;
+  border-radius:0!important; background:#f3f4f6!important;
+  box-shadow:none!important; overflow:hidden!important;
+}
+section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile > a img {
+  display:block!important; width:100%!important; height:100%!important;
+  max-width:100%!important; max-height:100%!important;
+  object-fit:contain!important; object-position:center center!important;
+  margin:0!important; padding:0!important; border:0!important;
+  background:transparent!important;
+}
+section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile > figcaption {
+  display:block!important; box-sizing:border-box!important; width:100%!important;
+  flex:1 0 auto!important; margin:0!important; padding:12px 13px!important;
+  font-size:0.93rem!important; line-height:1.5!important; text-align:center!important;
+  background:#fff!important; overflow-wrap:anywhere!important;
+}
+section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile figcaption .card-title {
+  display:block!important; margin:0 0 4px!important; padding:0!important;
+  text-align:center!important; font-weight:650!important;
+}
+section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile figcaption .card-detail-text {
+  display:block!important; margin:0!important; text-align:center!important;
+}
+section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile figcaption a {
+  display:inline!important; width:auto!important; height:auto!important; min-height:0!important;
+  margin:0!important; padding:0!important; border:0!important;
+  background:transparent!important; text-decoration:underline!important;
+}
+@media(max-width:640px) {
+  section[data-role="ancillary-documentation"] .ron-approved-ancillary-grid > .ron-approved-ancillary-tile {
+    flex-basis:min(290px,100%)!important; max-width:100%!important;
+  }
+}
+</style>
+</head>
 
 <body>
 <div class="wrap">
@@ -497,7 +552,7 @@ section.section-card[data-role="ancillary-documentation"] .ancillary-figure figc
 <section class="section-card" data-role="digital"><h2>Digitized Versions</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Baby%20B%26W.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Baby%20B%26W.jpg" alt="Baby Grin front digitized version 1" loading="lazy"></a><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Baby%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Baby%20COLOR.jpg" alt="Baby Grin front digitized version 2" loading="lazy"></a></div></section>
 <section class="section-card" data-role="literature"><h2>Literature</h2><div class="literature-entry"><p>Zephyr English, <em>Delusionville High</em> (PoPaganda, 2022), p. 82. ISBN 978-0-578-39761-0.</p><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/delusionville-high/delusionville%20high%20p82c.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/delusionville-high/delusionville%20high%20p82c.jpg" alt="Baby Grin front literature" loading="lazy"></a></div></div><div class="literature-entry"><p>Ron English, <em>Ron English’s Popaganda Coloring Book</em> (San Francisco: Last Gasp, 2016), p. 6. ISBN 978-0867198515.</p><div class="gallery-grid"><a class="gallery-item" href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/literature/popaganda-coloring-book-p6.jpg?v=1" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/literature/popaganda-coloring-book-p6.jpg?v=1" alt="Baby Grin front literature" loading="lazy"></a></div></div></section>
 <section class="section-card ron-notes-center" data-role="cards"><h2>Card</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Baby%20ORIGINAL%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Baby%20ORIGINAL%20COLOR.jpg" alt="Baby Grin front card" loading="lazy"></a></div></section>
-<section class="section-card" data-role="ancillary-documentation"><h2>Ancillary Documentation</h2><div class="gallery-grid"><a class="gallery-item ancillary-image-only" href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-5/main/fallasheep%20RE-013318.jpg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-5/main/fallasheep%20RE-013318.jpg" alt="Baby Grin Front ancillary documentation" loading="lazy"></a><a class="gallery-item ancillary-image-only" href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/sideshows2.jpg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/sideshows2.jpg" alt="Baby Grin Front ancillary documentation" loading="lazy"></a></div></section><section class="section-card" data-role="literature"><h2>Notes</h2><div class="text-block"><p>Used as a sketch for the painting <a href="https://ronenglish-archive.github.io/ron-english-paintings-2010s/detail/paintings/2010s/2015/Comic-Panel-Grin.html" target="_blank" rel="noopener">Comic Panel Grin</a>.</p></div></section>
+<section class="section-card" data-role="ancillary-documentation"><h2>Ancillary Documentation</h2><div class="ron-approved-ancillary-grid"><figure class="ron-approved-ancillary-tile"><a class="gallery-item ancillary-image-only" href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-5/main/fallasheep%20RE-013318.jpg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-5/main/fallasheep%20RE-013318.jpg" alt="Baby Grin Front ancillary documentation" loading="lazy"></a><figcaption>Graphic design by Ron English using the drawing.</figcaption></figure><figure class="ron-approved-ancillary-tile"><a class="gallery-item ancillary-image-only" href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/sideshows2.jpg" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/sideshows2.jpg" alt="Baby Grin Front ancillary documentation" loading="lazy"></a><figcaption>Graphic design by Ron English using the drawing.</figcaption></figure></div></section><section class="section-card" data-role="literature"><h2>Notes</h2><div class="text-block"><p>Used as a sketch for the painting <a href="https://ronenglish-archive.github.io/ron-english-paintings-2010s/detail/paintings/2010s/2015/Comic-Panel-Grin.html" target="_blank" rel="noopener">Comic Panel Grin</a>.</p></div></section>
 <nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="re-016693--baby-grin-side.html">Next: Baby Grin Side &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
 </div>
 </body>
