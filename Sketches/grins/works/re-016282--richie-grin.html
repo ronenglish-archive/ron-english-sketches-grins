@@ -429,6 +429,48 @@ section[data-role="videos"] .ron-video-tile > p,
 section[data-role="videos"] .ron-video-entry > p { margin:0!important; padding:12px!important; text-align:center!important; background:#fff!important; }
 @media(max-width:620px) {section[data-role="videos"]{padding:14px!important;}section[data-role="videos"] .ancillary-video-card,section[data-role="videos"] .ron-video-tile,section[data-role="videos"] .ron-video-entry{max-width:100%!important;}}
 </style>
+
+<style id="ron-sketches-bare-video-embed-tile-fix-v2">
+/* Bare .video-embed is itself the individual tile (Qhrist Grin structure).
+   Big Boy Grin has a separate .ron-video-tile wrapper; do not alter it. */
+section[data-role="videos"] .catalogue-video-grid > .video-embed,
+section[data-role="videos"] .ron-video-grid > .video-embed {
+  box-sizing:border-box!important;
+  flex:0 1 300px!important;
+  width:300px!important;
+  max-width:100%!important;
+  min-width:0!important;
+  height:300px!important;
+  min-height:300px!important;
+  max-height:300px!important;
+  margin:0!important;
+  padding:8px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:#f3f4f6!important;
+  border:1px solid #e5e7eb!important;
+  border-radius:16px!important;
+  overflow:hidden!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
+}
+section[data-role="videos"] .catalogue-video-grid > .video-embed > iframe,
+section[data-role="videos"] .ron-video-grid > .video-embed > iframe {
+  display:block!important;
+  flex:none!important;
+  max-width:100%!important;
+  max-height:284px!important;
+  margin:0 auto!important;
+}
+section[data-role="videos"] .catalogue-video-grid > .video-embed > video,
+section[data-role="videos"] .ron-video-grid > .video-embed > video {
+  display:block!important;
+  max-width:100%!important;
+  max-height:284px!important;
+  object-fit:contain!important;
+  margin:0 auto!important;
+}
+</style>
 </head>
 
 <body>
