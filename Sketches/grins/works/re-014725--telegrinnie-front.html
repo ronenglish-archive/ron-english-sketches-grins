@@ -505,160 +505,45 @@ section.ron-unified-notes-wip-panel > h2 {text-align:center!important;}
   section.ron-unified-notes-wip-panel {padding:14px!important;}
 }
 </style>
-<style id="ron-telegrinnie-video-grey-tile-v1">
-/* A dedicated Videos panel with a centered grey video tile and original portrait ratio. */
-section.section-card[data-role="videos"] {
-  box-sizing:border-box!important;width:100%!important;max-width:960px!important;
-  margin-left:auto!important;margin-right:auto!important;
-}
-section.section-card[data-role="videos"] .ron-telegrinnie-video-tile {
-  box-sizing:border-box!important;width:100%!important;max-width:320px!important;
-  margin:16px auto 0!important;padding:10px!important;
-  border:1px solid #e5e7eb!important;border-radius:16px!important;
-  background:#f3f4f6!important;box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
-}
-section.section-card[data-role="videos"] .ron-telegrinnie-video-tile .video-embed {
-  box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin:0 auto!important;
-}
-section.section-card[data-role="videos"] .ron-telegrinnie-video-tile iframe {
-  display:block!important;width:100%!important;max-width:100%!important;
-  aspect-ratio:9/16!important;height:auto!important;border:0!important;
-}
-</style>
-<style id="ron-starskull-reference-video-tile-20261012-v1">
-/* Starskull Front (RE-013986) approved video wrapper: one compact square grey tile
-   in a centered full-size white Videos section. Applied only to this page. */
-main section.section-card[data-role="videos"] {
-  box-sizing:border-box!important; width:100%!important; max-width:960px!important;
-  margin:0 auto 24px!important; padding:22px!important; background:#fff!important;
-  border:1px solid #e5e7eb!important; border-radius:18px!important;
-  box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
-}
-main section.section-card[data-role="videos"] > h2 { text-align:center!important; margin:0 0 16px!important; }
-main section.section-card[data-role="videos"] .ron-video-grid {
-  display:flex!important; flex-wrap:wrap!important; justify-content:center!important;
-  align-items:stretch!important; gap:18px!important; width:100%!important;
-  max-width:100%!important; margin:0 auto!important;
-}
-main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry {
-  box-sizing:border-box!important; display:flex!important; flex:0 1 290px!important;
-  flex-direction:column!important; justify-content:center!important; align-items:center!important;
-  width:min(290px,100%)!important; min-width:0!important; max-width:300px!important;
-  margin:0!important; padding:10px!important; border:1px solid #e5e7eb!important;
-  border-radius:16px!important; background:#f3f4f6!important; overflow:hidden!important;
-}
-main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry > .video-embed {
-  box-sizing:border-box!important; display:flex!important; flex:none!important;
-  justify-content:center!important; align-items:center!important;
-  width:100%!important; max-width:100%!important; height:auto!important;
-  aspect-ratio:1/1!important; min-height:0!important; margin:0 auto!important;
-  padding:0!important; background:transparent!important; overflow:hidden!important;
-}
-main section.section-card[data-role="videos"] .ron-video-entry .video-embed > iframe {
-  box-sizing:border-box!important; display:block!important; flex:none!important;
-  position:relative!important; inset:auto!important;
-  width:auto!important; height:100%!important; max-width:100%!important;
-  max-height:100%!important; aspect-ratio:9/16!important;
-  padding:0!important; border:0!important; margin:auto!important;
-}
-/* The animated GIF is a clickable contained visual, not a YouTube player. */
-main section.section-card[data-role="videos"] .ron-video-entry .video-embed > a {
-  box-sizing:border-box!important; display:flex!important; justify-content:center!important;
-  align-items:center!important; width:100%!important; height:100%!important;
-  max-width:100%!important; margin:0!important; padding:0!important;
-  background:transparent!important; border:0!important; box-shadow:none!important;
-}
-main section.section-card[data-role="videos"] .ron-video-entry .video-embed > a > img {
-  box-sizing:border-box!important; display:block!important; width:100%!important;
-  height:100%!important; max-width:100%!important; max-height:100%!important;
-  object-fit:contain!important; padding:0!important; margin:0!important;
-  background:transparent!important; border:0!important; border-radius:0!important;
-}
-@media(max-width:640px) {
-  main section.section-card[data-role="videos"] {padding:14px!important;}
-  main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry {max-width:100%!important;}
-}
-</style>
-<style id="ron-telegrinnie-portrait-iframe-sizing-v1">
-/* Stabilize Telegrinnie portrait player inside the Starskull-reference square video tile. */
-section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry {
-  width:min(290px,100%)!important;
-  max-width:300px!important;
-  min-width:0!important;
-  margin:0 auto!important;
-  padding:10px!important;
-  background:#f3f4f6!important;
-}
-section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry > .video-embed {
-  box-sizing:border-box!important;
-  position:relative!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  width:100%!important;
-  height:270px!important;
-  min-height:270px!important;
-  max-height:270px!important;
-  aspect-ratio:auto!important;
-  margin:0 auto!important;
-  padding:0!important;
-  overflow:hidden!important;
-  background:transparent!important;
-}
-section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry > .video-embed > iframe {
-  box-sizing:border-box!important;
-  display:block!important;
-  flex:0 0 auto!important;
-  position:static!important;
-  inset:auto!important;
-  width:151.875px!important;
-  min-width:0!important;
-  max-width:100%!important;
-  height:270px!important;
-  min-height:270px!important;
-  max-height:270px!important;
-  aspect-ratio:9/16!important;
-  padding:0!important;
-  margin:0 auto!important;
-  border:0!important;
-}
-</style>
 
-<style id="ron-telegrinnie-rounded-grey-video-card-v2">
-/* Individual video entry -- separate from the wide white Videos panel. */
-main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry {
-  box-sizing:border-box!important;
-  display:flex!important;align-items:center!important;justify-content:center!important;
-  flex:0 1 300px!important;width:300px!important;max-width:100%!important;
-  min-width:0!important;min-height:300px!important;height:300px!important;
-  margin:0!important;padding:8px!important;
-  background:#f3f4f6!important;border:1px solid #e5e7eb!important;
-  border-radius:16px!important;overflow:hidden!important;
+<style id="ron-telegrinnie-video-visible-rounded-v4">
+/* Actual container on this page is div.wrap, not main. */
+div.wrap > section.section-card[data-role="videos"] {
+  box-sizing:border-box!important;width:100%!important;max-width:960px!important;
+  margin:0 auto 24px!important;padding:22px!important;background:#fff!important;
+  border:1px solid #e5e7eb!important;border-radius:18px!important;
   box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
 }
-main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry > .video-embed {
-  box-sizing:border-box!important;
-  display:flex!important;align-items:center!important;justify-content:center!important;
+div.wrap > section.section-card[data-role="videos"] > h2 {text-align:center!important;margin:0 0 16px!important;}
+div.wrap > section.section-card[data-role="videos"] > .ron-video-grid {
+  display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
+  align-items:stretch!important;gap:18px!important;width:100%!important;margin:0 auto!important;
+}
+/* Visible gray square individual video tile. */
+div.wrap > section.section-card[data-role="videos"] > .ron-video-grid > .ron-video-entry {
+  box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;
+  flex:0 1 300px!important;width:300px!important;max-width:100%!important;min-width:0!important;
+  height:300px!important;min-height:300px!important;max-height:300px!important;
+  margin:0!important;padding:8px!important;background:#f3f4f6!important;
+  border:1px solid #e5e7eb!important;border-radius:16px!important;
+  box-shadow:0 8px 26px rgba(0,0,0,.06)!important;overflow:hidden!important;
+}
+div.wrap > section.section-card[data-role="videos"] > .ron-video-grid > .ron-video-entry > .video-embed {
+  box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;
   flex:none!important;position:relative!important;inset:auto!important;
-  width:100%!important;max-width:100%!important;height:100%!important;
-  aspect-ratio:auto!important;min-height:0!important;
-  margin:0!important;padding:0!important;
-  background:#f3f4f6!important;border:0!important;
-  border-radius:12px!important;overflow:hidden!important;
-  box-shadow:none!important;
+  width:100%!important;max-width:100%!important;height:100%!important;min-height:0!important;
+  aspect-ratio:auto!important;margin:0!important;padding:0!important;
+  background:transparent!important;border:0!important;border-radius:12px!important;overflow:hidden!important;
 }
-main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry > .video-embed > iframe {
+/* Round the iframe itself, not only an invisible ancestor. */
+div.wrap > section.section-card[data-role="videos"] > .ron-video-grid > .ron-video-entry > .video-embed > iframe {
   box-sizing:border-box!important;display:block!important;flex:none!important;
-  position:relative!important;inset:auto!important;
-  width:159.75px!important;height:284px!important;
-  max-width:100%!important;max-height:100%!important;
-  aspect-ratio:9/16!important;object-fit:contain!important;
-  margin:0 auto!important;padding:0!important;border:0!important;
-  border-radius:10px!important;
+  position:static!important;inset:auto!important;width:159.75px!important;height:284px!important;
+  min-height:0!important;max-height:284px!important;max-width:100%!important;
+  aspect-ratio:9/16!important;margin:0 auto!important;padding:0!important;
+  border:0!important;border-radius:12px!important;overflow:hidden!important;
 }
-@media(max-width:640px){
-  main section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry {max-width:100%!important;}
-}
+@media(max-width:620px){div.wrap > section.section-card[data-role="videos"]{padding:14px!important;}}
 </style>
 </head>
 
