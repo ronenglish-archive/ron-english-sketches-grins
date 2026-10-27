@@ -187,7 +187,27 @@ section.section-card[data-role="original-drawing"] .gallery-item{box-sizing:bord
 section.section-card[data-role="original-drawing"] .gallery-item img{display:block!important;width:100%!important;max-width:none!important;height:440px!important;object-fit:contain!important;object-position:center center!important;}
 @media(max-width:700px){section.section-card[data-role="original-drawing"]{padding:14px!important;}section.section-card[data-role="original-drawing"] .gallery-item img{height:300px!important;}}
 </style>
-</head>
+<style id="ron-tupac-detail-layout-normalization-v1">
+/* Restore the catalogue detail-page layout, without altering artwork or metadata. */
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif!important;color:#111!important;background:#fff!important}
+main.wrap{max-width:1180px!important;margin:0 auto!important;padding:28px 18px 56px!important}
+nav.nav-pills,nav.sequence-nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:10px!important;margin:20px auto!important;text-align:center!important}
+nav.nav-pills .nav-pill,nav.sequence-nav .nav-pill{display:inline-block!important;padding:8px 14px!important;border:1px solid #e5e7eb!important;border-radius:999px!important;background:#fff!important;color:#111!important;text-decoration:none!important;font-size:14px!important}
+header{text-align:center!important;margin:0 auto 22px!important}
+header .page-title{margin:0!important;font-size:clamp(2rem,4vw,3rem)!important;line-height:1.05!important}
+.catalogue-meta-block{width:100%!important;max-width:900px!important;margin:0 auto 24px!important;text-align:center!important}
+.work-meta{list-style:none!important;padding:0!important;margin:0 auto!important;line-height:1.7!important;text-align:center!important}
+.work-meta li{margin:2px auto!important}
+section.section-card[data-role="original-drawing"],section.section-card[data-role="digital"]{box-sizing:border-box!important;width:100%!important;max-width:960px!important;margin:0 auto 24px!important;padding:22px!important;border:1px solid #e5e7eb!important;border-radius:18px!important;background:#fff!important;box-shadow:0 8px 26px rgba(0,0,0,.06)!important}
+section.section-card h2{text-align:center!important;margin:0 0 16px!important;font-size:1.4rem!important}
+section.section-card .gallery-grid{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;gap:18px!important}
+section.section-card .gallery-grid>a.gallery-item{box-sizing:border-box!important;display:block!important;flex:0 1 300px!important;max-width:300px!important;width:100%!important;margin:0!important;border:1px solid #e5e7eb!important;border-radius:16px!important;overflow:hidden!important;background:#fff!important}
+section.section-card .gallery-grid>a.gallery-item>img{box-sizing:border-box!important;display:block!important;width:100%!important;max-width:none!important;height:310px!important;max-height:none!important;object-fit:contain!important;background:#f3f4f6!important;padding:6px!important}
+section.section-card[data-role="original-drawing"] .gallery-grid>a.gallery-item{flex:0 1 420px!important;max-width:420px!important}
+section.section-card[data-role="original-drawing"] .gallery-grid>a.gallery-item>img{height:440px!important}
+footer{border-top:1px solid #e5e7eb!important;text-align:center!important;margin-top:30px!important;padding-top:16px!important;color:#6b7280!important;font-size:14px!important}
+@media(max-width:700px){main.wrap{padding:22px 14px 48px!important}section.section-card[data-role="original-drawing"],section.section-card[data-role="digital"]{padding:14px!important}section.section-card[data-role="original-drawing"] .gallery-grid>a.gallery-item>img{height:300px!important}}
+</style></head>
 <body>
 <main class="wrap">
 <nav class="nav-pills" aria-label="Site navigation">
