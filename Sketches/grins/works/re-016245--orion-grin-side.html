@@ -498,6 +498,20 @@ section.section-card[data-role="original-drawing"] > .gallery-grid.original-grid
   section.section-card[data-role="original-drawing"] > .gallery-grid.original-grid > a.gallery-item > img{height:300px!important;}
 }
 </style>
+<style id="orion-grin-side-digital-three-across-v2">
+/* ORION-GRIN-SIDE-DIGITAL-THREE-ACROSS START */
+/* Eleven digital items: three across when the section has sufficient room. */
+@media (min-width: 760px) {
+  section.section-card[data-role="digital"] > .gallery-grid > a.gallery-item {
+    box-sizing: border-box !important;
+    flex: 0 1 290px !important;
+    width: min(290px, 100%) !important;
+    max-width: 290px !important;
+    min-width: 0 !important;
+  }
+}
+/* ORION-GRIN-SIDE-DIGITAL-THREE-ACROSS END */
+</style>
 </head>
 <body>
 <div class="wrap">
