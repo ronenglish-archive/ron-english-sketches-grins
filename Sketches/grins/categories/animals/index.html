@@ -1,65 +1,175 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>Animals | Ron English Catalogue Raisonn&eacute;</title>
-<style>
-/* Approved compact drawing index and set-member grid: single clean stylesheet. */
-:root{--border:#e5e7eb;--muted:#6b7280;--panel:#f8fafc}
-*{box-sizing:border-box}
-body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
-.wrap{width:calc(100% - 36px);max-width:1100px;margin:0 auto;padding:26px 0 48px}
-.page-narrow{max-width:1100px}
-.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px auto;text-align:center}
-.nav-pill,.sequence-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px;line-height:1.4}
-.nav-pill:hover,.sequence-pill:hover{background:#f9fafb}
-.sequence-nav .sequence-spacer{display:none}
-.page-header{text-align:center;margin:0 auto 24px}
-.page-title{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.1}
-.section-card{width:100%;margin:0 auto 24px;padding:22px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 26px #0000000f}
-.section-card h2{text-align:center;margin:0 0 16px;font-size:1.35rem}
-.catalogue-meta-block,.relationship-note{max-width:900px;margin:0 auto 24px;text-align:center}
-.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7}
-.relationship-note{padding:12px 16px;border:1px solid var(--border);border-radius:14px;background:#f9fafb}
-.index-grid,.group-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:16px;margin:0 auto}
-.index-grid>.index-card,.group-grid>.group-card{display:flex;flex:0 0 200px;width:200px;max-width:200px;min-width:0;flex-direction:column;align-items:stretch;overflow:hidden;background:#fff;color:inherit;text-decoration:none;text-align:center;border:1px solid var(--border);border-radius:12px;box-shadow:0 3px 12px #0000000b}
-.index-grid>.index-card:hover,.group-grid>.group-card:hover{border-color:#c9ced5;box-shadow:0 5px 16px #00000014}
-.index-grid>.index-card>img,.group-grid>.group-card>img{display:block;width:100%;height:158px;max-width:100%;object-fit:contain;padding:8px;background:var(--panel);border-bottom:1px solid var(--border)}
-.index-grid .index-image{display:flex;align-items:center;justify-content:center;width:100%;height:158px;padding:8px;background:var(--panel);border-bottom:1px solid var(--border)}
-.index-grid .index-image img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
-.index-grid .card-title,.index-grid .index-title,.group-grid .label,.group-grid .card-title{display:block;margin:0;padding:10px 8px 12px;text-align:center;font-size:14px;font-weight:600;line-height:1.35;overflow-wrap:anywhere}
-.card-subtitle,.set-label{display:block;font-size:12px;font-weight:400;line-height:1.35;color:var(--muted);margin-top:4px}
-footer{text-align:center;margin:30px auto 0;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
-footer a{color:inherit}
-@media(max-width:480px){.wrap{width:calc(100% - 24px)}.section-card{padding:14px}.index-grid,.group-grid{gap:12px}.index-grid>.index-card,.group-grid>.group-card{flex:0 1 145px;max-width:145px;width:145px}.index-grid>.index-card>img,.group-grid>.group-card>img,.index-grid .index-image{height:140px}.index-grid .card-title,.index-grid .index-title,.group-grid .label,.group-grid .card-title{font-size:13px}}
-</style>
-
-
-
-
-<link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Animals | Ron English Catalogue Raisonn&eacute;</title>
+  <style>
+    /* Page foundation */
+    :root {
+      --border: #e5e7eb;
+      --muted: #6b7280;
+      --panel: #f8fafc;
+    }
+    
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: #111;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .wrap {
+      width: calc(100% - 36px);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 26px 0 48px;
+    }
+    
+    /* Top and catalogue-sequence navigation */
+    .nav-pills, .sequence-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .nav-pill {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .nav-pill:hover, .nav-pill:focus-visible { background: #f9fafb; }
+    .sequence-nav { margin: 28px auto 18px; }
+    
+    /* Heading and category panel */
+    .page-header { text-align: center; margin: 0 auto 24px; }
+    .page-title { margin: 0; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+    .section-card {
+      width: 100%;
+      margin: 0 auto 24px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 8px 26px #0000000f;
+    }
+    
+    /* Compact category cards */
+    .index-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 16px;
+      margin: 0 auto;
+    }
+    .index-card {
+      display: flex;
+      flex: 0 0 200px;
+      width: 200px;
+      max-width: 200px;
+      min-width: 0;
+      flex-direction: column;
+      align-items: stretch;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+      color: inherit;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 3px 12px #0000000b;
+    }
+    .index-card:hover { border-color: #c9ced5; box-shadow: 0 5px 16px #00000014; }
+    .index-card > img {
+      display: block;
+      width: 100%;
+      height: 158px;
+      max-width: 100%;
+      object-fit: contain;
+      padding: 8px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+    }
+    .card-title {
+      display: block;
+      margin: 0;
+      padding: 10px 8px 12px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    
+    /* Footer */
+    footer {
+      margin: 30px auto 0;
+      padding: 16px 0 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    
+    /* Mobile compact cards */
+    @media (max-width: 480px) {
+      .wrap { width: calc(100% - 24px); }
+      .section-card { padding: 14px; }
+      .index-grid { gap: 12px; }
+      .index-card { flex: 0 1 145px; width: 145px; max-width: 145px; }
+      .index-card > img { height: 140px; }
+      .card-title { font-size: 13px; }
+    }
+  </style>
+  <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
 </head>
 <body>
-<div class="wrap">
-<nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../../index.html">&larr; Grins</a>  <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
-</nav>
-<header class="page-header"><h1 class="page-title">Animals</h1></header>
-<section class="section-card ron-standard-index-panel" data-role="index-listing"><div class="index-grid">
-<a class="index-card" href="bats/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Batman%20Grin%20Icon%20COLOR.jpg" alt="Bats and Insects" loading="lazy"><div class="card-title">Bats and Insects</div></a>
-<a class="index-card" href="bears/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bear%20Grin%20Forked%20Tongue%20COLOR%201.jpg" alt="Bears" loading="lazy"><div class="card-title">Bears</div></a>
-<a class="index-card" href="birds/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Flaming%20O%20Grin%20COLOR.jpg" alt="Birds" loading="lazy"><div class="card-title">Birds</div></a>
-<a class="index-card" href="canines/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Basketball%20Bulldog%20Grin%20COLOR.jpg" alt="Canines" loading="lazy"><div class="card-title">Canines</div></a>
-<a class="index-card" href="cattle/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Cow%20Grin%20COLOR.jpg" alt="Cattle" loading="lazy"><div class="card-title">Cattle</div></a>
-<a class="index-card" href="elephants/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Elefanka%20With%20Angel%20Wings%20Grin%20COLOR.jpg" alt="Elephants" loading="lazy"><div class="card-title">Elephants</div></a>
-<a class="index-card" href="felines/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Cat%20Grin%201%20COLOR.jpg" alt="Felines" loading="lazy"><div class="card-title">Felines</div></a>
-<a class="index-card" href="monkeys/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Speak%20More%20Evil%20Grin%20COLOR.jpg" alt="Primates" loading="lazy"><div class="card-title">Primates</div></a>
-<a class="index-card" href="reptiles/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Slo%20Moe%20Grin%20Portrait%20COLOR.jpg" alt="Reptiles" loading="lazy"><div class="card-title">Reptiles</div></a>
-<a class="index-card" href="../../sets/small-mammals.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Squirrel%20Squirt%20Grin%20COLOR.jpg" alt="Small Mammals" loading="lazy"><div class="card-title">Small Mammals</div></a>
-<a class="index-card" href="unicorns/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Unicorn%20Grin%20COLOR%202.jpg" alt="Unicorns" loading="lazy"><div class="card-title">Unicorns</div></a>
-<a class="index-card" href="../../sets/water-dwellers.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/octy.jpg?v=20260611i" alt="Water Dwellers" loading="lazy"><div class="card-title">Water Dwellers</div></a>
-</div></section><nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="../aliens/index.html">&larr; Previous: Aliens</a><a class="nav-pill sequence-pill" href="../botanicals/index.html">Next: Botanicals &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
-</div>
+  <div class="wrap">
+    <nav class="nav-pills" aria-label="Site navigation">
+      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a>
+      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a>
+      <a class="nav-pill" href="../../index.html">&larr; Grins</a>
+      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-title">Animals</h1>
+    </header>
+
+    <section class="section-card ron-standard-index-panel" data-role="index-listing">
+      <div class="index-grid">
+        <a class="index-card" href="bats/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Batman%20Grin%20Icon%20COLOR.jpg" alt="Bats and Insects" loading="lazy"><div class="card-title">Bats and Insects</div></a>
+        <a class="index-card" href="bears/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bear%20Grin%20Forked%20Tongue%20COLOR%201.jpg" alt="Bears" loading="lazy"><div class="card-title">Bears</div></a>
+        <a class="index-card" href="birds/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Flaming%20O%20Grin%20COLOR.jpg" alt="Birds" loading="lazy"><div class="card-title">Birds</div></a>
+        <a class="index-card" href="canines/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Basketball%20Bulldog%20Grin%20COLOR.jpg" alt="Canines" loading="lazy"><div class="card-title">Canines</div></a>
+        <a class="index-card" href="cattle/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Cow%20Grin%20COLOR.jpg" alt="Cattle" loading="lazy"><div class="card-title">Cattle</div></a>
+        <a class="index-card" href="elephants/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Elefanka%20With%20Angel%20Wings%20Grin%20COLOR.jpg" alt="Elephants" loading="lazy"><div class="card-title">Elephants</div></a>
+        <a class="index-card" href="felines/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Cat%20Grin%201%20COLOR.jpg" alt="Felines" loading="lazy"><div class="card-title">Felines</div></a>
+        <a class="index-card" href="monkeys/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Speak%20More%20Evil%20Grin%20COLOR.jpg" alt="Primates" loading="lazy"><div class="card-title">Primates</div></a>
+        <a class="index-card" href="reptiles/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Slo%20Moe%20Grin%20Portrait%20COLOR.jpg" alt="Reptiles" loading="lazy"><div class="card-title">Reptiles</div></a>
+        <a class="index-card" href="../../sets/small-mammals.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Squirrel%20Squirt%20Grin%20COLOR.jpg" alt="Small Mammals" loading="lazy"><div class="card-title">Small Mammals</div></a>
+        <a class="index-card" href="unicorns/index.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Unicorn%20Grin%20COLOR%202.jpg" alt="Unicorns" loading="lazy"><div class="card-title">Unicorns</div></a>
+        <a class="index-card" href="../../sets/water-dwellers.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/octy.jpg?v=20260611i" alt="Water Dwellers" loading="lazy"><div class="card-title">Water Dwellers</div></a>
+      </div>
+    </section>
+
+    <nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence">
+      <a class="nav-pill sequence-pill" href="../aliens/index.html">&larr; Previous: Aliens</a>
+      <a class="nav-pill sequence-pill" href="../botanicals/index.html">Next: Botanicals &rarr;</a>
+    </nav>
+
+    <footer>Published via GitHub Pages<br>for long-term public access.</footer>
+  </div>
 </body>
 </html>
