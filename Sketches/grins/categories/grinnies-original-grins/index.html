@@ -1,188 +1,327 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Grinnies | Ron English Catalogue Raisonné</title>
+  <style>
+    /* Page and typography */
+    :root {
+      --border: #e5e7eb;
+      --muted: #6b7280;
+      --panel: #f8fafc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: #111;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .wrap {
+      width: calc(100% - 36px);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 26px 0 48px;
+    }
+    .page-header { text-align: center; margin: 0 auto 24px; }
+    .page-title { margin: 0; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
 
-<title>Grinnies | Ron English Catalogue Raisonn&eacute;</title>
-<style>
-*{box-sizing:border-box}
-:root{--border:#e5e7eb;--muted:#6b7280;--panel:#f3f4f6;--shadow:0 8px 26px rgba(0,0,0,.06)}
-body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
-.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px 0;text-align:center}
-.nav-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px}
-.page-header{text-align:center;margin:0 auto 24px}.page-title{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.05}
-.section-card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:0 0 24px}
-.section-card h2{text-align:center;margin:0 0 16px;font-size:1.4rem}
-.index-grid,.gallery-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px}
-.index-card,.gallery-item{display:block;flex:0 1 280px;max-width:300px;width:100%;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
-.index-card img,.gallery-item img{display:block;width:100%;height:300px;object-fit:contain;background:var(--panel);padding:8px}.index-card img{height:280px}
-.card-title{padding:13px 14px 14px;text-align:center;font-weight:650;line-height:1.35}.card-subtitle{display:block;margin-top:4px;color:var(--muted);font-size:13px;font-weight:400}
-.catalogue-meta-block,.relationship-note,.notes-block,.text-block{max-width:900px;margin-left:auto;margin-right:auto;text-align:center}.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7;text-align:center}.work-meta li{display:block;margin:2px auto}
-.original-grid .gallery-item{flex:0 1 900px;max-width:900px}.original-grid .gallery-item img{height:460px}
-footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+    /* Site and catalogue sequence navigation */
+    .nav-pills, .sequence-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .nav-pill {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .nav-pill:hover, .nav-pill:focus-visible { background: #f9fafb; }
 
-/* ron-four-across-v3 */
-.index-grid{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:stretch!important;
-}
-.index-grid > .index-card{
-  box-sizing:border-box!important;
-  min-width:0!important;
-  flex:0 1 calc(25% - 28px)!important;
-  width:calc(25% - 28px)!important;
-  max-width:calc(25% - 28px)!important;
-}
-@media(max-width:900px){
-  .index-grid > .index-card{
-    flex-basis:calc(33.333% - 24px)!important;
-    width:calc(33.333% - 24px)!important;
-    max-width:calc(33.333% - 24px)!important;
-  }
-}
-@media(max-width:680px){
-  .index-grid > .index-card{
-    flex-basis:calc(50% - 18px)!important;
-    width:calc(50% - 18px)!important;
-    max-width:calc(50% - 18px)!important;
-  }
-}
-@media(max-width:440px){
-  .index-grid > .index-card{
-    flex-basis:100%!important;
-    width:100%!important;
-    max-width:100%!important;
-  }
-}</style>
+    /* Category panel and compact cards */
+    .section-card {
+      width: 100%;
+      margin: 0 auto 24px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 8px 26px #0000000f;
+    }
+    .index-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 16px;
+      margin: 0 auto;
+    }
+    .index-card {
+      display: flex;
+      flex: 0 0 200px;
+      width: 200px;
+      max-width: 200px;
+      min-width: 0;
+      flex-direction: column;
+      align-items: stretch;
+      overflow: hidden;
+      background: #fff;
+      color: inherit;
+      text-decoration: none;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #0000000b;
+    }
+    .index-card:hover {
+      border-color: #c9ced5;
+      box-shadow: 0 5px 16px #00000014;
+    }
+    .index-card > img {
+      display: block;
+      width: 100%;
+      height: 158px;
+      max-width: 100%;
+      object-fit: contain;
+      padding: 8px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+    }
+    .card-title {
+      display: block;
+      margin: 0;
+      padding: 10px 8px 12px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .card-subtitle {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.35;
+      color: var(--muted);
+      margin-top: 4px;
+    }
 
-<style id="global-main-index-standard-size-v1">
-  .index-grid{
-    display:flex!important;
-    flex-wrap:wrap!important;
-    justify-content:center!important;
-    align-items:stretch!important;
-    gap:18px!important;
-  }
-  .index-grid > .index-card,
-  .index-grid > .gallery-item,
-  .index-grid > .group-card{
-    flex:0 1 300px!important;
-    width:100%!important;
-    max-width:320px!important;
-    min-width:0!important;
-  }
-  .index-grid > .index-card .index-image,
-  .index-grid > .gallery-item img,
-  .index-grid > .group-card img{
-    width:100%!important;
-    height:240px!important;
-    max-height:240px!important;
-    aspect-ratio:auto!important;
-    object-fit:contain!important;
-  }
-</style>
-<style id="ron-global-prev-next-center-v2">
-/* Ron catalogue: force Previous / Next navigation to center horizontally as a group. */
-nav.sequence-nav.ron-bottom-prev-next-center{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:center!important;
-  gap:12px!important;
-  text-align:center!important;
-}
-nav.sequence-nav.ron-bottom-prev-next-center .sequence-spacer{
-  display:none!important;
-}
-nav.sequence-nav.ron-bottom-prev-next-center > a{
-  flex:0 1 auto!important;
-}
-</style><style id="ron-catalogue-four-across-standard-v1">
-.index-grid,
-.gallery-grid,
-.category-grid,
-.subcategories-grid,
-.cards-grid{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:stretch!important;
-  gap:18px!important;
-}
-.index-grid > .index-card,
-.index-grid > .gallery-item,
-.index-grid > .group-card,
-.gallery-grid > .index-card,
-.gallery-grid > .gallery-item,
-.gallery-grid > .group-card,
-.category-grid > .index-card,
-.category-grid > .gallery-item,
-.category-grid > .group-card,
-.subcategories-grid > .index-card,
-.subcategories-grid > .gallery-item,
-.subcategories-grid > .group-card,
-.cards-grid > .index-card,
-.cards-grid > .gallery-item,
-.cards-grid > .group-card{
-  box-sizing:border-box!important;
-  min-width:0!important;
-  flex:0 1 calc((100% - 54px) / 4)!important;
-  width:calc((100% - 54px) / 4)!important;
-  max-width:calc((100% - 54px) / 4)!important;
-}
-@media(max-width:900px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:calc((100% - 36px) / 3)!important;
-    width:calc((100% - 36px) / 3)!important;
-    max-width:calc((100% - 36px) / 3)!important;
-  }
-}
-@media(max-width:680px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:calc((100% - 18px) / 2)!important;
-    width:calc((100% - 18px) / 2)!important;
-    max-width:calc((100% - 18px) / 2)!important;
-  }
-}
-@media(max-width:440px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:100%!important;
-    width:100%!important;
-    max-width:100%!important;
-  }
-}
-</style>
-<style id="ron-standard-index-panel-v1">
-/* Approved Evil Monkeys-style outer index holder; scoped to this panel only. */
-section.ron-standard-index-panel{box-sizing:border-box;width:100%;max-width:none;margin:0 auto 24px;padding:22px;border:1px solid #e5e7eb;border-radius:18px;background:#fff;box-shadow:0 8px 26px rgba(0,0,0,.06)}
-section.ron-standard-index-panel > .index-grid{width:100%}
-@media(max-width:600px){section.ron-standard-index-panel{padding:14px}}
-</style>
-<link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
+    /* Footer */
+    footer {
+      text-align: center;
+      margin: 30px auto 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Compact mobile cards */
+    @media (max-width: 480px) {
+      .wrap { width: calc(100% - 24px); }
+      .section-card { padding: 14px; }
+      .index-grid { gap: 12px; }
+      .index-card { flex: 0 1 145px; width: 145px; max-width: 145px; }
+      .index-card > img { height: 140px; }
+      .card-title { font-size: 13px; }
+    }
+  </style>
+  <link href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png" rel="icon" type="image/png"/>
 </head>
 <body>
-<div class="wrap">
-<nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../../index.html">&larr; Grins</a>  <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
-</nav>
-<header class="page-header"><h1 class="page-title">Grinnies</h1></header>
-<section class="section-card ron-standard-index-panel" data-role="index-listing"><div class="index-grid"><a class="index-card" href="../../sets/baby-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Baby%20COLOR.jpg" alt="Baby Grin" loading="lazy"><div class="card-title">Baby Grin<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../sets/baby-grin-crawling.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Carousel%20Grinnie%20front%20COLOR.jpg" alt="Baby Grin Crawling" loading="lazy"><div class="card-title">Baby Grin Crawling<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../works/re-013205--baby-grin-version-2.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Baby%20Grin%202%20COLOR.jpg" alt="Baby Grin Version 2" loading="lazy"><div class="card-title">Baby Grin Version 2</div></a><a class="index-card" href="../../works/re-013227--boat-sketch.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260609%20%2816%29.jpg?v=20260610g" alt="Boat Sketch" loading="lazy"><div class="card-title">Boat Sketch</div></a><a class="index-card" href="../../works/re-012184--bulb-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/avians/ducks/bulb%20grin%20ORIGINAL.jpg" alt="Bulb Grin" loading="lazy"><div class="card-title">Bulb Grin</div></a><a class="index-card" href="../../works/re-012576--covid-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/COVID%20Grin%20COLOR.jpg" alt="COVID Grin" loading="lazy"><div class="card-title">COVID Grin</div></a><a class="index-card" href="../../sets/grinnie-delusionville-pilot.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnie%20Delusionville%20Pilot%20in%20plane%20side%20COLOR.jpg" alt="Delusionville Pilot - Grinnie" loading="lazy"><div class="card-title">Delusionville Pilot - Grinnie<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../works/re-016206--firecracker-skeleton-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Firecracker%20Skeleton%20Grin%20COLOR.jpg" alt="Firecracker Skeleton Grin" loading="lazy"><div class="card-title">Firecracker Skeleton Grin</div></a><a class="index-card" href="../../works/re-016216--floating-grinnie.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Floating%20Grinnie%20ORIGINAL.jpg" alt="Floating Grinnie" loading="lazy"><div class="card-title">Floating Grinnie</div></a><a class="index-card" href="../../works/re-013172--flying-grinnie.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Flying%20Grinnie%20COLOR.jpg" alt="Flying Grinnie" loading="lazy"><div class="card-title">Flying Grinnie</div></a><a class="index-card" href="../../works/re-013387--foot-in-mouth.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Foot%20in%20Mouth%20ORIGINAL%20COLOR.jpg" alt="Foot in Mouth" loading="lazy"><div class="card-title">Foot in Mouth</div></a><a class="index-card" href="../../sets/grin-god.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20God%20COLOR.jpg" alt="Grid God" loading="lazy"><div class="card-title">Grid God<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../grin-and-cathy/digital-drawings.html"><img src="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/images/works-on-paper/undated-finished-drawings/Grin%20and%20Cathy%2011x14%20inches.jpg" alt="Grin and Cathy" loading="lazy"><div class="card-title">Grin and Cathy</div></a><a class="index-card" href="../../works/re-014590--grin-cigar-smoker.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/grin%20cigar%20smoker.jpg" alt="Grin Cigar Smoker" loading="lazy"><div class="card-title">Grin Cigar Smoker</div></a><a class="index-card" href="../../works/re-014354--grin-in-the-hand-sketch.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/Grin%20in%20the%20hand%20sketch.jpg" alt="Grin in the Hand Sketch" loading="lazy"><div class="card-title">Grin in the Hand Sketch</div></a><a class="index-card" href="../../works/re-015847--grin-planet.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Planet%20COLOR.jpg" alt="Grin Planet" loading="lazy"><div class="card-title">Grin Planet</div></a><a class="index-card" href="../../sets/grinplanet-nobody.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Ring%20Racer%205%20ORIGINAL%20COLOR.jpg" alt="Grin Planet Animation" loading="lazy"><div class="card-title">Grin Planet Animation<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../sets/grin-sketches.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/grinsketch.jpg?v=20260609g" alt="Grin Sketches" loading="lazy"><div class="card-title">Grin Sketches<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../works/re-013123--grinnie-and-friends.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/images/Sketches/character-groups-and-ensembles/Grinnie%20and%20Friends%20COLOR.jpg" alt="Grinnie and Friends" loading="lazy"><div class="card-title">Grinnie and Friends</div></a><a class="index-card" href="../../works/re-014244--grinnie-definitive-original-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%28101%29.jpg?v=20260617d" alt="Grinnie Definitive Original Grin" loading="lazy"><div class="card-title">Grinnie Definitive Original Grin</div></a><a class="index-card" href="../../works/re-014421--grin-sketch-4.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnie%20Side%20view%20COLOR.png" alt="Grinnie Head Side" loading="lazy"><div class="card-title">Grinnie Head Side</div></a><a class="index-card" href="../../works/re-013448--grinnie-on-horseback-body.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnie%20on%20Horseback%20ORIGINAL.jpg" alt="Grinnie on Horseback Body" loading="lazy"><div class="card-title">Grinnie on Horseback Body</div></a><a class="index-card" href="../../works/re-014637--grinnie-plush-toy.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Plush%20Grin%20front%20ORIGINAL%20COLOR.jpg" alt="Grinnie Plush Toy" loading="lazy"><div class="card-title">Grinnie Plush Toy</div></a><a class="index-card" href="../../sets/grinnie-standing.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20animation%20front%20COLOR.jpg" alt="Grinnie Standing" loading="lazy"><div class="card-title">Grinnie Standing<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../sets/grinnie-totem-poles.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Brain%20Cone%20COLOR.jpg" alt="Grinnie Totem Poles" loading="lazy"><div class="card-title">Grinnie Totem Poles<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../works/re-016210--grinnie-twins.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnies%20Twins%20COLOR.jpg" alt="Grinnie Twins" loading="lazy"><div class="card-title">Grinnie Twins</div></a><a class="index-card" href="../../works/re-012188--grinnies-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnies%20Grin%20COLOR.jpg" alt="Grinnies Grin" loading="lazy"><div class="card-title">Grinnies Grin</div></a><a class="index-card" href="../../works/re-012774--grinnies-on-tv.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnies%20on%20TV%20COLOR.jpg" alt="Grinnies on TV" loading="lazy"><div class="card-title">Grinnies on TV</div></a><a class="index-card" href="../../works/re-014063--grinster.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/grinster.jpg" alt="Grinster" loading="lazy"><div class="card-title">Grinster</div></a><a class="index-card" href="../../sets/jumping-bean-animation.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2848%29.jpg?v=20260617c" alt="Jumping Bean Animation" loading="lazy"><div class="card-title">Jumping Bean Animation<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../works/melting-grinnie-head.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Melting%20Grinnie%20side%20view%203%20COLOR.png" alt="Melting Grinnie Head" loading="lazy"><div class="card-title">Melting Grinnie Head</div></a><a class="index-card" href="../../works/re-016212--mickey-eyes-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mickey%20Eyes%20Grin%201%20COLOR.png" alt="Mickey Eyes Grin" loading="lazy"><div class="card-title">Mickey Eyes Grin</div></a><a class="index-card" href="../../works/re-016243--mummy-grin-head.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mummy%20Grin%202%20COLOR.jpg" alt="Mummy Grin Head" loading="lazy"><div class="card-title">Mummy Grin Head</div></a><a class="index-card" href="../../sets/skeleton-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Skeleton%20Grin%20front%20COLOR.jpg" alt="Skeleton Grin" loading="lazy"><div class="card-title">Skeleton Grin<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../sets/skewered-grinnies.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/Skewered%20Grinnie%201%20COLOR.png" alt="Skewered Grinnies" loading="lazy"><div class="card-title">Skewered Grinnies<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../works/re-014765--smiley-face-dog-grin-newcastle.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Smiley%20Face%20Dog%20Grin%20Newcastle%20B%26W.jpg" alt="Smiley Face Dog Grin Newcastle" loading="lazy"><div class="card-title">Smiley Face Dog Grin Newcastle</div></a><a class="index-card" href="../../sets/smoking-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Smoking%20Grin%20COLOR.jpg" alt="Smoking Grin" loading="lazy"><div class="card-title">Smoking Grin<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../works/re-014590--spitting-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Spitting%20Grin%20COLOR.jpg" alt="Spitting Grin" loading="lazy"><div class="card-title">Spitting Grin</div></a><a class="index-card" href="../../works/re-013778--starry-eye-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/starry%20eye%20grin.jpg?v=20260910ag" alt="Starry Eye Grin" loading="lazy"><div class="card-title">Starry Eye Grin</div></a><a class="index-card" href="../../sets/zip-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260614%20(92).jpg?v=20260614e" alt="Zip Grin" loading="lazy"><div class="card-title">Zip Grin<span class="card-subtitle">Set</span></div></a></div></section>
-<nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="../cereal-killers/index.html">&larr; Previous: Cereal Killers</a><a class="nav-pill sequence-pill" href="../humans/index.html">Next: Humans &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
-</div>
+  <div class="wrap">
+    <nav class="nav-pills" aria-label="Site navigation">
+      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a>
+      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a>
+      <a class="nav-pill" href="../../index.html">← Grins</a>
+      <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
+    </nav>
+    <header class="page-header">
+      <h1 class="page-title">Grinnies</h1>
+    </header>
+    
+      <div class="index-grid">
+        <a class="index-card" href="../../sets/baby-grin.html">
+          <img alt="Baby Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Baby%20COLOR.jpg"/>
+          <div class="card-title">Baby Grin<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../sets/baby-grin-crawling.html">
+          <img alt="Baby Grin Crawling" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Carousel%20Grinnie%20front%20COLOR.jpg"/>
+          <div class="card-title">Baby Grin Crawling<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../works/re-013205--baby-grin-version-2.html">
+          <img alt="Baby Grin Version 2" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Baby%20Grin%202%20COLOR.jpg"/>
+          <div class="card-title">Baby Grin Version 2</div>
+        </a>
+        <a class="index-card" href="../../works/re-013227--boat-sketch.html">
+          <img alt="Boat Sketch" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260609%20%2816%29.jpg?v=20260610g"/>
+          <div class="card-title">Boat Sketch</div>
+        </a>
+        <a class="index-card" href="../../works/re-012184--bulb-grin.html">
+          <img alt="Bulb Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-animals/images/Sketches/avians/ducks/bulb%20grin%20ORIGINAL.jpg"/>
+          <div class="card-title">Bulb Grin</div>
+        </a>
+        <a class="index-card" href="../../works/re-012576--covid-grin.html">
+          <img alt="COVID Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/COVID%20Grin%20COLOR.jpg"/>
+          <div class="card-title">COVID Grin</div>
+        </a>
+        <a class="index-card" href="../../sets/grinnie-delusionville-pilot.html">
+          <img alt="Delusionville Pilot - Grinnie" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnie%20Delusionville%20Pilot%20in%20plane%20side%20COLOR.jpg"/>
+          <div class="card-title">Delusionville Pilot - Grinnie<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../works/re-016206--firecracker-skeleton-grin.html">
+          <img alt="Firecracker Skeleton Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Firecracker%20Skeleton%20Grin%20COLOR.jpg"/>
+          <div class="card-title">Firecracker Skeleton Grin</div>
+        </a>
+        <a class="index-card" href="../../works/re-016216--floating-grinnie.html">
+          <img alt="Floating Grinnie" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Floating%20Grinnie%20ORIGINAL.jpg"/>
+          <div class="card-title">Floating Grinnie</div>
+        </a>
+        <a class="index-card" href="../../works/re-013172--flying-grinnie.html">
+          <img alt="Flying Grinnie" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Flying%20Grinnie%20COLOR.jpg"/>
+          <div class="card-title">Flying Grinnie</div>
+        </a>
+        <a class="index-card" href="../../works/re-013387--foot-in-mouth.html">
+          <img alt="Foot in Mouth" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Foot%20in%20Mouth%20ORIGINAL%20COLOR.jpg"/>
+          <div class="card-title">Foot in Mouth</div>
+        </a>
+        <a class="index-card" href="../../sets/grin-god.html">
+          <img alt="Grid God" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20God%20COLOR.jpg"/>
+          <div class="card-title">Grid God<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../grin-and-cathy/digital-drawings.html">
+          <img alt="Grin and Cathy" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/images/works-on-paper/undated-finished-drawings/Grin%20and%20Cathy%2011x14%20inches.jpg"/>
+          <div class="card-title">Grin and Cathy</div>
+        </a>
+        <a class="index-card" href="../../works/re-014590--grin-cigar-smoker.html">
+          <img alt="Grin Cigar Smoker" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/grin%20cigar%20smoker.jpg"/>
+          <div class="card-title">Grin Cigar Smoker</div>
+        </a>
+        <a class="index-card" href="../../works/re-014354--grin-in-the-hand-sketch.html">
+          <img alt="Grin in the Hand Sketch" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/Grin%20in%20the%20hand%20sketch.jpg"/>
+          <div class="card-title">Grin in the Hand Sketch</div>
+        </a>
+        <a class="index-card" href="../../sets/grin-mouth-sketches.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Mouth%20ORIGINAL.jpg" alt="Grin Mouth Sketches" loading="lazy"><div class="card-title">Grin Mouth Sketches<span class="card-subtitle">Set</span></div></a>
+        <a class="index-card" href="../../works/re-015847--grin-planet.html">
+          <img alt="Grin Planet" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Planet%20COLOR.jpg"/>
+          <div class="card-title">Grin Planet</div>
+        </a>
+        <a class="index-card" href="../../sets/grinplanet-nobody.html">
+          <img alt="Grin Planet Animation" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Ring%20Racer%205%20ORIGINAL%20COLOR.jpg"/>
+          <div class="card-title">Grin Planet Animation<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../sets/grin-sketches.html">
+          <img alt="Grin Sketches" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/grinsketch.jpg?v=20260609g"/>
+          <div class="card-title">Grin Sketches<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../works/re-013123--grinnie-and-friends.html">
+          <img alt="Grinnie and Friends" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/images/Sketches/character-groups-and-ensembles/Grinnie%20and%20Friends%20COLOR.jpg"/>
+          <div class="card-title">Grinnie and Friends</div>
+        </a>
+        <a class="index-card" href="../../works/re-014244--grinnie-definitive-original-grin.html">
+          <img alt="Grinnie Definitive Original Grin" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%28101%29.jpg?v=20260617d"/>
+          <div class="card-title">Grinnie Definitive Original Grin</div>
+        </a>
+        <a class="index-card" href="../../works/re-014421--grin-sketch-4.html">
+          <img alt="Grinnie Head Side" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnie%20Side%20view%20COLOR.png"/>
+          <div class="card-title">Grinnie Head Side</div>
+        </a>
+        <a class="index-card" href="../../works/re-013448--grinnie-on-horseback-body.html">
+          <img alt="Grinnie on Horseback Body" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnie%20on%20Horseback%20ORIGINAL.jpg"/>
+          <div class="card-title">Grinnie on Horseback Body</div>
+        </a>
+        <a class="index-card" href="../../works/re-014637--grinnie-plush-toy.html">
+          <img alt="Grinnie Plush Toy" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Plush%20Grin%20front%20ORIGINAL%20COLOR.jpg"/>
+          <div class="card-title">Grinnie Plush Toy</div>
+        </a>
+        <a class="index-card" href="../../sets/grinnie-standing.html">
+          <img alt="Grinnie Standing" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20animation%20front%20COLOR.jpg"/>
+          <div class="card-title">Grinnie Standing<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../sets/grinnie-totem-poles.html">
+          <img alt="Grinnie Totem Poles" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grin%20Brain%20Cone%20COLOR.jpg"/>
+          <div class="card-title">Grinnie Totem Poles<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../works/re-016210--grinnie-twins.html">
+          <img alt="Grinnie Twins" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnies%20Twins%20COLOR.jpg"/>
+          <div class="card-title">Grinnie Twins</div>
+        </a>
+        <a class="index-card" href="../../works/re-012188--grinnies-grin.html">
+          <img alt="Grinnies Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnies%20Grin%20COLOR.jpg"/>
+          <div class="card-title">Grinnies Grin</div>
+        </a>
+        <a class="index-card" href="../../works/re-012774--grinnies-on-tv.html">
+          <img alt="Grinnies on TV" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Grinnies%20on%20TV%20COLOR.jpg"/>
+          <div class="card-title">Grinnies on TV</div>
+        </a>
+        <a class="index-card" href="../../works/re-014063--grinster.html">
+          <img alt="Grinster" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/grinster.jpg"/>
+          <div class="card-title">Grinster</div>
+        </a>
+        <a class="index-card" href="../../sets/jumping-bean-animation.html">
+          <img alt="Jumping Bean Animation" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2848%29.jpg?v=20260617c"/>
+          <div class="card-title">Jumping Bean Animation<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../works/melting-grinnie-head.html">
+          <img alt="Melting Grinnie Head" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Melting%20Grinnie%20side%20view%203%20COLOR.png"/>
+          <div class="card-title">Melting Grinnie Head</div>
+        </a>
+        <a class="index-card" href="../../works/re-016212--mickey-eyes-grin.html">
+          <img alt="Mickey Eyes Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mickey%20Eyes%20Grin%201%20COLOR.png"/>
+          <div class="card-title">Mickey Eyes Grin</div>
+        </a>
+        <a class="index-card" href="../../works/re-016243--mummy-grin-head.html">
+          <img alt="Mummy Grin Head" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Mummy%20Grin%202%20COLOR.jpg"/>
+          <div class="card-title">Mummy Grin Head</div>
+        </a>
+        <a class="index-card" href="../../sets/skeleton-grin.html">
+          <img alt="Skeleton Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Skeleton%20Grin%20front%20COLOR.jpg"/>
+          <div class="card-title">Skeleton Grin<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../sets/skewered-grinnies.html">
+          <img alt="Skewered Grinnies" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/Skewered%20Grinnie%201%20COLOR.png"/>
+          <div class="card-title">Skewered Grinnies<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../works/re-014765--smiley-face-dog-grin-newcastle.html">
+          <img alt="Smiley Face Dog Grin Newcastle" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Smiley%20Face%20Dog%20Grin%20Newcastle%20B%26W.jpg"/>
+          <div class="card-title">Smiley Face Dog Grin Newcastle</div>
+        </a>
+        <a class="index-card" href="../../sets/smoking-grin.html">
+          <img alt="Smoking Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Smoking%20Grin%20COLOR.jpg"/>
+          <div class="card-title">Smoking Grin<span class="card-subtitle">Set</span></div>
+        </a>
+        <a class="index-card" href="../../works/re-014590--spitting-grin.html">
+          <img alt="Spitting Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Spitting%20Grin%20COLOR.jpg"/>
+          <div class="card-title">Spitting Grin</div>
+        </a>
+        <a class="index-card" href="../../works/re-013778--starry-eye-grin.html">
+          <img alt="Starry Eye Grin" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-4/main/sketches/starry%20eye%20grin.jpg?v=20260910ag"/>
+          <div class="card-title">Starry Eye Grin</div>
+        </a>
+        <a class="index-card" href="../../sets/zip-grin.html">
+          <img alt="Zip Grin" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260614%20(92).jpg?v=20260614e"/>
+          <div class="card-title">Zip Grin<span class="card-subtitle">Set</span></div>
+        </a>
+      </div>
+    
+    <nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence">
+      <a class="nav-pill sequence-pill" href="../cereal-killers/index.html">← Previous: Cereal Killers</a>
+      <a class="nav-pill sequence-pill" href="../humans/index.html">Next: Humans →</a>
+    </nav>
+    <footer>Published via GitHub Pages<br/>for long-term public access.</footer>
+  </div>
 </body>
 </html>

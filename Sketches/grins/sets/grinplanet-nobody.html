@@ -160,6 +160,17 @@ nav.sequence-nav .sequence-spacer{
 /* Set index holder: 960px standard without changing index-card sizes. */
 main.wrap > section.section-card:not([data-role]){box-sizing:border-box!important;display:block!important;width:100%!important;max-width:960px!important;margin-left:auto!important;margin-right:auto!important;padding:22px!important;border:1px solid #e5e7eb!important;border-radius:18px!important;background:#fff!important;box-shadow:0 8px 26px rgba(0,0,0,.06)!important;}
 @media(max-width:600px){main.wrap > section.section-card:not([data-role]){padding:14px!important;}}
+
+/* Owner-approved 200x200 square artwork cards: set/group pages, 2026-11-11. */
+.index-grid,.group-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:12px!important;margin-left:auto;margin-right:auto}
+.index-grid>.index-card,.group-grid>.group-card{box-sizing:border-box;display:flex;flex-direction:column;flex:0 0 200px!important;width:200px!important;max-width:200px!important!important;min-width:0;height:200px!important;max-height:200px!important!important;overflow:hidden}
+.index-grid>.index-card>img,.group-grid>.group-card>img{display:block;box-sizing:border-box;width:100%;height:auto!important;max-height:none!important;min-height:0;flex:1 1 auto;object-fit:contain;object-position:center}
+.index-grid>.index-card>.index-image{display:flex;box-sizing:border-box;width:100%;height:auto!important;max-height:none!important;min-height:0;flex:1 1 auto;align-items:center;justify-content:center;overflow:hidden}
+.index-grid>.index-card>.index-image>img{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;object-position:center}
+.index-grid>.index-card>.card-title,.index-grid>.index-card>.index-title,.group-grid>.group-card>.label,.group-grid>.group-card>.card-title{flex:0 0 auto;min-height:0;margin:0;padding:6px 6px 8px;font-size:13px;line-height:1.25;overflow-wrap:anywhere}
+@media(max-width:480px){.index-grid,.group-grid{gap:10px}.index-grid>.index-card,.group-grid>.group-card{flex:0 1 200px;width:min(200px,100%);max-width:200px!important!important;height:200px!important;max-height:200px!important!important}.index-grid>.index-card>img,.group-grid>.group-card>img,.index-grid>.index-card>.index-image{height:auto!important;max-height:none!important}.index-grid>.index-card>.card-title,.index-grid>.index-card>.index-title,.group-grid>.group-card>.label,.group-grid>.group-card>.card-title{font-size:13px}}
+
+main.wrap > section.section-card:not([data-role]){max-width:560px!important}
 </style>
 <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
 </head>

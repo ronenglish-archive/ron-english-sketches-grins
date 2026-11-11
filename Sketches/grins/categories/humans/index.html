@@ -1,190 +1,181 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Humans | Ron English Catalogue Raisonn&eacute;</title>
+  <style>
+/* Page foundations */
+:root {
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --panel: #f8fafc;
+}
 
-<title>Humans | Ron English Catalogue Raisonn&eacute;</title>
-<style>
-*{box-sizing:border-box}
-:root{--border:#e5e7eb;--muted:#6b7280;--panel:#f3f4f6;--shadow:0 8px 26px rgba(0,0,0,.06)}
-body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
-.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px 0;text-align:center}
-.nav-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px}
-.page-header{text-align:center;margin:0 auto 24px}.page-title{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.05}
-.section-card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:0 0 24px}
-.section-card h2{text-align:center;margin:0 0 16px;font-size:1.4rem}
-.index-grid,.gallery-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px}
-.index-card,.gallery-item{display:block;flex:0 1 280px;max-width:300px;width:100%;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
-.index-card img,.gallery-item img{display:block;width:100%;height:300px;object-fit:contain;background:var(--panel);padding:8px}.index-card img{height:280px}
-.card-title{padding:13px 14px 14px;text-align:center;font-weight:650;line-height:1.35}.card-subtitle{display:block;margin-top:4px;color:var(--muted);font-size:13px;font-weight:400}
-.catalogue-meta-block,.relationship-note,.notes-block,.text-block{max-width:900px;margin-left:auto;margin-right:auto;text-align:center}.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7;text-align:center}.work-meta li{display:block;margin:2px auto}
-.original-grid .gallery-item{flex:0 1 900px;max-width:900px}.original-grid .gallery-item img{height:460px}
-footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+* { box-sizing: border-box; }
 
-/* ron-four-across-v3 */
-.index-grid{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:stretch!important;
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
 }
-.index-grid > .index-card{
-  box-sizing:border-box!important;
-  min-width:0!important;
-  flex:0 1 calc(25% - 28px)!important;
-  width:calc(25% - 28px)!important;
-  max-width:calc(25% - 28px)!important;
-}
-@media(max-width:900px){
-  .index-grid > .index-card{
-    flex-basis:calc(33.333% - 24px)!important;
-    width:calc(33.333% - 24px)!important;
-    max-width:calc(33.333% - 24px)!important;
-  }
-}
-@media(max-width:680px){
-  .index-grid > .index-card{
-    flex-basis:calc(50% - 18px)!important;
-    width:calc(50% - 18px)!important;
-    max-width:calc(50% - 18px)!important;
-  }
-}
-@media(max-width:440px){
-  .index-grid > .index-card{
-    flex-basis:100%!important;
-    width:100%!important;
-    max-width:100%!important;
-  }
-}</style>
 
-<style id="global-main-index-standard-size-v1">
-  .index-grid{
-    display:flex!important;
-    flex-wrap:wrap!important;
-    justify-content:center!important;
-    align-items:stretch!important;
-    gap:18px!important;
-  }
-  .index-grid > .index-card,
-  .index-grid > .gallery-item,
-  .index-grid > .group-card{
-    flex:0 1 300px!important;
-    width:100%!important;
-    max-width:320px!important;
-    min-width:0!important;
-  }
-  .index-grid > .index-card .index-image,
-  .index-grid > .gallery-item img,
-  .index-grid > .group-card img{
-    width:100%!important;
-    height:240px!important;
-    max-height:240px!important;
-    aspect-ratio:auto!important;
-    object-fit:contain!important;
-  }
-</style>
-<style id="ron-global-prev-next-center-v2">
-/* Ron catalogue: force Previous / Next navigation to center horizontally as a group. */
-nav.sequence-nav.ron-bottom-prev-next-center{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:center!important;
-  gap:12px!important;
-  text-align:center!important;
+.wrap {
+  width: calc(100% - 36px);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 26px 0 48px;
 }
-nav.sequence-nav.ron-bottom-prev-next-center .sequence-spacer{
-  display:none!important;
+
+/* Site navigation and catalogue sequence */
+.nav-pills,
+.sequence-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px auto;
+  text-align: center;
 }
-nav.sequence-nav.ron-bottom-prev-next-center > a{
-  flex:0 1 auto!important;
+
+.nav-pill {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
 }
-</style><style id="ron-catalogue-four-across-standard-v1">
-.index-grid,
-.gallery-grid,
-.category-grid,
-.subcategories-grid,
-.cards-grid{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:stretch!important;
-  gap:18px!important;
+
+.nav-pill:hover,
+.nav-pill:focus-visible { background: #f9fafb; }
+
+/* Page heading and category panel */
+.page-header { text-align: center; margin: 0 auto 24px; }
+.page-title { margin: 0; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+
+.section-card {
+  width: 100%;
+  margin: 0 auto 24px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 26px #0000000f;
 }
-.index-grid > .index-card,
-.index-grid > .gallery-item,
-.index-grid > .group-card,
-.gallery-grid > .index-card,
-.gallery-grid > .gallery-item,
-.gallery-grid > .group-card,
-.category-grid > .index-card,
-.category-grid > .gallery-item,
-.category-grid > .group-card,
-.subcategories-grid > .index-card,
-.subcategories-grid > .gallery-item,
-.subcategories-grid > .group-card,
-.cards-grid > .index-card,
-.cards-grid > .gallery-item,
-.cards-grid > .group-card{
-  box-sizing:border-box!important;
-  min-width:0!important;
-  flex:0 1 calc((100% - 54px) / 4)!important;
-  width:calc((100% - 54px) / 4)!important;
-  max-width:calc((100% - 54px) / 4)!important;
+
+/* Compact catalogue cards */
+.index-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  margin: 0 auto;
 }
-@media(max-width:900px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:calc((100% - 36px) / 3)!important;
-    width:calc((100% - 36px) / 3)!important;
-    max-width:calc((100% - 36px) / 3)!important;
-  }
+
+.index-card {
+  display: flex;
+  flex: 0 0 200px;
+  width: 200px;
+  max-width: 200px;
+  min-width: 0;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0000000b;
 }
-@media(max-width:680px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:calc((100% - 18px) / 2)!important;
-    width:calc((100% - 18px) / 2)!important;
-    max-width:calc((100% - 18px) / 2)!important;
-  }
+
+.index-card:hover {
+  border-color: #c9ced5;
+  box-shadow: 0 5px 16px #00000014;
 }
-@media(max-width:440px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:100%!important;
-    width:100%!important;
-    max-width:100%!important;
-  }
+
+.index-card > img {
+  display: block;
+  width: 100%;
+  height: 158px;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 8px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
 }
-</style>
-<style id="ron-standard-index-panel-v1">
-/* Approved Evil Monkeys-style outer index holder; scoped to this panel only. */
-section.ron-standard-index-panel{box-sizing:border-box;width:100%;max-width:none;margin:0 auto 24px;padding:22px;border:1px solid #e5e7eb;border-radius:18px;background:#fff;box-shadow:0 8px 26px rgba(0,0,0,.06)}
-section.ron-standard-index-panel > .index-grid{width:100%}
-@media(max-width:600px){section.ron-standard-index-panel{padding:14px}}
-</style>
-<link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
+
+.card-title {
+  display: block;
+  margin: 0;
+  padding: 10px 8px 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.card-subtitle {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* Footer */
+footer {
+  margin: 30px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Compact mobile layout */
+@media (max-width: 480px) {
+  .wrap { width: calc(100% - 24px); }
+  .section-card { padding: 14px; }
+  .index-grid { gap: 12px; }
+  .index-card { flex: 0 1 145px; width: 145px; max-width: 145px; }
+  .index-card > img { height: 140px; }
+  .card-title { font-size: 13px; }
+}
+  </style>
+  <link href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png" rel="icon" type="image/png"/>
 </head>
 <body>
-<div class="wrap">
-<nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../../index.html">&larr; Grins</a>  <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
+  <div class="wrap">
+    <nav aria-label="Site navigation" class="nav-pills"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../../index.html">← Grins</a> <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
 </nav>
-<header class="page-header"><h1 class="page-title">Humans</h1></header>
-<section class="section-card ron-standard-index-panel" data-role="index-listing"><div class="index-grid"><a class="index-card" href="../../sets/businessman-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Businessman%20Grin%20COLOR.jpg" alt="Businessman Grin" loading="lazy"><div class="card-title">Businessman Grin<span class="card-subtitle">Set</span></div></a><a class="index-card" href="../../works/re-012713--cafeteria-lady-grin-front-and-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Cafeteria%20Lady%20Grin%20COLOR.jpg" alt="Cafeteria Lady Grin Front and Side" loading="lazy"><div class="card-title">Cafeteria Lady Grin Front and Side</div></a><a class="index-card" href="../../works/re-014365--fan-1-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260618%20%287%29.jpg?v=20260618a" alt="Fan 1 Grin" loading="lazy"><div class="card-title">Fan 1 Grin</div></a><a class="index-card" href="../../works/re-014366--fan-2-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260618%20%287%29n.jpg?v=20260618a" alt="Fan 2 Grin" loading="lazy"><div class="card-title">Fan 2 Grin</div></a><a class="index-card" href="../../works/re-012326-r--grin-guy-sketch.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-3/main/sketches/Scan_20260622%20%2813%29.jpg?v=20260622j" alt="Grin Guy Sketch" loading="lazy"><div class="card-title">Grin Guy Sketch</div></a><a class="index-card" href="../../works/re-016299--grin-man.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Scan_20241122%20ORIGINAL.jpg" alt="Jason Rockman Grin Sketch" loading="lazy"><div class="card-title">Jason Rockman Grin Sketch</div></a><a class="index-card" href="../../works/re-016744--only-have-eyes-for-you.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260522%20(3).jpg?v=20260614e" alt="Only Have Eyes for You" loading="lazy"><div class="card-title">Only Have Eyes for You</div></a><a class="index-card" href="../../works/re-016298--shades-grin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-3/main/sketches/Scan_20260702%20%282%29.jpg?v=20260703a" alt="Shades Grin" loading="lazy"><div class="card-title">Shades Grin</div></a>
-<a class="index-card" href="../../works/re-014876--supergrin.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260317%20(4).jpg?v=20260614e" alt="Supergrin" loading="lazy"><div class="card-title">Supergrin</div></a>
-</div></section>
-<nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="../grinnies-original-grins/index.html">&larr; Previous: Grinnies</a><a class="nav-pill sequence-pill" href="../kursed/index.html">Next: Kursed &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
-</div>
+    <header class="page-header"><h1 class="page-title">Humans</h1></header>
+    
+      <div class="index-grid">
+        <a class="index-card" href="../../sets/businessman-grin.html"><img alt="Businessman Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Businessman%20Grin%20COLOR.jpg"/><div class="card-title">Businessman Grin<span class="card-subtitle">Set</span></div></a>
+        <a class="index-card" href="../../works/re-012713--cafeteria-lady-grin-front-and-side.html"><img alt="Cafeteria Lady Grin Front and Side" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Cafeteria%20Lady%20Grin%20COLOR.jpg"/><div class="card-title">Cafeteria Lady Grin Front and Side</div></a>
+        <a class="index-card" href="../../works/re-014365--fan-1-grin.html"><img alt="Fan 1 Grin" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260618%20%287%29.jpg?v=20260618a"/><div class="card-title">Fan 1 Grin</div></a>
+        <a class="index-card" href="../../works/re-014366--fan-2-grin.html"><img alt="Fan 2 Grin" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260618%20%287%29n.jpg?v=20260618a"/><div class="card-title">Fan 2 Grin</div></a>
+        <a class="index-card" href="../../works/re-012326-r--grin-guy-sketch.html"><img alt="Grin Guy Sketch" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-3/main/sketches/Scan_20260622%20%2813%29.jpg?v=20260622j"/><div class="card-title">Grin Guy Sketch</div></a>
+        <a class="index-card" href="../../works/re-016299--grin-man.html"><img alt="Jason Rockman Grin Sketch" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Scan_20241122%20ORIGINAL.jpg"/><div class="card-title">Jason Rockman Grin Sketch</div></a>
+        <a class="index-card" href="../../works/re-016744--only-have-eyes-for-you.html"><img alt="Only Have Eyes for You" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260522%20(3).jpg?v=20260614e"/><div class="card-title">Only Have Eyes for You</div></a>
+        <a class="index-card" href="../../works/re-016298--shades-grin.html"><img alt="Shades Grin" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-3/main/sketches/Scan_20260702%20%282%29.jpg?v=20260703a"/><div class="card-title">Shades Grin</div></a>
+        <a class="index-card" href="../../works/re-014876--supergrin.html"><img alt="Supergrin" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260317%20(4).jpg?v=20260614e"/><div class="card-title">Supergrin</div></a>
+      </div>
+    
+    <nav aria-label="Catalogue sequence" class="sequence-nav ron-bottom-prev-next-center"><a class="nav-pill sequence-pill" href="../grinnies-original-grins/index.html">← Previous: Grinnies</a><a class="nav-pill sequence-pill" href="../kursed/index.html">Next: Kursed →</a></nav>
+    <footer>Published via GitHub Pages<br/>for long-term public access.</footer>
+  </div>
 </body>
 </html>
