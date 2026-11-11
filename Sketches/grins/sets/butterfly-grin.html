@@ -111,17 +111,38 @@ footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid v
   }
 }
 
-/* Owner-approved Butterfly Grin: two detail-page cards, 200px square artwork areas. */
+/* Butterfly Grin detail-page cards: entire card is 200 x 200px, including caption. */
 section.section-card > .index-grid > a.index-card {
+  box-sizing:border-box!important;
+  display:flex!important;
+  flex-direction:column!important;
   flex:0 0 200px!important;
   width:200px!important;
   max-width:200px!important;
+  height:200px!important;
+  min-height:200px!important;
+  max-height:200px!important;
 }
 section.section-card > .index-grid > a.index-card > img {
-  width:100%;
-  height:200px;
-  max-height:200px;
-  object-fit:contain;
+  box-sizing:border-box!important;
+  display:block!important;
+  flex:0 0 148px!important;
+  width:100%!important;
+  height:148px!important;
+  max-height:148px!important;
+  object-fit:contain!important;
+}
+section.section-card > .index-grid > a.index-card > .card-title {
+  box-sizing:border-box!important;
+  flex:1 1 auto!important;
+  min-height:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:4px 8px!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-weight:500!important;
+  line-height:1.35!important;
 }
 </style>
 <style id="ron-notes-wip-panel-width-v1">
@@ -180,7 +201,7 @@ section.section-card[data-role="digital"] .gallery-grid > .gallery-item img{disp
 <nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../categories/animals/index.html#bats-and-insects">&larr; Bats and Insects</a></nav>
 <header class="page-header"><h1 class="page-title">Butterfly Grin</h1></header>
 <section class="section-card"><div class="index-grid"><a class="index-card" href="../works/re-014761--butterfly-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Wing%20Grin%20body%20ORIGINAL.jpg" alt="Butterfly Grin original drawing" loading="lazy"><div class="card-title">Butterfly Grin</div></a><a class="index-card" href="../works/re-014191--butterfly-grin-wing.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/ww.jpg?v=20260617d" alt="Butterfly Grin Wing" loading="lazy"><div class="card-title">Butterfly Grin Wing</div></a></div></section>
-<section class="section-card" data-role="digital"><h2>Full Character</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Wing%20Grin%20ORIGINAL%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Wing%20Grin%20ORIGINAL%20COLOR.jpg" alt="Butterfly Grin complete character digitized version" loading="lazy"></a></div><div class="text-block"><p>The Butterfly Grin character combines the wing and body drawings to form the complete character.</p></div></section><footer>Published via GitHub Pages<br>for long-term public access.</footer>
+<section class="section-card" data-role="digital"><h2>Full Character</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Wing%20Grin%20ORIGINAL%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Wing%20Grin%20ORIGINAL%20COLOR.jpg" alt="Butterfly Grin complete character digitized version" loading="lazy"></a></div><div class="text-block"><p>The Butterfly Grin character combines the wing and body drawings to form the complete character.</p></div></section><nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="../works/re-012842--batman-grin-icon.html">Next: Bat Grin Icon &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
 </div>
 </body>
 </html>
