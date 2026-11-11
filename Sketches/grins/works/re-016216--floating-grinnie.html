@@ -107,6 +107,9 @@ footer{text-align:center;margin:28px auto 0;padding-top:16px;border-top:1px soli
 /* Source-verified animation-frame role collision on 248–251: retain distinct frame format. */
 body:has(section[data-role="digital"] > h2.animation-frame-heading) section[data-role="digital"] .gallery-item{width:auto;max-width:100%;height:auto;flex:0 1 auto}
 body:has(section[data-role="digital"] > h2.animation-frame-heading) section[data-role="digital"] .gallery-item img{height:auto;max-height:380px}
+
+/* Original Drawing ONLY: remove inherited inner image tile frame; outer panel and other galleries unchanged. */
+section[data-role="original-drawing"] .gallery-grid > a.gallery-item, section[data-role="original-drawing"] .original-grid > a.gallery-item{border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;padding:0!important}
 </style>
 </head>
 

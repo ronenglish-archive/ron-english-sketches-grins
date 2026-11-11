@@ -69,6 +69,9 @@ footer{text-align:center;margin:28px auto 0;padding-top:16px;border-top:1px soli
 @media(max-width:380px){.wrap{padding:18px 10px 42px}.section-card{padding:14px 10px}[data-role="digital"] .gallery-item,[data-role="digitized-versions"] .gallery-item{width:130px;max-width:130px;flex-basis:130px}}
 /* All Notes text, including direct paragraphs, is horizontally centered. */
 .section-card.ron-notes-center,.section-card.ron-notes-center p,.section-card.ron-notes-center .text-block{text-align:center}
+
+/* Original Drawing ONLY: remove inherited inner image tile frame; outer panel and other galleries unchanged. */
+section[data-role="original-drawing"] .gallery-grid > a.gallery-item, section[data-role="original-drawing"] .original-grid > a.gallery-item{border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;padding:0!important}
 </style>
 </head>
 

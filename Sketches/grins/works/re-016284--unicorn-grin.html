@@ -117,6 +117,9 @@ section[data-role="skewered-variants"] .variant-card>a:first-child{display:flex;
 section[data-role="skewered-variants"] .variant-card>a:first-child img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;padding:0;background:#fff}
 section[data-role="skewered-variants"] .variant-card .card-title{padding:6px 2px 0;font-size:12px;line-height:1.4;text-align:center;font-weight:400}
 @media(max-width:380px){section[data-role="skewered-variants"] .variant-card{flex-basis:130px;width:130px;max-width:130px}section[data-role="skewered-variants"] .variant-card>a:first-child{width:130px}}
+
+/* Original Drawing ONLY: remove inherited inner image tile frame; outer panel and other galleries unchanged. */
+section[data-role="original-drawing"] .gallery-grid > a.gallery-item, section[data-role="original-drawing"] .original-grid > a.gallery-item{border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;padding:0!important}
 </style>
 </head>
 <body>
