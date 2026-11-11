@@ -34,6 +34,16 @@ body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Se
 footer{text-align:center;margin:30px auto 0;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
 footer a{color:inherit}
 @media(max-width:480px){.wrap{width:calc(100% - 24px)}.section-card{padding:14px}.index-grid,.group-grid{gap:12px}.index-grid>.index-card,.group-grid>.group-card{flex:0 1 145px;max-width:145px;width:145px}.index-grid>.index-card>img,.group-grid>.group-card>img,.index-grid .index-image{height:140px}.index-grid .card-title,.index-grid .index-title,.group-grid .label,.group-grid .card-title{font-size:13px}}
+
+/* Owner-approved 200x200 group artwork cards, scoped to actual index galleries. */
+section.section-card{box-sizing:border-box;width:100%;max-width:560px;margin-left:auto;margin-right:auto}
+section.section-card .index-grid,section.section-card .group-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:16px}
+section.section-card .index-grid>.index-card,section.section-card .group-grid>.group-card{box-sizing:border-box!important;display:flex!important;flex-direction:column!important;flex:0 1 200px!important;width:200px!important;max-width:200px!important;min-width:0!important;height:auto!important;aspect-ratio:1/1!important;overflow:hidden!important}
+section.section-card .index-grid>.index-card>img,section.section-card .group-grid>.group-card>img{box-sizing:border-box!important;display:block!important;flex:1 1 0!important;min-height:0!important;height:0!important;max-height:none!important;width:100%!important;object-fit:contain!important}
+section.section-card .index-grid>.index-card>.index-image{box-sizing:border-box!important;display:flex!important;flex:1 1 0!important;min-height:0!important;height:auto!important;max-height:none!important;align-items:center;justify-content:center}
+section.section-card .index-grid>.index-card>.index-image img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important}
+section.section-card .index-grid>.index-card>.card-title,section.section-card .group-grid>.group-card>.label,section.section-card .group-grid>.group-card>.card-title{flex:0 0 auto;min-height:0;}
+@media(max-width:480px){section.section-card .index-grid>.index-card,section.section-card .group-grid>.group-card{flex-basis:min(200px,100%)!important;width:min(200px,100%)!important;max-width:100%!important}}
 </style>
 
 <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">

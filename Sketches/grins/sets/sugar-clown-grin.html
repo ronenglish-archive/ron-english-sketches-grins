@@ -34,6 +34,15 @@ body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Se
 footer{text-align:center;margin:30px auto 0;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
 footer a{color:inherit}
 @media(max-width:480px){.wrap{width:calc(100% - 24px)}.section-card{padding:14px}.index-grid,.group-grid{gap:12px}.index-grid>.index-card,.group-grid>.group-card{flex:0 1 145px;max-width:145px;width:145px}.index-grid>.index-card>img,.group-grid>.group-card>img,.index-grid .index-image{height:140px}.index-grid .card-title,.index-grid .index-title,.group-grid .label,.group-grid .card-title{font-size:13px}}
+
+/* Owner-approved 200x200 square artwork cards: set/group pages, 2026-11-11. */
+.index-grid,.group-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:12px;margin-left:auto;margin-right:auto}
+.index-grid>.index-card,.group-grid>.group-card{box-sizing:border-box;display:flex;flex-direction:column;flex:0 0 200px;width:200px;max-width:200px;min-width:0;height:200px;max-height:200px;overflow:hidden}
+.index-grid>.index-card>img,.group-grid>.group-card>img{display:block;box-sizing:border-box;width:100%;height:auto;max-height:none;min-height:0;flex:1 1 auto;object-fit:contain;object-position:center}
+.index-grid>.index-card>.index-image{display:flex;box-sizing:border-box;width:100%;height:auto;max-height:none;min-height:0;flex:1 1 auto;align-items:center;justify-content:center;overflow:hidden}
+.index-grid>.index-card>.index-image>img{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;object-position:center}
+.index-grid>.index-card>.card-title,.index-grid>.index-card>.index-title,.group-grid>.group-card>.label,.group-grid>.group-card>.card-title{flex:0 0 auto;min-height:0;margin:0;padding:6px 6px 8px;font-size:13px;line-height:1.25;overflow-wrap:anywhere}
+@media(max-width:480px){.index-grid,.group-grid{gap:10px}.index-grid>.index-card,.group-grid>.group-card{flex:0 1 200px;width:min(200px,100%);max-width:200px;height:200px;max-height:200px}.index-grid>.index-card>img,.group-grid>.group-card>img,.index-grid>.index-card>.index-image{height:auto;max-height:none}.index-grid>.index-card>.card-title,.index-grid>.index-card>.index-title,.group-grid>.group-card>.label,.group-grid>.group-card>.card-title{font-size:13px}}
 </style>
 
 
@@ -45,7 +54,7 @@ footer a{color:inherit}
 </nav>
 <header class="page-header"><h1 class="page-title">Sugar Clown Grin</h1></header>
 <section class="section-card"><div class="index-grid"><a class="index-card" href="../works/re-013106--sugar-clown-grin-back.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20back%20COLOR.jpg" alt="Sugar Clown Grin Back" loading="lazy"><div class="card-title">Sugar Clown Grin Back</div></a><a class="index-card" href="../works/re-013091--sugar-clown-grin-left-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20left%20side%20COLOR.jpg" alt="Sugar Clown Grin Left Side" loading="lazy"><div class="card-title">Sugar Clown Grin Left Side</div></a><a class="index-card" href="../works/re-013093--sugar-clown-grin-right-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20right%20side%20COLOR.jpg" alt="Sugar Clown Grin Right Side" loading="lazy"><div class="card-title">Sugar Clown Grin Right Side</div></a><a class="index-card" href="../works/re-014517--clown.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260619%20%2819%29.jpg?v=20260619d" alt="Sugar Clown Grin Sketch" loading="lazy"><div class="card-title">Sugar Clown Grin Sketch</div></a><a class="index-card" href="../works/re-012313--sugar-clown-grin-three-quarters.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Sugar%20Clown%20Grin%20COLOR.jpg" alt="Sugar Clown Grin Three Quarters" loading="lazy"><div class="card-title">Sugar Clown Grin Three Quarters</div></a></div></section>
-<nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="santa-grin.html">&larr; Previous: Santa GrinsSet</a><a class="nav-pill sequence-pill" href="../works/re-012233--surf-girl-grin.html">Next: Surf Girl Grin &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
+<nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="santa-grin.html">&larr; Previous: Santa Grins</a><a class="nav-pill sequence-pill" href="../works/re-012233--surf-girl-grin.html">Next: Surf Girl Grin &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
 </div>
 </body>
 </html>

@@ -34,6 +34,15 @@ body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Se
 footer{text-align:center;margin:30px auto 0;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
 footer a{color:inherit}
 @media(max-width:480px){.wrap{width:calc(100% - 24px)}.section-card{padding:14px}.index-grid,.group-grid{gap:12px}.index-grid>.index-card,.group-grid>.group-card{flex:0 1 145px;max-width:145px;width:145px}.index-grid>.index-card>img,.group-grid>.group-card>img,.index-grid .index-image{height:140px}.index-grid .card-title,.index-grid .index-title,.group-grid .label,.group-grid .card-title{font-size:13px}}
+
+/* Owner-approved 200x200 square artwork cards: set/group pages, 2026-11-11. */
+.index-grid,.group-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:12px;margin-left:auto;margin-right:auto}
+.index-grid>.index-card,.group-grid>.group-card{box-sizing:border-box;display:flex;flex-direction:column;flex:0 0 200px;width:200px;max-width:200px;min-width:0;height:200px;max-height:200px;overflow:hidden}
+.index-grid>.index-card>img,.group-grid>.group-card>img{display:block;box-sizing:border-box;width:100%;height:auto;max-height:none;min-height:0;flex:1 1 auto;object-fit:contain;object-position:center}
+.index-grid>.index-card>.index-image{display:flex;box-sizing:border-box;width:100%;height:auto;max-height:none;min-height:0;flex:1 1 auto;align-items:center;justify-content:center;overflow:hidden}
+.index-grid>.index-card>.index-image>img{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;object-position:center}
+.index-grid>.index-card>.card-title,.index-grid>.index-card>.index-title,.group-grid>.group-card>.label,.group-grid>.group-card>.card-title{flex:0 0 auto;min-height:0;margin:0;padding:6px 6px 8px;font-size:13px;line-height:1.25;overflow-wrap:anywhere}
+@media(max-width:480px){.index-grid,.group-grid{gap:10px}.index-grid>.index-card,.group-grid>.group-card{flex:0 1 200px;width:min(200px,100%);max-width:200px;height:200px;max-height:200px}.index-grid>.index-card>img,.group-grid>.group-card>img,.index-grid>.index-card>.index-image{height:auto;max-height:none}.index-grid>.index-card>.card-title,.index-grid>.index-card>.index-title,.group-grid>.group-card>.label,.group-grid>.group-card>.card-title{font-size:13px}}
 </style>
 
 
@@ -45,7 +54,7 @@ footer a{color:inherit}
 </nav>
 <header class="page-header"><h1 class="page-title">Lemon Boy</h1></header>
 <section class="section-card"><div class="index-grid"><a class="index-card" href="../works/re-016223--lemon-boy-grin-front.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Lemon%20Boy%20grin%20COLOR.jpg" alt="Lemon Boy Grin Front" loading="lazy"><div class="card-title">Lemon Boy Grin Front</div></a><a class="index-card" href="../works/re-016723--lemon-boy-grin-head.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins/Lemon%20Boy%20Grin%20Walking%20face%20ORIGINAL.jpg" alt="Lemon Boy Grin Head" loading="lazy"><div class="card-title">Lemon Boy Grin Head</div></a><a class="index-card" href="../works/re-016722--lemon-boy-grin-side.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Lemon%20Boy%20Grin%20Walking%20COLOR.jpg" alt="Lemon Boy Grin Side" loading="lazy"><div class="card-title">Lemon Boy Grin Side</div></a><a class="index-card" href="../works/re-014641--lemon-boy-grin-side-and-back.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-3/main/sketches/Scan_20260620%20%2810%29.jpg?v=20260620b" alt="Lemon Boy Grin Side and Back" loading="lazy"><div class="card-title">Lemon Boy Grin Side and Back</div></a></div></section>
-<nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="jeremiah-grin.html">&larr; Previous: Jeremiah GrinSet</a><a class="nav-pill sequence-pill" href="../works/re-015162--lemon-dissect-grin.html">Next: Lemon Dissect Grin &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
+<nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="jeremiah-grin.html">&larr; Previous: Jeremiah Grin</a><a class="nav-pill sequence-pill" href="../works/re-015162--lemon-dissect-grin.html">Next: Lemon Dissect Grin &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
 </div>
 </body>
 </html>

@@ -139,6 +139,14 @@ nav.sequence-nav .sequence-spacer{
 /* Set index holder: 960px standard without changing index-card sizes. */
 main.wrap > section.section-card:not([data-role]){box-sizing:border-box!important;display:block!important;width:100%!important;max-width:960px!important;margin-left:auto!important;margin-right:auto!important;padding:22px!important;border:1px solid #e5e7eb!important;border-radius:18px!important;background:#fff!important;box-shadow:0 8px 26px rgba(0,0,0,.06)!important;}
 @media(max-width:600px){main.wrap > section.section-card:not([data-role]){padding:14px!important;}}
+
+/* Specific repaired set-page cards; supersedes legacy four-across !important cascade. */
+main.wrap > section.section-card:not([data-role]){box-sizing:border-box!important;width:100%!important;max-width:560px!important;margin-left:auto!important;margin-right:auto!important}
+main.wrap > section.section-card .index-grid,main.wrap > section.section-card .gallery-grid{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;gap:16px!important}
+main.wrap > section.section-card .index-grid>.index-card,main.wrap > section.section-card .gallery-grid>.gallery-item{box-sizing:border-box!important;display:flex!important;flex-direction:column!important;flex:0 1 200px!important;width:200px!important;max-width:200px!important;min-width:0!important;height:auto!important;aspect-ratio:1/1!important;overflow:hidden!important}
+main.wrap > section.section-card .index-grid>.index-card img,main.wrap > section.section-card .gallery-grid>.gallery-item img{box-sizing:border-box!important;display:block!important;flex:1 1 0!important;min-height:0!important;height:0!important;max-height:none!important;width:100%!important;object-fit:contain!important}
+main.wrap > section.section-card .index-grid>.index-card>.card-title,main.wrap > section.section-card .gallery-grid>.gallery-item>.card-title{flex:0 0 auto!important}
+@media(max-width:480px){main.wrap > section.section-card .index-grid>.index-card,main.wrap > section.section-card .gallery-grid>.gallery-item{flex-basis:min(200px,100%)!important;width:min(200px,100%)!important;max-width:100%!important}}
 </style>
 <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
 </head>
