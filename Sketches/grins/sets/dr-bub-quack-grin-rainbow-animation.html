@@ -1,10 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
 
-<title>Dr Bub Quack Rainbow Animation | Ron English Catalogue Raisonn&eacute;</title>
+<html lang="en">
+<head><base href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/sets/"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Dr Bub Quack Rainbow Animation | Ron English Catalogue Raisonné</title>
 <style>
 *{box-sizing:border-box}
 :root{--border:#e5e7eb;--muted:#6b7280;--panel:#f3f4f6;--shadow:0 8px 26px rgba(0,0,0,.06)}
@@ -173,7 +173,6 @@ section[data-role="videos"] .ron-video-tile > p,
 section[data-role="videos"] .ron-video-entry > p { margin:0!important; padding:12px!important; text-align:center!important; background:#fff!important; }
 @media(max-width:620px) {section[data-role="videos"]{padding:14px!important;}section[data-role="videos"] .ancillary-video-card,section[data-role="videos"] .ron-video-tile,section[data-role="videos"] .ron-video-entry{max-width:100%!important;}}
 </style>
-
 <style id="ron-sketches-wrapped-video-card-surface-v3">
 /* Only video tiles, NEVER the large white Videos panel. */
 section[data-role="videos"] .ron-video-grid > .ron-video-entry,
@@ -446,7 +445,7 @@ section.section-card > .index-grid > .index-card,
 section.section-card:not([data-role]) > .gallery-grid > .gallery-item {flex:0 1 200px!important;max-width:min(200px,100%)!important;width:min(200px,100%)!important;}
 }
 </style>
-<link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
+<link href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png" rel="icon" type="image/png"/>
 <style id="ron-dr-bub-four-across-compact-video-v1">
 /* Seven artwork cards: four maximum per row, centered final row. */
 section.section-card > .index-grid {box-sizing:border-box!important;display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:16px!important;max-width:848px!important;margin-left:auto!important;margin-right:auto!important;}
@@ -456,14 +455,97 @@ section.section-card > .index-grid > .index-card {box-sizing:border-box!importan
 section.section-card[data-role="videos"] .ron-yt-clean-grid > .ron-yt-clean-tile {flex:0 1 200px!important;width:min(200px,100%)!important;max-width:200px!important;}
 section.section-card[data-role="videos"] .ron-yt-clean-tile > a.ron-video-poster {height:150px!important;min-height:150px!important;max-height:150px!important;}
 </style>
-</head>
+<style>
+/* V5: actual DOM is div.wrap on most pages, not main.wrap. Exact reference panel geometry. */
+html body .wrap > section.section-card,
+html body main.wrap > section.section-card,
+html body .wrap > section.section-card[data-role],
+html body .wrap > section.section-card.ron-standard-index-panel,
+html body .wrap > section.section-card.artwork-index-panel {
+ box-sizing:border-box!important;display:block!important;
+ width:100%!important;max-width:560px!important;
+ margin:0 auto 24px!important;padding:22px!important;
+ border:1px solid #e5e7eb!important;border-radius:18px!important;
+ background:#fff!important;box-shadow:0 8px 26px #0000000f!important;
+}
+html body .wrap > section.section-card h2,
+html body .wrap > section.section-card h3,
+html body .wrap > section.section-card .section-title,
+html body .wrap > section.section-card > header {
+ text-align:center!important;
+}
+html body .wrap .index-grid,
+html body .wrap .group-grid,
+html body .wrap .gallery-grid,
+html body .wrap .ron-yt-clean-grid {
+ display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
+ align-items:stretch!important;gap:16px!important;margin-left:auto!important;margin-right:auto!important;
+}
+html body .wrap .index-grid > .index-card,
+html body .wrap .group-grid > .group-card,
+html body .wrap .gallery-grid > .gallery-item,
+html body .wrap .ron-yt-clean-grid > .ron-yt-clean-tile {
+ box-sizing:border-box!important;flex:0 0 200px!important;
+ width:200px!important;min-width:0!important;max-width:200px!important;
+ height:200px!important;min-height:200px!important;max-height:200px!important;
+ margin:0!important;overflow:hidden!important;
+}
+html body .wrap .index-grid > .index-card,
+html body .wrap .group-grid > .group-card {
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;
+ border:1px solid #e5e7eb!important;border-radius:12px!important;
+ background:white!important;text-align:center!important;
+}
+html body .wrap .index-grid > .index-card > img,
+html body .wrap .group-grid > .group-card > img,
+html body .wrap .index-grid > .index-card > .index-image {
+ box-sizing:border-box!important;display:block!important;flex:1 1 auto!important;
+ width:100%!important;height:auto!important;min-height:0!important;
+ max-height:none!important;object-fit:contain!important;
+}
+html body .wrap .index-grid > .index-card > .card-title,
+html body .wrap .index-grid > .index-card > .index-title,
+html body .wrap .group-grid > .group-card > .card-title {
+ flex:0 0 auto!important;text-align:center!important;
+}
+html body .wrap .ron-yt-clean-grid > .ron-yt-clean-tile {
+ display:flex!important;flex-direction:column!important;
+ border:1px solid #e5e7eb!important;border-radius:12px!important;
+ background:white!important;
+}
+html body .wrap .ron-yt-clean-tile > a.ron-video-poster {
+ box-sizing:border-box!important;display:flex!important;flex:1 1 auto!important;
+ width:100%!important;height:auto!important;min-height:0!important;
+ max-height:none!important;overflow:hidden!important;
+}
+html body .wrap .ron-yt-clean-tile > a.ron-video-poster img {
+ max-width:100%!important;max-height:100%!important;object-fit:contain!important;
+}
+html body .wrap .sequence-nav,
+html body .wrap .nav-pills {
+ display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
+ align-items:center!important;gap:10px!important;text-align:center!important;
+ margin:24px auto!important;
+}
+@media(max-width:480px){html body .wrap > section.section-card{padding:14px!important}}
+</style><style>
+/* V6 targeted fix: override the more-specific legacy :not([data-role]) 960px rule.
+   Main artwork panel only; video panel and all other approved page styles untouched. */
+html body .wrap > section.section-card:not([data-role]) {
+ box-sizing:border-box!important;
+ width:100%!important;
+ max-width:560px!important;
+ margin-left:auto!important;
+ margin-right:auto!important;
+}
+</style></head>
 <body>
 <div class="wrap">
-<nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../categories/animals/index.html#birds">&larr; Birds</a>  <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
+<nav aria-label="Site navigation" class="nav-pills"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../categories/animals/index.html#birds">← Birds</a> <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
 </nav>
 <header class="page-header"><h1 class="page-title">Dr Bub Quack Rainbow Animation</h1></header>
-<section class="section-card"><div class="index-grid"><a class="index-card" href="../works/re-016199--dr-bub-quack-grin-rainbow-animation-2.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dr%20Bub%20Quack%20Grin%20COLOR.jpg" alt="Dr Bub Quack Grin Rainbow Animation 1" loading="lazy"><div class="card-title">Dr Bub Quack Grin Rainbow Animation 1</div></a><a class="index-card" href="../works/re-013484--dr-bub-quack-grin-rainbow-animation-1.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%206.jpg" alt="Dr Bub Quack Grin Rainbow Animation 2" loading="lazy"><div class="card-title">Dr Bub Quack Grin Rainbow Animation 2</div></a><a class="index-card" href="../works/re-016701--dr-bub-quack-grin-rainbow-animation-3.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%207.jpg" alt="Dr Bub Quack Grin Rainbow Animation 3" loading="lazy"><div class="card-title">Dr Bub Quack Grin Rainbow Animation 3</div></a><a class="index-card" href="../works/re-016702--dr-bub-quack-grin-rainbow-animation-4.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%209.jpg" alt="Dr Bub Quack Grin Rainbow Animation 4" loading="lazy"><div class="card-title">Dr Bub Quack Grin Rainbow Animation 4</div></a><a class="index-card" href="../works/re-016703--dr-bub-quack-grin-rainbow-animation-5.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%201.jpg" alt="Dr Bub Quack Grin Rainbow Animation 5" loading="lazy"><div class="card-title">Dr Bub Quack Grin Rainbow Animation 5</div></a><a class="index-card" href="../works/re-016704--dr-bub-quack-grin-rainbow-animation-6.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%202.jpg" alt="Dr Bub Quack Grin Rainbow Animation 6" loading="lazy"><div class="card-title">Dr Bub Quack Grin Rainbow Animation 6</div></a><a class="index-card" href="../works/re-016705--dr-bub-quack-grin-rainbow-animation-7.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%208.jpg" alt="Dr Bub Quack Grin Rainbow Animation 7" loading="lazy"><div class="card-title">Dr Bub Quack Grin Rainbow Animation 7</div></a></div></section>
-<section class="section-card" data-role="videos"><h2>Videos</h2><div class="ron-yt-clean-grid"><figure class="ron-yt-clean-tile"><a class="ron-video-poster" data-ron-video-poster="v1" data-video-embed-url="https://www.youtube.com/embed/Lrgo_upsL-c" href="https://www.youtube.com/watch?v=Lrgo_upsL-c" target="_blank" rel="noopener noreferrer" aria-label="Watch Ancillary video on YouTube" style="position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:180px;overflow:hidden;background:#e9ecef;border-radius:10px;"><img src="https://i.ytimg.com/vi/Lrgo_upsL-c/hqdefault.jpg" alt="Video preview: Ancillary video" loading="lazy" onerror="this.onerror=null;this.src=&quot;https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dr%20Bub%20Quack%20Grin%20COLOR.jpg&quot;;" style="display:block;width:100%;height:100%;object-fit:contain;max-width:100%;" /><span aria-hidden="true" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.82);color:white;border-radius:14px;padding:12px 20px;font-size:28px;line-height:1;">&#9654;</span></a><figcaption><a href="https://www.youtube.com/watch?v=Lrgo_upsL-c" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></figcaption></figure></div></section><nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill" href="../works/re-016182--teddy-bear-grin-version-2.html">&#8592; Previous: Teddy Bear Grin</a><a class="nav-pill" href="../works/re-016743--duck-grin.html">Next: Duck Grin &#8594;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
+<section class="section-card"><div class="index-grid"><a class="index-card" href="../works/re-016199--dr-bub-quack-grin-rainbow-animation-2.html"><img alt="Dr Bub Quack Grin Rainbow Animation 1" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dr%20Bub%20Quack%20Grin%20COLOR.jpg"/><div class="card-title">Dr Bub Quack Grin Rainbow Animation 1</div></a><a class="index-card" href="../works/re-013484--dr-bub-quack-grin-rainbow-animation-1.html"><img alt="Dr Bub Quack Grin Rainbow Animation 2" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%206.jpg"/><div class="card-title">Dr Bub Quack Grin Rainbow Animation 2</div></a><a class="index-card" href="../works/re-016701--dr-bub-quack-grin-rainbow-animation-3.html"><img alt="Dr Bub Quack Grin Rainbow Animation 3" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%207.jpg"/><div class="card-title">Dr Bub Quack Grin Rainbow Animation 3</div></a><a class="index-card" href="../works/re-016702--dr-bub-quack-grin-rainbow-animation-4.html"><img alt="Dr Bub Quack Grin Rainbow Animation 4" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%209.jpg"/><div class="card-title">Dr Bub Quack Grin Rainbow Animation 4</div></a><a class="index-card" href="../works/re-016703--dr-bub-quack-grin-rainbow-animation-5.html"><img alt="Dr Bub Quack Grin Rainbow Animation 5" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%201.jpg"/><div class="card-title">Dr Bub Quack Grin Rainbow Animation 5</div></a><a class="index-card" href="../works/re-016704--dr-bub-quack-grin-rainbow-animation-6.html"><img alt="Dr Bub Quack Grin Rainbow Animation 6" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%202.jpg"/><div class="card-title">Dr Bub Quack Grin Rainbow Animation 6</div></a><a class="index-card" href="../works/re-016705--dr-bub-quack-grin-rainbow-animation-7.html"><img alt="Dr Bub Quack Grin Rainbow Animation 7" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins2/quack%20animation%20frame%208.jpg"/><div class="card-title">Dr Bub Quack Grin Rainbow Animation 7</div></a></div></section>
+<section class="section-card" data-role="videos"><h2>Videos</h2><div class="ron-yt-clean-grid"><figure class="ron-yt-clean-tile"><a aria-label="Watch Ancillary video on YouTube" class="ron-video-poster" data-ron-video-poster="v1" data-video-embed-url="https://www.youtube.com/embed/Lrgo_upsL-c" href="https://www.youtube.com/watch?v=Lrgo_upsL-c" rel="noopener noreferrer" style="position:relative;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:180px;overflow:hidden;background:#e9ecef;border-radius:10px;" target="_blank"><img alt="Video preview: Ancillary video" loading="lazy" onerror='this.onerror=null;this.src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dr%20Bub%20Quack%20Grin%20COLOR.jpg";' src="https://i.ytimg.com/vi/Lrgo_upsL-c/hqdefault.jpg" style="display:block;width:100%;height:100%;object-fit:contain;max-width:100%;"/><span aria-hidden="true" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.82);color:white;border-radius:14px;padding:12px 20px;font-size:28px;line-height:1;">▶</span></a><figcaption><a href="https://www.youtube.com/watch?v=Lrgo_upsL-c" rel="noopener noreferrer" target="_blank">Watch on YouTube</a></figcaption></figure></div></section><nav aria-label="Catalogue sequence" class="sequence-nav ron-bottom-prev-next-center"><a class="nav-pill" href="../works/re-016182--teddy-bear-grin-version-2.html">← Previous: Teddy Bear Grin</a><a class="nav-pill" href="../works/re-016743--duck-grin.html">Next: Duck Grin →</a></nav><footer>Published via GitHub Pages<br/>for long-term public access.</footer>
 </div>
 </body>
 </html>
