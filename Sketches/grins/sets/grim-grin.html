@@ -86,6 +86,22 @@ html body .wrap .group-grid > .group-card {
  border:1px solid #e5e7eb!important;border-radius:12px!important;
  background:white!important;text-align:center!important;
 }
+/* Grim Reapers: inner artwork links must fill fixed square cards. */
+html body .wrap .index-grid > .index-card > a {
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;
+ box-sizing:border-box!important;width:100%!important;height:100%!important;
+ min-height:0!important;min-width:0!important;text-decoration:none!important;color:inherit!important;
+}
+html body .wrap .index-grid > .index-card > a > img {
+ display:block!important;box-sizing:border-box!important;width:100%!important;
+ height:0!important;min-height:0!important;flex:1 1 0%!important;
+ object-fit:contain!important;object-position:center!important;
+}
+html body .wrap .index-grid > .index-card > a > .card-title {
+ display:block!important;box-sizing:border-box!important;flex:0 0 auto!important;
+ margin:0!important;padding:6px 6px 8px!important;
+ font:500 14px/1.35 Georgia,"Times New Roman",serif!important;text-align:center!important;
+}
 html body .wrap .index-grid > .index-card > img,
 html body .wrap .group-grid > .group-card > img,
 html body .wrap .index-grid > .index-card > .index-image {
