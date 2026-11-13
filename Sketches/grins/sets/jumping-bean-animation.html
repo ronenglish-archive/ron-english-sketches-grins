@@ -1,501 +1,69 @@
-!doctype html&gt;
+<!DOCTYPE html>
 <html lang="en">
 <head><base href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/sets/"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Jumping Bean Animation | Ron English Catalogue Raisonné</title>
-<style>
-*{box-sizing:border-box}
-:root{--border:#e5e7eb;--muted:#6b7280;--panel:#f3f4f6;--shadow:0 8px 26px rgba(0,0,0,.06)}
-body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
-.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px 0;text-align:center}
-.nav-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px}
-.page-header{text-align:center;margin:0 auto 24px}.page-title{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.05;font-family:Georgia,"Times New Roman",serif;font-weight:500}
-.section-card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:0 0 24px}
-.section-card h2{text-align:center;margin:0 0 16px;font-size:1.4rem}
-.index-grid,.gallery-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px}
-.index-card,.gallery-item{display:block;flex:0 1 280px;max-width:300px;width:100%;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
-.index-card img,.gallery-item img{display:block;width:100%;height:300px;object-fit:contain;background:var(--panel);padding:8px}.index-card img{height:280px}
-.card-title{padding:13px 14px 14px;text-align:center;font-weight:500;line-height:1.35;font-family:Georgia,'Times New Roman',serif}.card-subtitle{display:block;margin-top:4px;color:var(--muted);font-size:13px;font-weight:400}
-.catalogue-meta-block,.relationship-note,.notes-block,.text-block{max-width:900px;margin-left:auto;margin-right:auto;text-align:center}.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7;text-align:center}.work-meta li{display:block;margin:2px auto}
-.original-grid .gallery-item{flex:0 1 900px;max-width:900px}.original-grid .gallery-item img{height:460px}
-footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
-</style>
-<style id="ron-bottom-prev-next-center-v1">
-/* Ron catalogue: center bottom Previous / Next navigation as a group. */
-nav.ron-bottom-prev-next-center{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:center!important;
-  gap:12px!important;
-  text-align:center!important;
-}
-nav.ron-bottom-prev-next-center .sequence-spacer{
-  display:none!important;
-}
-nav.ron-bottom-prev-next-center > a{
-  flex:0 1 auto!important;
-}
-</style><style id="ron-grins-sequence-pill-standard-v1">
-nav.sequence-nav{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:center!important;
-  gap:12px!important;
-  margin:28px 0 18px!important;
-  text-align:center!important;
-}
-nav.sequence-nav > a{
-  display:inline-block!important;
-  flex:0 1 auto!important;
-  padding:8px 14px!important;
-  border:1px solid #e5e7eb!important;
-  border-radius:999px!important;
-  background:#fff!important;
-  color:#111!important;
-  text-decoration:none!important;
-  font-size:14px!important;
-  line-height:1.4!important;
-}
-nav.sequence-nav > a:hover{
-  background:#f9fafb!important;
-}
-nav.sequence-nav .sequence-spacer{
-  display:none!important;
-}
-</style>
-<style id="ron-catalogue-four-across-standard-v1">
-.index-grid,
-.gallery-grid,
-.category-grid,
-.subcategories-grid,
-.cards-grid{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:stretch!important;
-  gap:18px!important;
-}
-.index-grid > .index-card,
-.index-grid > .gallery-item,
-.index-grid > .group-card,
-.gallery-grid > .index-card,
-.gallery-grid > .gallery-item,
-.gallery-grid > .group-card,
-.category-grid > .index-card,
-.category-grid > .gallery-item,
-.category-grid > .group-card,
-.subcategories-grid > .index-card,
-.subcategories-grid > .gallery-item,
-.subcategories-grid > .group-card,
-.cards-grid > .index-card,
-.cards-grid > .gallery-item,
-.cards-grid > .group-card{
-  box-sizing:border-box!important;
-  min-width:0!important;
-  flex:0 1 calc((100% - 54px) / 4)!important;
-  width:calc((100% - 54px) / 4)!important;
-  max-width:calc((100% - 54px) / 4)!important;
-}
-@media(max-width:900px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:calc((100% - 36px) / 3)!important;
-    width:calc((100% - 36px) / 3)!important;
-    max-width:calc((100% - 36px) / 3)!important;
-  }
-}
-@media(max-width:680px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:calc((100% - 18px) / 2)!important;
-    width:calc((100% - 18px) / 2)!important;
-    max-width:calc((100% - 18px) / 2)!important;
-  }
-}
-@media(max-width:440px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:100%!important;
-    width:100%!important;
-    max-width:100%!important;
-  }
-}
-</style>
-<style id="ron-ancillary-media-v1">
-.ron-ancillary-media{background:#fff;border:1px solid #e5e7eb;border-radius:18px;box-shadow:0 8px 26px rgba(0,0,0,.06);padding:22px;margin:0 0 24px;text-align:center}
-.ron-ancillary-media h2{margin:0 0 16px;font-size:1.4rem;text-align:center}
-.ron-ancillary-media .ron-media-wrap{max-width:900px;margin:0 auto}
-.ron-ancillary-media a{display:block;text-decoration:none}
-.ron-ancillary-media img,.ron-ancillary-media video{display:block;width:100%;max-width:900px;max-height:600px;object-fit:contain;margin:0 auto;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:16px}
-.ron-ancillary-media .ron-media-note{max-width:900px;margin:14px auto 0;line-height:1.65;text-align:center}
-</style><style id="ron-owner-ancillary-batch6">
-section[data-role="ancillary-documentation"],section[data-role="videos"],section[data-role="digital"] {max-width:960px!important;width:100%!important;box-sizing:border-box!important;margin-left:auto!important;margin-right:auto!important}
-section[data-role="ancillary-documentation"] .ron-approved-ancillary-grid {display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;gap:18px!important;margin:0 auto!important;max-width:940px!important}
-section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile {box-sizing:border-box!important;flex:0 1 290px!important;max-width:300px!important;width:100%!important;margin:0!important;text-align:center!important}
-section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile>a {display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:300px!important;max-width:100%!important;border:1px solid #e5e7eb!important;border-radius:14px!important;overflow:hidden!important}
-section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile>a>img {display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;padding:8px!important}
-section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile figcaption {display:block!important;margin:10px auto 0!important;line-height:1.5!important;text-align:center!important}
-section[data-role="ancillary-documentation"] .ron-approved-ancillary-tile figcaption a {display:inline!important;width:auto!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;text-decoration:underline!important}
-section[data-role="videos"] .catalogue-video-grid {display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:18px!important}
-section[data-role="videos"] .catalogue-video-grid>.video-embed {flex:0 1 300px!important;width:100%!important;max-width:320px!important;margin:0!important}
-section[data-role="videos"] iframe {display:block!important;max-width:100%!important}
-section[data-role="videos"] video {display:block!important;width:100%!important;max-width:320px!important;height:auto!important;margin:0 auto!important}
-</style>
-<style id="ron-sketches-videos-unified-v1">
-/* V11 video holders: 960px white panel, compact 300px tiles, grey letterbox. */
-section[data-role="videos"] { box-sizing:border-box!important; width:100%!important; max-width:960px!important; margin:0 auto 24px!important; padding:22px!important; background:#fff!important; border:1px solid #e5e7eb!important; border-radius:18px!important; box-shadow:0 8px 26px rgba(0,0,0,.06)!important; }
-section[data-role="videos"] > h2 { text-align:center!important; margin:0 0 16px!important; }
-section[data-role="videos"] .catalogue-video-grid,
-section[data-role="videos"] .ron-video-grid { display:flex!important; flex-wrap:wrap!important; align-items:stretch!important; justify-content:center!important; gap:18px!important; width:100%!important; max-width:100%!important; margin:0 auto!important; }
-section[data-role="videos"] .ancillary-video-card,
-section[data-role="videos"] .ron-video-tile,
-section[data-role="videos"] .ron-video-entry { box-sizing:border-box!important; flex:0 1 300px!important; width:min(300px,100%)!important; min-width:0!important; max-width:300px!important; margin:0!important; padding:0!important; text-align:center!important; background:#fff!important; border:1px solid #e5e7eb!important; border-radius:16px!important; overflow:hidden!important; box-shadow:0 8px 26px rgba(0,0,0,.06)!important; }
-/* All media have the same compact square grey field, independently of player aspect. */
-section[data-role="videos"] .ancillary-video-card > div:first-child,
-section[data-role="videos"] .ron-video-tile > .video-embed,
-section[data-role="videos"] .ron-video-entry > .video-embed,
-section[data-role="videos"] .ron-video-entry > div:first-child,
-section[data-role="videos"] .ron-video-tile > div:first-child { box-sizing:border-box!important; position:relative!important; inset:auto!important; display:flex!important; align-items:center!important; justify-content:center!important; width:100%!important; max-width:100%!important; height:300px!important; min-height:300px!important; max-height:300px!important; padding:8px!important; margin:0!important; overflow:hidden!important; background:#f3f4f6!important; }
-section[data-role="videos"] iframe { box-sizing:border-box!important; display:block!important; position:relative!important; inset:auto!important; flex:none!important; width:100%!important; max-width:100%!important; height:auto!important; max-height:284px!important; aspect-ratio:16/9!important; border:0!important; margin:0 auto!important; }
-/* 9:16 portrait iframe: fit it inside the SAME grey square without stretching. */
-section[data-role="videos"] iframe[style*="9/16"],
-section[data-role="videos"] iframe[style*="9 / 16"] { aspect-ratio:9/16!important; height:284px!important; width:159.75px!important; max-width:100%!important; }
-section[data-role="videos"] video { box-sizing:border-box!important; position:relative!important; inset:auto!important; display:block!important; width:100%!important; height:284px!important; max-height:284px!important; object-fit:contain!important; background:#f3f4f6!important; }
-section[data-role="videos"] .ancillary-video-card > p,
-section[data-role="videos"] .ron-video-tile > p,
-section[data-role="videos"] .ron-video-entry > p { margin:0!important; padding:12px!important; text-align:center!important; background:#fff!important; }
-@media(max-width:620px) {section[data-role="videos"]{padding:14px!important;}section[data-role="videos"] .ancillary-video-card,section[data-role="videos"] .ron-video-tile,section[data-role="videos"] .ron-video-entry{max-width:100%!important;}}
-</style>
-<style id="ron-sketches-wrapped-video-card-surface-v3">
-/* Only video tiles, NEVER the large white Videos panel. */
-section[data-role="videos"] .ron-video-grid > .ron-video-entry,
-section[data-role="videos"] .catalogue-video-grid > .ron-video-entry,
-section[data-role="videos"] .ron-video-grid > .ron-video-tile,
-section[data-role="videos"] .catalogue-video-grid > .ron-video-tile,
-section[data-role="videos"] .ron-video-grid > .ancillary-video-card,
-section[data-role="videos"] .catalogue-video-grid > .ancillary-video-card {
-  box-sizing:border-box!important;
-  flex:0 1 300px!important;
-  width:300px!important;
-  min-width:0!important;
-  max-width:100%!important;
-  margin:0!important;
-  text-align:center!important;
-  border:1px solid #e5e7eb!important;
-  border-radius:16px!important;
-  overflow:hidden!important;
-  box-shadow:0 8px 26px rgba(0,0,0,.06)!important;
-}
-/* Inner letterbox surface where a wrapper already contains a media div. */
-section[data-role="videos"] .ron-video-entry > div:first-child,
-section[data-role="videos"] .ron-video-tile > div:first-child,
-section[data-role="videos"] .ancillary-video-card > div:first-child {
-  box-sizing:border-box!important;
-  position:relative!important;
-  inset:auto!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  width:100%!important;
-  max-width:100%!important;
-  height:300px!important;
-  min-height:300px!important;
-  max-height:300px!important;
-  padding:8px!important;
-  margin:0!important;
-  overflow:hidden!important;
-  background:#f3f4f6!important;
-}
-/* Direct HTML5 players have no intervening div: add their gray square HERE. */
-section[data-role="videos"] .ron-video-entry > video,
-section[data-role="videos"] .ron-video-tile > video,
-section[data-role="videos"] .ancillary-video-card > video {
-  box-sizing:border-box!important;
-  display:block!important;
-  position:relative!important;
-  inset:auto!important;
-  width:100%!important;
-  max-width:100%!important;
-  height:300px!important;
-  min-height:300px!important;
-  max-height:300px!important;
-  padding:8px!important;
-  margin:0!important;
-  object-fit:contain!important;
-  background:#f3f4f6!important;
-}
-/* For direct iframes, provide the same background, corner clipping, and padding. */
-section[data-role="videos"] .ron-video-entry > iframe,
-section[data-role="videos"] .ron-video-tile > iframe,
-section[data-role="videos"] .ancillary-video-card > iframe {
-  box-sizing:border-box!important;
-  display:block!important;
-  position:relative!important;
-  inset:auto!important;
-  max-width:100%!important;
-  max-height:300px!important;
-  padding:8px!important;
-  margin:0 auto!important;
-  background:#f3f4f6!important;
-}
-section[data-role="videos"] .ron-video-entry > p,
-section[data-role="videos"] .ron-video-tile > p,
-section[data-role="videos"] .ancillary-video-card > p {
-  margin:0!important;
-  padding:12px!important;
-  background:#fff!important;
-  text-align:center!important;
-}
-</style>
-<style id="ron-sketches-video-unified-20261020-v1">
-/* Unified video presentation: centered full-width section, centered compact cards. */
-section.section-card[data-role="videos"] {box-sizing:border-box!important;width:100%!important;max-width:960px!important;margin-left:auto!important;margin-right:auto!important;padding:22px!important;}
-section.section-card[data-role="videos"] > h2 {text-align:center!important;}
-section.section-card[data-role="videos"] .catalogue-video-grid,
-section.section-card[data-role="videos"] .ron-video-grid {box-sizing:border-box!important;display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;gap:18px!important;width:100%!important;max-width:100%!important;margin:0 auto!important;}
-section.section-card[data-role="videos"] .catalogue-video-grid > .ancillary-video-card,
-section.section-card[data-role="videos"] .catalogue-video-grid > .video-embed,
-section.section-card[data-role="videos"] .catalogue-video-grid > .ron-video-entry,
-section.section-card[data-role="videos"] .ron-video-grid > .ancillary-video-card,
-section.section-card[data-role="videos"] .ron-video-grid > .video-embed,
-section.section-card[data-role="videos"] .ron-video-grid > .ron-video-entry {box-sizing:border-box!important;flex:0 1 300px!important;width:min(300px,100%)!important;min-width:0!important;max-width:300px!important;height:auto!important;min-height:0!important;max-height:none!important;margin:0!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;align-items:center!important;padding:10px!important;text-align:center!important;background:#f3f4f6!important;border:1px solid #e5e7eb!important;border-radius:14px!important;overflow:hidden!important;}
-section.section-card[data-role="videos"] .video-embed,
-section.section-card[data-role="videos"] .ancillary-video-card > div:first-child,
-section.section-card[data-role="videos"] .ron-video-entry > .video-embed {box-sizing:border-box!important;width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;padding:0!important;margin:0!important;position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;background:transparent!important;}
-section.section-card[data-role="videos"] a.ron-video-poster {box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;position:relative!important;inset:auto!important;width:100%!important;max-width:100%!important;height:220px!important;min-height:0!important;max-height:220px!important;aspect-ratio:auto!important;padding:0!important;margin:0 auto!important;background:#e9ecef!important;border-radius:10px!important;overflow:hidden!important;}
-section.section-card[data-role="videos"] a.ron-video-poster img {display:block!important;max-width:100%!important;width:100%!important;height:100%!important;max-height:100%!important;object-fit:contain!important;}
-section.section-card[data-role="videos"] .ron-video-watch-label {display:block!important;position:static!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;margin:8px auto 0!important;padding:0!important;text-align:center!important;font-size:14px!important;line-height:1.4!important;height:auto!important;}
-section.section-card[data-role="videos"] .ron-video-watch-label a {text-decoration:underline!important;}
-section.section-card[data-role="videos"] .ron-video-entry > p,
-section.section-card[data-role="videos"] .ancillary-video-card > p {margin:8px auto 0!important;padding:0!important;text-align:center!important;}
-@media(max-width:620px){section.section-card[data-role="videos"]{padding:14px!important;}section.section-card[data-role="videos"] .catalogue-video-grid > *,section.section-card[data-role="videos"] .ron-video-grid > *{max-width:100%!important;}}
-</style>
-<style id="ron-video-watch-caption-only-20261020-v1">
-/* Owner requested Watch on YouTube as the only caption underneath each thumbnail. */
-section.section-card[data-role="videos"] .catalogue-video-grid,
-section.section-card[data-role="videos"] .ron-video-grid {
-  align-items:stretch!important;justify-content:center!important;
-}
-section.section-card[data-role="videos"] .ron-video-watch-label,
-section.section-card[data-role="videos"] .ron-video-caption,
-section.section-card[data-role="videos"] .ancillary-video-card > p,
-section.section-card[data-role="videos"] .ron-video-entry > p,
-section.section-card[data-role="videos"] .video-embed > p,
-section.section-card[data-role="videos"] .ron-video-youtube-v2 > p {
-  display:block!important;position:static!important;
-  margin:10px auto 2px!important;padding:0!important;
-  width:100%!important;max-width:100%!important;
-  height:auto!important;min-height:0!important;
-  text-align:center!important;font-size:14px!important;line-height:1.45!important;
-  background:transparent!important;border:0!important;box-shadow:none!important;
-}
-section.section-card[data-role="videos"] .ron-video-watch-label a,
-section.section-card[data-role="videos"] .ron-video-caption a,
-section.section-card[data-role="videos"] .ancillary-video-card > p a,
-section.section-card[data-role="videos"] .ron-video-entry > p a,
-section.section-card[data-role="videos"] .video-embed > p a,
-section.section-card[data-role="videos"] .ron-video-youtube-v2 > p a {
-  display:inline!important;position:static!important;
-  width:auto!important;height:auto!important;margin:0!important;
-  padding:0!important;background:transparent!important;
-  border:none!important;border-radius:0!important;
-  box-shadow:none!important;transform:none!important;
-  font:inherit!important;color:inherit!important;
-  text-decoration:underline!important;
-}
-section.section-card[data-role="videos"] .ron-video-youtube-v2 {
-  display:flex!important;flex-direction:column!important;align-items:center!important;
-  width:100%!important;max-width:100%!important;
-}
-</style>
-<style id="ron-yt-figcaption-rebuild-20261020-v2">
-/* Individual video cards with exactly one linked figcaption. This is real rebuilt HTML. */
-section.section-card[data-role="videos"] .ron-yt-clean-grid {
- display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
- align-items:stretch!important;gap:18px!important;width:100%!important;
- max-width:100%!important;margin:0 auto!important;padding:0!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile {
- box-sizing:border-box!important;display:flex!important;flex-direction:column!important;
- align-items:center!important;justify-content:flex-start!important;
- flex:0 1 300px!important;width:min(300px,100%)!important;max-width:300px!important;
- min-width:0!important;height:auto!important;min-height:0!important;
- margin:0!important;padding:10px!important;text-align:center!important;
- background:#f3f4f6!important;border:1px solid #e5e7eb!important;
- border-radius:14px!important;overflow:hidden!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile > a.ron-video-poster {
- box-sizing:border-box!important;display:flex!important;position:relative!important;
- align-items:center!important;justify-content:center!important;
- inset:auto!important;width:100%!important;max-width:100%!important;
- height:220px!important;min-height:220px!important;max-height:220px!important;
- margin:0 auto!important;padding:0!important;overflow:hidden!important;
- border-radius:10px!important;background:#e9ecef!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile > a.ron-video-poster img {
- display:block!important;width:100%!important;max-width:100%!important;
- height:100%!important;max-height:100%!important;object-fit:contain!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile > figcaption {
- display:block!important;position:static!important;box-sizing:border-box!important;
- width:100%!important;height:auto!important;max-width:100%!important;
- min-height:0!important;margin:10px 0 0!important;padding:0!important;
- text-align:center!important;font:normal 14px/1.45 system-ui,sans-serif!important;
- background:transparent!important;border:none!important;box-shadow:none!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile > figcaption > a {
- display:inline!important;position:static!important;float:none!important;
- color:inherit!important;background:transparent!important;
- font:inherit!important;text-decoration:underline!important;
- border:none!important;box-shadow:none!important;padding:0!important;margin:0!important;
-}
-@media(max-width:620px){section.section-card[data-role="videos"] .ron-yt-clean-tile{max-width:100%!important;}}
-</style>
-<style id="ron-yt-figcaption-rebuild-20261020-v1">
-/* Individual video cards with exactly one linked figcaption. This is real rebuilt HTML. */
-section.section-card[data-role="videos"] .ron-yt-clean-grid {
- display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
- align-items:stretch!important;gap:18px!important;width:100%!important;
- max-width:100%!important;margin:0 auto!important;padding:0!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile {
- box-sizing:border-box!important;display:flex!important;flex-direction:column!important;
- align-items:center!important;justify-content:flex-start!important;
- flex:0 1 300px!important;width:min(300px,100%)!important;max-width:300px!important;
- min-width:0!important;height:auto!important;min-height:0!important;
- margin:0!important;padding:10px!important;text-align:center!important;
- background:#f3f4f6!important;border:1px solid #e5e7eb!important;
- border-radius:14px!important;overflow:hidden!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile > a.ron-video-poster {
- box-sizing:border-box!important;display:flex!important;position:relative!important;
- align-items:center!important;justify-content:center!important;
- inset:auto!important;width:100%!important;max-width:100%!important;
- height:220px!important;min-height:220px!important;max-height:220px!important;
- margin:0 auto!important;padding:0!important;overflow:hidden!important;
- border-radius:10px!important;background:#e9ecef!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile > a.ron-video-poster img {
- display:block!important;width:100%!important;max-width:100%!important;
- height:100%!important;max-height:100%!important;object-fit:contain!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile > figcaption {
- display:block!important;position:static!important;box-sizing:border-box!important;
- width:100%!important;height:auto!important;max-width:100%!important;
- min-height:0!important;margin:10px 0 0!important;padding:0!important;
- text-align:center!important;font:normal 14px/1.45 system-ui,sans-serif!important;
- background:transparent!important;border:none!important;box-shadow:none!important;
-}
-section.section-card[data-role="videos"] .ron-yt-clean-tile > figcaption > a {
- display:inline!important;position:static!important;float:none!important;
- color:inherit!important;background:transparent!important;
- font:inherit!important;text-decoration:underline!important;
- border:none!important;box-shadow:none!important;padding:0!important;margin:0!important;
-}
-@media(max-width:620px){section.section-card[data-role="videos"] .ron-yt-clean-tile{max-width:100%!important;}}
-</style>
-<style id="ron-panel-width-audit-batch05-grins-v2-20261026">
-/* Set index holder: 960px standard without changing index-card sizes. */
-main.wrap > section.section-card:not([data-role]){box-sizing:border-box!important;display:block!important;width:100%!important;max-width:960px!important;margin-left:auto!important;margin-right:auto!important;padding:22px!important;border:1px solid #e5e7eb!important;border-radius:18px!important;background:#fff!important;box-shadow:0 8px 26px rgba(0,0,0,.06)!important;}
-@media(max-width:600px){main.wrap > section.section-card:not([data-role]){padding:14px!important;}}
 
-/* Index artwork cards only; video and other documentary galleries unchanged. */
-.artwork-index-panel{box-sizing:border-box;width:100%;max-width:560px;margin-left:auto;margin-right:auto}
-.artwork-index-panel .index-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px!important}
-.artwork-index-panel .index-grid>.index-card{box-sizing:border-box;display:flex;flex-direction:column;flex:0 0 200px!important;width:200px!important;max-width:200px!important!important;height:200px!important;max-height:200px!important!important;min-width:0;overflow:hidden}
-.artwork-index-panel .index-card>img{display:block;width:100%;height:auto!important;max-height:none!important;min-height:0;flex:1 1 auto;object-fit:contain;object-position:center}
-.artwork-index-panel .index-card>.card-title{flex:0 0 auto;padding:6px 6px 8px;font-size:13px;line-height:1.25;overflow-wrap:anywhere;font-family:Georgia,'Times New Roman',serif}
-@media(max-width:480px){.artwork-index-panel .index-grid>.index-card{flex:0 1 200px;width:min(200px,100%);height:200px!important;max-height:200px!important!important}.artwork-index-panel .index-card>img{height:auto!important;max-height:none!important}}
 
-main.wrap > section.section-card:not([data-role]){max-width:560px!important}
-</style>
+
+
+
+
+
+
+
+
+
 <link href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png" rel="icon" type="image/png"/>
-<style>
-/* V5: actual DOM is div.wrap on most pages, not main.wrap. Exact reference panel geometry. */
-html body .wrap > section.section-card,
-html body main.wrap > section.section-card,
-html body .wrap > section.section-card[data-role],
-html body .wrap > section.section-card.ron-standard-index-panel,
-html body .wrap > section.section-card.artwork-index-panel {
- box-sizing:border-box!important;display:block!important;
- width:100%!important;max-width:560px!important;
- margin:0 auto 24px!important;padding:22px!important;
- border:1px solid #e5e7eb!important;border-radius:18px!important;
- background:#fff!important;box-shadow:0 8px 26px #0000000f!important;
-}
-html body .wrap > section.section-card h2,
-html body .wrap > section.section-card h3,
-html body .wrap > section.section-card .section-title,
-html body .wrap > section.section-card > header {
- text-align:center!important;
-}
-html body .wrap .index-grid,
-html body .wrap .group-grid,
-html body .wrap .gallery-grid,
-html body .wrap .ron-yt-clean-grid {
- display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
- align-items:stretch!important;gap:16px!important;margin-left:auto!important;margin-right:auto!important;
-}
-html body .wrap .index-grid > .index-card,
-html body .wrap .group-grid > .group-card,
-html body .wrap .gallery-grid > .gallery-item,
-html body .wrap .ron-yt-clean-grid > .ron-yt-clean-tile {
- box-sizing:border-box!important;flex:0 0 200px!important;
- width:200px!important;min-width:0!important;max-width:200px!important;
- height:200px!important;min-height:200px!important;max-height:200px!important;
- margin:0!important;overflow:hidden!important;
-}
-html body .wrap .index-grid > .index-card,
-html body .wrap .group-grid > .group-card {
- display:flex!important;flex-direction:column!important;align-items:stretch!important;
- border:1px solid #e5e7eb!important;border-radius:12px!important;
- background:white!important;text-align:center!important;
-}
-html body .wrap .index-grid > .index-card > img,
-html body .wrap .group-grid > .group-card > img,
-html body .wrap .index-grid > .index-card > .index-image {
- box-sizing:border-box!important;display:block!important;flex:1 1 auto!important;
- width:100%!important;height:auto!important;min-height:0!important;
- max-height:none!important;object-fit:contain!important;
-}
-html body .wrap .index-grid > .index-card > .card-title,
-html body .wrap .index-grid > .index-card > .index-title,
-html body .wrap .group-grid > .group-card > .card-title {
- flex:0 0 auto!important;text-align:center!important;
-}
-html body .wrap .ron-yt-clean-grid > .ron-yt-clean-tile {
- display:flex!important;flex-direction:column!important;
- border:1px solid #e5e7eb!important;border-radius:12px!important;
- background:white!important;
-}
-html body .wrap .ron-yt-clean-tile > a.ron-video-poster {
- box-sizing:border-box!important;display:flex!important;flex:1 1 auto!important;
- width:100%!important;height:auto!important;min-height:0!important;
- max-height:none!important;overflow:hidden!important;
-}
-html body .wrap .ron-yt-clean-tile > a.ron-video-poster img {
- max-width:100%!important;max-height:100%!important;object-fit:contain!important;
-}
-html body .wrap .sequence-nav,
-html body .wrap .nav-pills {
- display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
- align-items:center!important;gap:10px!important;text-align:center!important;
- margin:24px auto!important;
-}
-@media(max-width:480px){html body .wrap > section.section-card{padding:14px!important}}
+<style>/* Ron English Catalogue Raisonné — clean Sets & Groups layout */
+:root{--border:#e5e7eb;--muted:#6b7280;--panel:#f8fafc}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:#111;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+.wrap{width:calc(100% - 32px);max-width:700px;margin:0 auto;padding:26px 0 48px}
+.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px auto;text-align:center}
+.nav-pill,.sequence-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px}
+.nav-pill:hover,.sequence-pill:hover{background:#f9fafb}
+.sequence-spacer{display:none}
+.page-header{text-align:center;margin:0 auto 24px}
+.page-title{margin:0;font:500 28px/1.25 Georgia,"Times New Roman",serif}
+.section-card{width:100%;max-width:680px;margin:0 auto 24px;padding:18px 12px;border:1px solid var(--border);border-radius:12px;background:#fff}
+.section-card h2{text-align:center;margin:0 0 16px;font-size:1.35rem}
+.index-grid,.group-grid,.gallery-grid,.category-grid,.subcategories-grid,.cards-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:12px;margin:0 auto}
+.index-grid>.index-card,.group-grid>.group-card,.gallery-grid>.gallery-card{display:flex;flex:0 0 200px;width:200px;height:204px;min-width:0;flex-direction:column;overflow:hidden;background:#fff;color:inherit;text-decoration:none;text-align:center;border:1px solid var(--border);border-radius:12px;box-shadow:0 3px 12px #0000000b}
+.index-grid>.index-card:hover,.group-grid>.group-card:hover{border-color:#c9ced5;box-shadow:0 5px 16px #00000014}
+.index-grid>.index-card>img,.group-grid>.group-card>img,.gallery-grid>.gallery-card>img{display:block;width:100%;height:158px;flex:0 0 158px;object-fit:contain;padding:8px;background:var(--panel);border-bottom:1px solid var(--border)}
+.index-grid .index-image{display:flex;align-items:center;justify-content:center;width:100%;height:158px;flex:0 0 158px;padding:8px;background:var(--panel);border-bottom:1px solid var(--border)}
+.index-grid .index-image img{display:block;width:100%;height:100%;object-fit:contain}
+.index-grid .card-title,.index-grid .index-title,.group-grid .label,.group-grid .card-title{display:flex;align-items:center;justify-content:center;flex:1;min-height:0;margin:0;padding:3px 5px;text-align:center;font:400 14px/1.2 Georgia,"Times New Roman",serif;overflow-wrap:anywhere}
+.catalogue-meta-block,.relationship-note{max-width:680px;margin:0 auto 24px;text-align:center}
+.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7}
+.relationship-note,.ron-full-character-note{padding:12px 16px;border:1px solid var(--border);border-radius:12px;background:#f9fafb}
+footer{text-align:center;margin:30px auto 0;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+footer a{color:inherit}
+/* Ancillary documentation, video, and digital sections */
+section[data-role="videos"],section[data-role="digital"],section[data-role="ancillary-documentation"],.ron-unified-notes-wip-panel{max-width:680px}
+section[data-role="videos"] img,section[data-role="digital"] img{max-width:100%;height:auto;object-fit:contain}
+.ron-video-grid,.ron-digital-grid,.ron-ancillary-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.ron-video-entry,.ron-digital-entry{max-width:300px;min-width:0;text-align:center}
+.ron-video-entry img{width:100%;height:auto;object-fit:contain;background:#f3f4f6}
+.ron-video-entry iframe{max-width:100%;aspect-ratio:16/9}
+.ron-video-entry figcaption{text-align:center}
+figure{max-width:100%;margin:12px auto}figure img{max-width:100%;height:auto}
+@media(max-width:660px){.wrap{width:calc(100% - 24px)}.section-card{padding:14px}}
+@media(max-width:445px){.index-grid,.group-grid{gap:10px}.index-grid>.index-card,.group-grid>.group-card{flex-basis:min(200px,100%);width:min(200px,100%)}}
+
+.ron-ancillary-media{max-width:100%;margin:18px auto;text-align:center}
+.ron-ancillary-media img,.ron-ancillary-media video{max-width:100%;height:auto}
+.ron-video-grid a,.ron-digital-grid a{overflow-wrap:anywhere}
+.section-card p,.section-card li{overflow-wrap:anywhere}
+
+/* Video preview: approved compact documentary presentation. */
+section[data-role="videos"] .ron-yt-clean-grid{display:flex;justify-content:center;align-items:flex-start;gap:12px}
+section[data-role="videos"] .ron-yt-clean-tile{width:min(200px,100%);max-width:200px;margin:0;text-align:center}
+section[data-role="videos"] .ron-video-poster{display:block;position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111}
+section[data-role="videos"] .ron-video-poster>img{display:block;width:100%;height:100%;object-fit:contain}
+section[data-role="videos"] figcaption{display:none}
 </style></head>
 <body>
 <div class="wrap">
@@ -503,7 +71,7 @@ html body .wrap .nav-pills {
 </nav>
 <header class="page-header"><h1 class="page-title">Jumping Bean Animation</h1></header>
 <section class="section-card artwork-index-panel"><div class="index-grid"><a class="index-card" href="../works/re-014171--jumping-bean-animation-1.html"><img alt="Jumping Bean Animation 1" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2833%29.jpg?v=20260617a"/><div class="card-title">Jumping Bean Animation 1</div></a><a class="index-card" href="../works/re-014189--jumping-bean-animation-2.html"><img alt="Jumping Bean Animation 2" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2848%29.jpg?v=20260617c"/><div class="card-title">Jumping Bean Animation 2</div></a><a class="index-card" href="../works/re-014196--jumping-bean-animation-3.html"><img alt="Jumping Bean Animation 3" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2849%29.jpg?v=20260617e"/><div class="card-title">Jumping Bean Animation 3</div></a><a class="index-card" href="../works/re-014205--jumping-bean-animation-4.html"><img alt="Jumping Bean Animation 4" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2833%29c.jpg?v=20260617a"/><div class="card-title">Jumping Bean Animation 4</div></a><a class="index-card" href="../works/re-014206--jumping-bean-animation-5.html"><img alt="Jumping Bean Animation 5" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/ani1.jpg?v=20260617g"/><div class="card-title">Jumping Bean Animation 5</div></a><a class="index-card" href="../works/re-014207--jumping-bean-animation-6.html"><img alt="Jumping Bean Animation 6" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/an4.jpg?v=20260617g"/><div class="card-title">Jumping Bean Animation 6</div></a><a class="index-card" href="../works/re-014208--jumping-bean-animation-7.html"><img alt="Jumping Bean Animation 7" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/an3.jpg?v=20260617g"/><div class="card-title">Jumping Bean Animation 7</div></a><a class="index-card" href="../works/re-014209--jumping-bean-animation-8.html"><img alt="Jumping Bean Animation 8" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/ani5.jpg?v=20260617g"/><div class="card-title">Jumping Bean Animation 8</div></a><a class="index-card" href="../works/re-014210--jumping-bean-animation-9.html"><img alt="Jumping Bean Animation 9" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/ani7.jpg?v=20260617g"/><div class="card-title">Jumping Bean Animation 9</div></a><a class="index-card" href="../works/re-014211--jumping-bean-animation-10.html"><img alt="Jumping Bean Animation 10" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/ani12.jpg?v=20260617g"/><div class="card-title">Jumping Bean Animation 10</div></a><a class="index-card" href="../works/re-014212--jumping-bean-animation-11.html"><img alt="Jumping Bean Animation 11" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2843%29.jpg?v=20260617g"/><div class="card-title">Jumping Bean Animation 11</div></a><a class="index-card" href="../works/re-017212--jumping-bean-animation-12.html"><img alt="Jumping Bean Animation 12" loading="lazy" src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-grins/main/images/Sketches/grins/RE-017212jumping.jpg"/><div class="card-title">Jumping Bean Animation 12</div></a></div></section>
-<section class="section-card" data-role="videos"><h2>Videos</h2><div class="ron-yt-clean-grid"><figure class="ron-yt-clean-tile" data-original-mp4="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-5/main/RE-014171.mp4"><a aria-label="Watch Jumping Bean Animation on YouTube" class="ron-video-poster" data-ron-video-poster="v1" data-video-embed-url="https://www.youtube.com/embed/6neuBEqnLIg" href="https://www.youtube.com/watch?v=6neuBEqnLIg" rel="noopener noreferrer" target="_blank"><img alt="Video preview: Jumping Bean Animation" loading="lazy" onerror='this.onerror=null;this.src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2833%29.jpg?v=20260617a";' src="https://i.ytimg.com/vi/6neuBEqnLIg/hqdefault.jpg"/><span aria-hidden="true" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:12px 20px;font-size:28px;line-height:1;color:#fff;background:rgba(0,0,0,.82);border-radius:14px;">▶</span></a><figcaption><a href="https://www.youtube.com/watch?v=6neuBEqnLIg" rel="noopener noreferrer" target="_blank">Watch on YouTube</a></figcaption></figure></div></section><nav aria-label="Catalogue sequence" class="sequence-nav ron-bottom-prev-next-center"><a class="nav-pill sequence-pill" href="../works/re-014063--grinster.html">← Previous: Grinster</a><a class="nav-pill sequence-pill" href="../works/melting-grinnie-head.html">Next: Melting Grinnie Head →</a></nav><footer>Published via GitHub Pages<br/>for long-term public access.</footer>
+<section class="section-card" data-role="videos"><h2>Videos</h2><div class="ron-yt-clean-grid"><figure class="ron-yt-clean-tile" data-original-mp4="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-5/main/RE-014171.mp4"><a aria-label="Watch Jumping Bean Animation on YouTube" class="ron-video-poster" data-ron-video-poster="v1" data-video-embed-url="https://www.youtube.com/embed/6neuBEqnLIg" href="https://www.youtube.com/watch?v=6neuBEqnLIg" rel="noopener noreferrer" target="_blank"><img alt="Video preview: Jumping Bean Animation" loading="lazy" onerror='this.onerror=null;this.src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-2/main/Images/Scan_20260617%20%2833%29.jpg?v=20260617a";' src="https://i.ytimg.com/vi/6neuBEqnLIg/hqdefault.jpg"/><span aria-hidden="true" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;width:28px;height:28px;font-size:14px;line-height:1;color:#fff;background:rgba(0,0,0,.72);border-radius:50%;pointer-events:none;">▶</span></a></figure></div></section><nav aria-label="Catalogue sequence" class="sequence-nav ron-bottom-prev-next-center"><a class="nav-pill sequence-pill" href="../works/re-014063--grinster.html">← Previous: Grinster</a><a class="nav-pill sequence-pill" href="../works/melting-grinnie-head.html">Next: Melting Grinnie Head →</a></nav><footer>Published via GitHub Pages<br/>for long-term public access.</footer>
 </div>
 </body>
 </html>
