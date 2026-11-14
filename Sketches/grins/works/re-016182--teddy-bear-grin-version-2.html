@@ -76,7 +76,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:1
 [data-role="literature"] .gallery-item img{max-height:155px;height:auto;object-fit:contain;background:#fff}
 /* Brain Halves compact YouTube poster dimensions; !important neutralizes preserved source inline styles. */
 [data-role="videos"] .ron-yt-clean-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:12px}
-[data-role="videos"] .ron-yt-clean-tile{display:block;position:relative;flex:0 0 200px;width:200px;max-width:200px;margin:0;text-align:center}
+[data-role="videos"] .ron-yt-clean-tile{display:block;position:relative;flex:0 0 200px;width:200px;max-width:200px;margin:0 auto;text-align:center}
 [data-role="videos"] .ron-video-poster{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:125px!important;min-height:125px!important;max-height:125px!important;overflow:hidden!important;background:#fff!important;border:1px solid var(--border);border-radius:10px!important}
 [data-role="videos"] .ron-video-poster img{display:block!important;max-width:100%!important;width:100%!important;height:100%!important;object-fit:contain!important;background:#fff!important}
 [data-role="videos"] .ron-video-poster span[aria-hidden="true"]{position:absolute!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%)!important;display:flex!important;align-items:center!important;justify-content:center!important;width:44px!important;height:44px!important;padding:0!important;border-radius:50%!important;font-size:22px!important;line-height:1!important;background:rgba(0,0,0,.8)!important;color:white!important}
@@ -110,18 +110,14 @@ footer{text-align:center;margin:28px auto 0;padding-top:16px;border-top:1px soli
 
 /* Explicit family identified by data-category, not the generic ancillary role. */
 [data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-items{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;gap:12px}
-[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item{display:block;box-sizing:border-box;flex:0 0 130px;width:130px;max-width:130px;margin:0;text-align:center}
-[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item .gallery-item{display:block;width:130px;max-width:130px}
-[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item .gallery-item img{display:block;width:100%;height:200px;object-fit:contain;object-position:center;background:#fff}
+[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item{display:block;box-sizing:border-box;flex:0 1 auto;width:auto;max-width:200px;margin:0 auto;text-align:center}
+[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item .gallery-item{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:fit-content;max-width:200px;height:auto;max-height:200px;margin:0 auto;padding:0}
+[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item .gallery-item img{display:block;width:auto;max-width:200px;height:auto;max-height:200px;object-fit:contain;object-position:center}
 
 
 /* Original Drawing ONLY: remove inherited inner image tile frame; outer panel and other galleries unchanged. */
 section[data-role="original-drawing"] .gallery-grid > a.gallery-item, section[data-role="original-drawing"] .original-grid > a.gallery-item{border:0!important;border-radius:0!important;overflow:visible!important;padding:0!important}
 
-/* Owner-approved 200 x 200 graphic-design documentary card; preserve image proportions. */
-[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item{flex:0 0 200px;width:200px;max-width:200px}
-[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item .gallery-item{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:200px;max-width:200px;height:200px;padding:8px}
-[data-role="ancillary-documentation"][data-category="artist-created-graphic-designs"] .ron-doc-category-item .gallery-item img{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
 </style>
 </head>
 <body>
