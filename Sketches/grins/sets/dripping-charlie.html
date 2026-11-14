@@ -7,146 +7,25 @@
 <title>Dripping Charlie Grin | Ron English Catalogue Raisonn&eacute;</title>
 <style>
 *{box-sizing:border-box}
-:root{--border:#e5e7eb;--muted:#6b7280;--panel:#f3f4f6;--shadow:0 8px 26px rgba(0,0,0,.06)}
-body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
-.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px 0;text-align:center}
-.nav-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px}
-.page-header{text-align:center;margin:0 auto 24px}.page-title{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.05}
-.section-card{background:#fff;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:22px;margin:0 0 24px}
-.section-card h2{text-align:center;margin:0 0 16px;font-size:1.4rem}
-.index-grid,.gallery-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px}
-.index-card,.gallery-item{display:block;flex:0 1 280px;max-width:300px;width:100%;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;text-decoration:none;color:inherit;box-shadow:var(--shadow)}
-.index-card img,.gallery-item img{display:block;width:100%;height:300px;object-fit:contain;background:var(--panel);padding:8px}.index-card img{height:280px}
-.card-title{padding:13px 14px 14px;text-align:center;font-weight:650;line-height:1.35}.card-subtitle{display:block;margin-top:4px;color:var(--muted);font-size:13px;font-weight:400}
-.catalogue-meta-block,.relationship-note,.notes-block,.text-block{max-width:900px;margin-left:auto;margin-right:auto;text-align:center}.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7;text-align:center}.work-meta li{display:block;margin:2px auto}
-.original-grid .gallery-item{flex:0 1 900px;max-width:900px}.original-grid .gallery-item img{height:460px}
-footer{text-align:center;margin-top:30px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
-</style>
-<style id="ron-bottom-prev-next-center-v1">
-/* Ron catalogue: center bottom Previous / Next navigation as a group. */
-nav.ron-bottom-prev-next-center{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:center!important;
-  gap:12px!important;
-  text-align:center!important;
-}
-nav.ron-bottom-prev-next-center .sequence-spacer{
-  display:none!important;
-}
-nav.ron-bottom-prev-next-center > a{
-  flex:0 1 auto!important;
-}
-</style><style id="ron-grins-sequence-pill-standard-v1">
-nav.sequence-nav{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:center!important;
-  gap:12px!important;
-  margin:28px 0 18px!important;
-  text-align:center!important;
-}
-nav.sequence-nav > a{
-  display:inline-block!important;
-  flex:0 1 auto!important;
-  padding:8px 14px!important;
-  border:1px solid #e5e7eb!important;
-  border-radius:999px!important;
-  background:#fff!important;
-  color:#111!important;
-  text-decoration:none!important;
-  font-size:14px!important;
-  line-height:1.4!important;
-}
-nav.sequence-nav > a:hover{
-  background:#f9fafb!important;
-}
-nav.sequence-nav .sequence-spacer{
-  display:none!important;
-}
-</style>
-<style id="ron-catalogue-four-across-standard-v1">
-.index-grid,
-.gallery-grid,
-.category-grid,
-.subcategories-grid,
-.cards-grid{
-  display:flex!important;
-  flex-wrap:wrap!important;
-  justify-content:center!important;
-  align-items:stretch!important;
-  gap:18px!important;
-}
-.index-grid > .index-card,
-.index-grid > .gallery-item,
-.index-grid > .group-card,
-.gallery-grid > .index-card,
-.gallery-grid > .gallery-item,
-.gallery-grid > .group-card,
-.category-grid > .index-card,
-.category-grid > .gallery-item,
-.category-grid > .group-card,
-.subcategories-grid > .index-card,
-.subcategories-grid > .gallery-item,
-.subcategories-grid > .group-card,
-.cards-grid > .index-card,
-.cards-grid > .gallery-item,
-.cards-grid > .group-card{
-  box-sizing:border-box!important;
-  min-width:0!important;
-  flex:0 1 calc((100% - 54px) / 4)!important;
-  width:calc((100% - 54px) / 4)!important;
-  max-width:calc((100% - 54px) / 4)!important;
-}
-@media(max-width:900px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:calc((100% - 36px) / 3)!important;
-    width:calc((100% - 36px) / 3)!important;
-    max-width:calc((100% - 36px) / 3)!important;
-  }
-}
-@media(max-width:680px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:calc((100% - 18px) / 2)!important;
-    width:calc((100% - 18px) / 2)!important;
-    max-width:calc((100% - 18px) / 2)!important;
-  }
-}
-@media(max-width:440px){
-  .index-grid > .index-card,.index-grid > .gallery-item,.index-grid > .group-card,
-  .gallery-grid > .index-card,.gallery-grid > .gallery-item,.gallery-grid > .group-card,
-  .category-grid > .index-card,.category-grid > .gallery-item,.category-grid > .group-card,
-  .subcategories-grid > .index-card,.subcategories-grid > .gallery-item,.subcategories-grid > .group-card,
-  .cards-grid > .index-card,.cards-grid > .gallery-item,.cards-grid > .group-card{
-    flex-basis:100%!important;
-    width:100%!important;
-    max-width:100%!important;
-  }
-}
-</style>
-<style id="ron-panel-width-audit-batch05-grins-v2-20261026">
-/* Set index holder: 960px standard without changing index-card sizes. */
-main.wrap > section.section-card:not([data-role]){box-sizing:border-box!important;display:block!important;width:100%!important;max-width:960px!important;margin-left:auto!important;margin-right:auto!important;padding:22px!important;border:1px solid #e5e7eb!important;border-radius:18px!important;background:#fff!important;box-shadow:0 8px 26px rgba(0,0,0,.06)!important;}
-@media(max-width:600px){main.wrap > section.section-card:not([data-role]){padding:14px!important;}}
-
-/* Specific repaired set-page cards; supersedes legacy four-across !important cascade. */
-main.wrap > section.section-card:not([data-role]){box-sizing:border-box!important;width:100%!important;max-width:560px!important;margin-left:auto!important;margin-right:auto!important}
-main.wrap > section.section-card .index-grid,main.wrap > section.section-card .gallery-grid{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important;gap:16px!important}
-main.wrap > section.section-card .index-grid>.index-card,main.wrap > section.section-card .gallery-grid>.gallery-item{box-sizing:border-box!important;display:flex!important;flex-direction:column!important;flex:0 1 200px!important;width:200px!important;max-width:200px!important;min-width:0!important;height:auto!important;aspect-ratio:1/1!important;overflow:hidden!important}
-main.wrap > section.section-card .index-grid>.index-card img,main.wrap > section.section-card .gallery-grid>.gallery-item img{box-sizing:border-box!important;display:block!important;flex:1 1 0!important;min-height:0!important;height:0!important;max-height:none!important;width:100%!important;object-fit:contain!important}
-main.wrap > section.section-card .index-grid>.index-card>.card-title,main.wrap > section.section-card .gallery-grid>.gallery-item>.card-title{flex:0 0 auto!important}
-@media(max-width:480px){main.wrap > section.section-card .index-grid>.index-card,main.wrap > section.section-card .gallery-grid>.gallery-item{flex-basis:min(200px,100%)!important;width:min(200px,100%)!important;max-width:100%!important}}
+:root{--border:#e5e7eb;--muted:#6b7280}
+body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5}
+.wrap{max-width:700px;margin:0 auto;padding:28px 10px 44px}
+.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:20px auto;text-align:center}
+.nav-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px;line-height:1.4}
+.nav-pill:hover{background:#f9fafb}
+.page-header{text-align:center;margin:0 auto 24px}.page-title{margin:0;font-size:30px;line-height:1.2}
+.section-card{max-width:680px;margin:0 auto 20px;padding:22px 18px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:none}
+.section-card h2{text-align:center;margin:0 0 16px;font-size:20px}
+.index-grid,.gallery-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:16px}
+.index-card,.gallery-item{display:flex;flex-direction:column;flex:0 0 200px;width:200px;max-width:200px;height:204px;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fff;color:inherit;text-decoration:none;box-shadow:none}
+.index-card img,.gallery-item img{display:block;width:100%;height:158px;object-fit:contain;background:#fff;padding:4px}
+.card-title{display:flex;flex:1;align-items:center;justify-content:center;min-height:44px;padding:4px 6px;text-align:center;font-size:13px;font-weight:400;line-height:1.25}
+.card-subtitle{display:block;margin-top:3px;color:var(--muted);font-size:12px;font-weight:400}
+.catalogue-meta-block,.relationship-note,.notes-block,.text-block{text-align:center;margin-left:auto;margin-right:auto}
+.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7;text-align:center}.work-meta li{display:block;margin:2px auto}
+.digitized-description{text-align:center;margin:0 auto 18px;max-width:580px;line-height:1.5;font-size:15px}
+footer{text-align:center;margin:30px auto 0;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+@media(max-width:460px){.section-card{padding:18px 10px}.page-title{font-size:26px}}
 </style>
 <link rel="icon" type="image/png" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png">
 </head>
@@ -155,7 +34,7 @@ main.wrap > section.section-card .index-grid>.index-card>.card-title,main.wrap >
 <nav class="nav-pills" aria-label="Site navigation"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../categories/pop-culture-characters/peanuts/index.html">&larr; Peanuts Grins</a>  <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
 </nav>
 <header class="page-header"><h1 class="page-title">Dripping Charlie Grin</h1></header>
-<section class="section-card"><div class="index-grid"><a class="index-card" href="../works/re-013253--dripping-charlie-body.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260610-3%29.jpg?v=20260611c" alt="Dripping Grin Charlie Body" loading="lazy"><div class="card-title">Dripping Grin Charlie Body</div></a><a class="index-card" href="../works/re-016296--dripping-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20head%20COLOR%203.png" alt="Dripping Charlie Grin Head" loading="lazy"><div class="card-title">Dripping Charlie Grin Head</div></a></div></section><section class="section-card"><h2>Full Character</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20B%26W.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20B%26W.jpg" alt="Dripping Charlie full character black and white" loading="lazy"></a><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20ORIGINAL%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20ORIGINAL%20COLOR.jpg" alt="Dripping Charlie full character color" loading="lazy"></a></div><div class="text-block" style="max-width:860px;margin:18px auto 0;padding:14px 18px;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:12px;text-align:center;line-height:1.6;"><p>The body and head sketches were used together to create the full Dripping Charlie character shown above.</p></div></section><section class="section-card"><h2>Cards</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20card.png" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20card.png" alt="Dripping Charlie card 1" loading="lazy"></a><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20ORIGINAL%20COLOR%203.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20ORIGINAL%20COLOR%203.jpg" alt="Dripping Charlie card 2" loading="lazy"></a></div></section>
+<section class="section-card"><div class="index-grid"><a class="index-card" href="../works/re-013253--dripping-charlie-body.html"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings/main/images/Sketches/New/Scan_20260610-3%29.jpg?v=20260611c" alt="Dripping Grin Charlie Body" loading="lazy"><div class="card-title">Dripping Grin Charlie Body</div></a><a class="index-card" href="../works/re-016296--dripping-grin.html"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20head%20COLOR%203.png" alt="Dripping Charlie Grin Head" loading="lazy"><div class="card-title">Dripping Charlie Grin Head</div></a></div></section><section class="section-card"><h2>Digitized Versions</h2><p class="digitized-description">The body and head sketches were used together to create the full Dripping Charlie character shown above.</p><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20B%26W.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20B%26W.jpg" alt="Dripping Charlie full character black and white" loading="lazy"></a><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20ORIGINAL%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20ORIGINAL%20COLOR.jpg" alt="Dripping Charlie full character color" loading="lazy"></a></div></section><section class="section-card"><h2>Cards</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20card.png" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20card.png" alt="Dripping Charlie card 1" loading="lazy"></a><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20ORIGINAL%20COLOR%203.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Dripping%20Grin%20ORIGINAL%20COLOR%203.jpg" alt="Dripping Charlie card 2" loading="lazy"></a></div></section>
 <nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="../works/re-016247--dementon-grin.html">&larr; Previous: Dementon Grin</a><a class="nav-pill sequence-pill" href="snoopy-grin.html">Next: Snoopy Grin &rarr;</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
 </div>
 </body>
