@@ -269,13 +269,9 @@ footer {text-align:center;margin:28px auto 0;padding-top:16px;border-top:1px sol
 
 [data-role="digital"] .gallery-item img, [data-role="digitized-versions"] .gallery-item img {display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#fff;max-width:100%;max-height:100%;}
 
-/* Preserve Animation Frame as a separate, unsized category; the role is misleading on some source pages. */
-/* Keep mobile sizing after desktop card geometry so it wins in the cascade. */
-@media(max-width:380px){[data-role="digital"] .gallery-item,[data-role="digitized-versions"] .gallery-item{width:200px;max-width:200px;flex:0 0 200px;background:#fff;border-radius:10px;}}
-/* Source-verified animation-frame role collision on 248–251: retain distinct frame format. */
-body:has(section[data-role="digital"] > h2.animation-frame-heading) section[data-role="digital"] .gallery-item {width:200px;max-width:200px;height:200px;flex:0 0 200px;max-height:200px;}
-
-body:has(section[data-role="digital"] > h2.animation-frame-heading) section[data-role="digital"] .gallery-item img {height:100%;max-height:100%;max-width:100%;object-fit:contain;width:100%;}
+/* Animation Frame: match the verified 200 x 200 px presentation of frames 5–8. */
+.animation-frame-panel .gallery-item {width:200px;max-width:200px;height:200px;max-height:200px;flex:0 0 200px;}
+.animation-frame-panel .gallery-item img {display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center;}
 
 </style>
 </head>
@@ -287,7 +283,7 @@ body:has(section[data-role="digital"] > h2.animation-frame-heading) section[data
 <header class="page-header"><h1 class="page-title">Grinplanet Nobody Animation 3</h1></header>
 <h2 class="original-drawing-heading">Original Drawing</h2><section class="section-card" data-role="original-drawing"><div class="text-block"><p>The original has not been located. This entry will be updated if further information becomes available.</p></div></section><div class="catalogue-meta-block"><ul class="work-meta"><li><strong>Title:</strong> Grinplanet Nobody Animation 3</li><li><strong>Medium:</strong> Unknown</li><li><strong>Dimensions:</strong> Unknown</li><li><strong>Work ID:</strong> RE-016710</li></ul></div>
 <div class="relationship-note" data-role="grinplanet-shared-source"><strong>Shared source drawing.</strong> Grin Planet Head 4 uses the same underlying original drawing as <a href="re-016710--grinplanet-nobody-4.html"><em>Grin Planet Head 7</em></a>.</div>
-<section class="section-card"><h2>Animation Frame</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Ring%20Racer%203%20ORIGINAL%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Ring%20Racer%203%20ORIGINAL%20COLOR.jpg" alt="Grin Planet head 4 digitized version" loading="lazy"></a></div></section>
+<section class="section-card animation-frame-panel"><h2>Animation Frame</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Ring%20Racer%203%20ORIGINAL%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins2/Ring%20Racer%203%20ORIGINAL%20COLOR.jpg" alt="Grin Planet head 4 digitized version" loading="lazy"></a></div></section>
 
 
 <nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-016711--grinplanet-nobody-5.html">← Previous: Grinplanet Nobody Animation 2</a><a class="nav-pill sequence-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/Sketches/grins/works/re-016708--grinplanet-nobody-2.html">Next: Grinplanet Nobody Animation 4 →</a></nav><footer>Published via GitHub Pages<br>for long-term public access.</footer>
