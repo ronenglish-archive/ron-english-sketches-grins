@@ -6,144 +6,44 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Simpsons | Ron English Catalogue Raisonné</title>
 <style>
-/* Approved compact drawing index and set-member grid: single clean stylesheet. */
+/* Consolidated Simpsons category index. Three 200px cards fit within the 680px artwork panel. */
 :root{--border:#e5e7eb;--muted:#6b7280;--panel:#f8fafc}
 *{box-sizing:border-box}
 body{margin:0;background:#fff;color:#111;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
 .wrap{width:calc(100% - 36px);max-width:1100px;margin:0 auto;padding:26px 0 48px}
-.page-narrow{max-width:1100px}
-.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:20px auto;text-align:center}
-.nav-pill,.sequence-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px;line-height:1.4}
-.nav-pill:hover,.sequence-pill:hover{background:#f9fafb}
-.sequence-nav .sequence-spacer{display:none}
+.nav-pills,.sequence-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:24px auto;text-align:center}
+.nav-pill{display:inline-block;padding:8px 14px;border:1px solid var(--border);border-radius:999px;background:#fff;color:#111;text-decoration:none;font-size:14px;line-height:1.4}
+.nav-pill:hover{background:#f9fafb}
 .page-header{text-align:center;margin:0 auto 24px}
-.page-title{font-family:Georgia,"Times New Roman",serif;font-weight:500;margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.1;}
-.section-card{width:100%;margin:0 auto 24px;padding:22px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 26px #0000000f}
-.section-card h2{text-align:center;margin:0 0 16px;font-size:1.35rem}
-.catalogue-meta-block,.relationship-note{max-width:900px;margin:0 auto 24px;text-align:center}
-.work-meta{list-style:none;padding:0;margin:0 auto;line-height:1.7}
-.relationship-note{padding:12px 16px;border:1px solid var(--border);border-radius:14px;background:#f9fafb}
-.index-grid,.group-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:16px;margin:0 auto}
-.index-grid>.index-card,.group-grid>.group-card{display:flex;flex:0 0 200px;width:200px;max-width:200px;min-width:0;flex-direction:column;align-items:stretch;overflow:hidden;background:#fff;color:inherit;text-decoration:none;text-align:center;border:1px solid var(--border);border-radius:12px;box-shadow:0 3px 12px #0000000b}
-.index-grid>.index-card:hover,.group-grid>.group-card:hover{border-color:#c9ced5;box-shadow:0 5px 16px #00000014}
-.index-grid>.index-card>img,.group-grid>.group-card>img{display:block;width:100%;height:158px;max-width:100%;object-fit:contain;padding:8px;background:var(--panel);border-bottom:1px solid var(--border)}
-.index-grid .index-image{display:flex;align-items:center;justify-content:center;width:100%;height:158px;padding:8px;background:var(--panel);border-bottom:1px solid var(--border)}
-.index-grid .index-image img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
-.index-grid .card-title,.index-grid .index-title,.group-grid .label,.group-grid .card-title{font-family:Georgia,"Times New Roman",serif;font-weight:500;display:block;margin:0;padding:10px 8px 12px;text-align:center;font-size:14px;line-height:1.35;overflow-wrap:anywhere;}
-.card-subtitle,.set-label{display:block;font-size:12px;font-weight:400;line-height:1.35;color:var(--muted);margin-top:4px}
+.page-title{margin:0;text-align:center;font:700 28px/1.2 Georgia,"Times New Roman",serif}
+.section-card{display:block;width:100%;max-width:680px;margin:0 auto 24px;padding:22px;border:1px solid var(--border);border-radius:18px;background:#fff;box-shadow:0 8px 26px #0000000f}
+.index-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:16px;margin:0 auto}
+.index-grid>.index-card{display:flex;flex:0 0 200px;width:200px;height:200px;min-width:0;max-width:200px;flex-direction:column;align-items:stretch;overflow:hidden;background:#fff;color:inherit;text-decoration:none;text-align:center;border:1px solid var(--border);border-radius:12px;box-shadow:0 3px 12px #0000000b;margin:0}
+.index-grid>.index-card:hover{border-color:#c9ced5;box-shadow:0 5px 16px #00000014}
+.index-grid>.index-card>img{display:block;flex:1 1 auto;width:100%;height:auto;min-height:0;max-width:100%;object-fit:contain;padding:8px;background:var(--panel);border-bottom:1px solid var(--border)}
+.index-grid .card-title{flex:0 0 auto;display:block;margin:0;padding:10px 8px 12px;text-align:center;font:500 14px/1.3 Georgia,"Times New Roman",serif;overflow-wrap:anywhere}
+.card-subtitle{display:block;font-size:12px;font-weight:400;line-height:1.35;color:var(--muted);margin-top:4px}
 footer{text-align:center;margin:30px auto 0;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
 footer a{color:inherit}
-@media(max-width:480px){.wrap{width:calc(100% - 24px)}.section-card{padding:14px}.index-grid,.group-grid{gap:12px}.index-grid>.index-card,.group-grid>.group-card{flex:0 1 145px;max-width:145px;width:145px}.index-grid>.index-card>img,.group-grid>.group-card>img,.index-grid .index-image{height:140px}.index-grid .card-title,.index-grid .index-title,.group-grid .label,.group-grid .card-title{font-size:13px}}
+@media(max-width:480px){.wrap{width:calc(100% - 24px)}.section-card{padding:14px}}
+@media(max-width:260px){.index-grid>.index-card{flex-basis:100%;width:100%;max-width:200px}}
 </style>
 <link href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/favicon.png" rel="icon" type="image/png"/>
-<style>
-/* V5: actual DOM is div.wrap on most pages, not main.wrap. Exact reference panel geometry. */
-html body .wrap > section.section-card,
-html body main.wrap > section.section-card,
-html body .wrap > section.section-card[data-role],
-html body .wrap > section.section-card.ron-standard-index-panel,
-html body .wrap > section.section-card.artwork-index-panel {
- box-sizing:border-box!important;display:block!important;
- width:100%!important;max-width:560px!important;
- margin:0 auto 24px!important;padding:22px!important;
- border:1px solid #e5e7eb!important;border-radius:18px!important;
- background:#fff!important;box-shadow:0 8px 26px #0000000f!important;
-}
-html body .wrap > section.section-card h2,
-html body .wrap > section.section-card h3,
-html body .wrap > section.section-card .section-title,
-html body .wrap > section.section-card > header {
- text-align:center!important;
-}
-html body .wrap .index-grid,
-html body .wrap .group-grid,
-html body .wrap .gallery-grid,
-html body .wrap .ron-yt-clean-grid {
- display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
- align-items:stretch!important;gap:16px!important;margin-left:auto!important;margin-right:auto!important;
-}
-html body .wrap .index-grid > .index-card,
-html body .wrap .group-grid > .group-card,
-html body .wrap .gallery-grid > .gallery-item,
-html body .wrap .ron-yt-clean-grid > .ron-yt-clean-tile {
- box-sizing:border-box!important;flex:0 0 200px!important;
- width:200px!important;min-width:0!important;max-width:200px!important;
- height:200px!important;min-height:200px!important;max-height:200px!important;
- margin:0!important;overflow:hidden!important;
-}
-html body .wrap .index-grid > .index-card,
-html body .wrap .group-grid > .group-card {
- display:flex!important;flex-direction:column!important;align-items:stretch!important;
- border:1px solid #e5e7eb!important;border-radius:12px!important;
- background:white!important;text-align:center!important;
-}
-html body .wrap .index-grid > .index-card > img,
-html body .wrap .group-grid > .group-card > img,
-html body .wrap .index-grid > .index-card > .index-image {
- box-sizing:border-box!important;display:block!important;flex:1 1 auto!important;
- width:100%!important;height:auto!important;min-height:0!important;
- max-height:none!important;object-fit:contain!important;
-}
-html body .wrap .index-grid > .index-card > .card-title,
-html body .wrap .index-grid > .index-card > .index-title,
-html body .wrap .group-grid > .group-card > .card-title {
- flex:0 0 auto!important;text-align:center!important;
-}
-html body .wrap .ron-yt-clean-grid > .ron-yt-clean-tile {
- display:flex!important;flex-direction:column!important;
- border:1px solid #e5e7eb!important;border-radius:12px!important;
- background:white!important;
-}
-html body .wrap .ron-yt-clean-tile > a.ron-video-poster {
- box-sizing:border-box!important;display:flex!important;flex:1 1 auto!important;
- width:100%!important;height:auto!important;min-height:0!important;
- max-height:none!important;overflow:hidden!important;
-}
-html body .wrap .ron-yt-clean-tile > a.ron-video-poster img {
- max-width:100%!important;max-height:100%!important;object-fit:contain!important;
-}
-html body .wrap .sequence-nav,
-html body .wrap .nav-pills {
- display:flex!important;flex-wrap:wrap!important;justify-content:center!important;
- align-items:center!important;gap:10px!important;text-align:center!important;
- margin:24px auto!important;
-}
-@media(max-width:480px){html body .wrap > section.section-card{padding:14px!important}}
-</style><style id="ron-approved-set-caption-style-v1">
-/* Approved set-member caption typography; documentary captions excluded. */
-.index-grid > .index-card > .card-title,
-.index-grid > .index-card > .index-title,
-.index-grid > .index-card > .index-body,
-.group-grid > .group-card > .label,
-.group-grid > .group-card > .card-title,
-.set-grid > .set-member > .set-caption,
-.index-grid > a.gallery-item > .entry-body > .work-title,
-.index-grid > a.gallery-item > .entry-body > .entry-title,
-.gallery-grid > a.gallery-item > .entry-body > .work-title,
-.member-grid > a.catalog-card > .card-title,
-.index-grid > .index-card > a > .card-title,
-.index-grid > a.gallery-item > .entry-body > .card-title {
-  font-family: Georgia, "Times New Roman", serif !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 1.3 !important;
-  text-align: center !important;
-}
-</style></head>
+</head>
 <body>
 <div class="wrap">
 <nav aria-label="Site navigation" class="nav-pills"><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/">Catalogue Home</a><a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-sketches-and-drawings/Sketches/">Sketches &amp; Drawings</a><a class="nav-pill" href="../index.html">← Pop Culture Characters</a> <a class="nav-pill" href="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/search/">Search Catalogue</a>
 </nav>
-<header class="page-header"><h1 class="page-title" style="font-family:Georgia,&quot;Times New Roman&quot;,serif !important; font-size:28px !important; font-weight:700 !important; line-height:1.2 !important; text-align:center !important;">Simpsons</h1></header>
+<header class="page-header"><h1 class="page-title">Simpsons</h1></header>
 <section class="section-card ron-standard-index-panel" data-role="index-listing"><div class="index-grid"><a class="index-card" href="../../../works/re-016543--badly-drawn-bart.html"><img alt="Badly Drawn Bart" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/images/works-on-paper/undated-finished-drawings/Badly%20Drawn%20Bart.jpg"/><div class="card-title">Badly Drawn Bart</div></a>
-<a class="index-card" href="../../../works/re-016264--bart-grin-short.html"><img alt="Bart Grin Short" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bart%20Grin%20short%20front%20ORIGINAL%20COLOR.png"/><div class="card-title">Bart Grin Short</div></a>
 <a class="index-card" href="../../../sets/bart-grin.html"><img alt="Bart Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bart%20Grin%20front%20ORIGINAL%20COLOR.jpg"/><div class="card-title">Bart Grin<span class="card-subtitle">Set</span></div></a>
+<a class="index-card" href="../../../works/re-016264--bart-grin-short.html"><img alt="Bart Grin Short" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bart%20Grin%20short%20front%20ORIGINAL%20COLOR.png"/><div class="card-title">Bart Grin Short</div></a>
 <a class="index-card" href="../../../works/re-016266--bartman-grin.html"><img alt="Bartman Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Bartman%20Grin%20flying%20COLOR.jpg"/><div class="card-title">Bartman Grin</div></a>
 <a class="index-card" href="../../../sets/bart-grin-chubby.html"><img alt="Chubby Bart Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-catalogue-raisonne/images/works-on-paper/undated-finished-drawings/Bart%20Grin%20Chubby%20front%20COLOR.jpg"/><div class="card-title">Chubby Bart Grin<span class="card-subtitle">Set</span></div></a>
 <a class="index-card" href="../../../works/re-016268--homer-grin.html"><img alt="Homer Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Homer%20Grin%20Flying%20COLOR.jpg"/><div class="card-title">Homer Grin</div></a>
+<a class="index-card" href="../../../sets/homer-grin.html"><img alt="Homer Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Homer%20Grin%203%20front%20COLOR.jpg"/><div class="card-title">Homer Grin<span class="card-subtitle">Set</span></div></a>
 <a class="index-card" href="../../../works/re-016269--homer-grin-chubby.html"><img alt="Homer Grin Chubby" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Homer%20Grin%20COLOR.jpg"/><div class="card-title">Homer Grin Chubby</div></a>
 <a class="index-card" href="../../../sets/homer-grin-version-2.html"><img alt="Homer Grin Version 2" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Homer%20Grin%20version%202%20front%20COLOR.jpg"/><div class="card-title">Homer Grin Version 2<span class="card-subtitle">Set</span></div></a>
-<a class="index-card" href="../../../sets/homer-grin.html"><img alt="Homer Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Homer%20Grin%203%20front%20COLOR.jpg"/><div class="card-title">Homer Grin<span class="card-subtitle">Set</span></div></a>
 <a class="index-card" href="../../../sets/krusty-the-clown-grin.html"><img alt="Krusty Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Krusty%20the%20Clown%20Grin%20front%20COLOR.jpg"/><div class="card-title">Krusty Grin<span class="card-subtitle">Set</span></div></a>
 <a class="index-card" href="../../../sets/lisa-grin.html"><img alt="Lisa Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Lisa%20Grin%20front%20COLOR.jpg"/><div class="card-title">Lisa Grin<span class="card-subtitle">Set</span></div></a>
 <a class="index-card" href="../../../sets/maggie-grin.html"><img alt="Maggie Grin" loading="lazy" src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Maggie%20Grin%20front%20COLOR.jpg"/><div class="card-title">Maggie Grin<span class="card-subtitle">Set</span></div></a>
