@@ -117,6 +117,14 @@ footer {text-align:center;margin:0 auto 16px;font-size:14px;color:#555;border-to
 
 @media(max-width:440px){.wrap{padding:12px 10px 22px}.section-card{padding:19px 12px}[data-role="digital"] .gallery-item,[data-role="digitized-versions"] .gallery-item{flex:0 1 200px;max-width:100%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto;transition:none}}
+
+/* Graphic design gallery: proportional, tightly fitted cards only. */
+section[data-ron-design-fit="v1"] {box-sizing:border-box;width:100%;max-width:560px;margin:18px auto;padding:19px 16px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;box-shadow:none;text-align:center}
+section[data-ron-design-fit="v1"] > h2 {font:400 20px/1.3 Georgia,serif;margin:0 0 12px;text-align:center}
+section[data-ron-design-fit="v1"] > .ron-design-fit-grid {display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:12px;width:100%;margin:0 auto;padding:0}
+section[data-ron-design-fit="v1"] > .ron-design-fit-grid > figure {display:flex;flex-direction:column;align-items:center;flex:0 1 auto;width:auto;max-width:200px;min-width:0;height:auto;min-height:0;margin:0;padding:0;border:0;background:transparent;box-shadow:none}
+section[data-ron-design-fit="v1"] > .ron-design-fit-grid > figure > a {box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;flex:0 1 auto;width:auto;height:auto;min-width:0;min-height:0;max-width:200px;max-height:200px;margin:0;padding:0;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;background:#fff;box-shadow:none}
+section[data-ron-design-fit="v1"] > .ron-design-fit-grid > figure > a > img {display:block;width:auto;height:auto;min-width:0;min-height:0;max-width:198px;max-height:198px;object-fit:contain;margin:0;padding:0;border:0;border-radius:0;box-shadow:none}
 </style>
 </head>
 
@@ -130,6 +138,8 @@ footer {text-align:center;margin:0 auto 16px;font-size:14px;color:#555;border-to
 <section class="section-card" data-role="digital"><h2>Digitized Versions</h2><div class="gallery-grid"><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Eminem%20Grin%20B%26W.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Eminem%20Grin%20B%26W.jpg" alt="Eminem Grin digitized version 1" loading="lazy"></a><a class="gallery-item" href="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Eminem%20Grin%20COLOR.jpg" target="_blank" rel="noopener"><img src="https://ronenglish-archive.github.io/ron-english-sketches-grins/images/Sketches/grins/Eminem%20Grin%20COLOR.jpg" alt="Eminem Grin digitized version 2" loading="lazy"></a></div></section>
 <section class="section-card ron-notes-center ron-unified-notes-wip-panel"><h2>Notes</h2><div class="text-block"><p>Used as a sketch for the painting <a href="https://ronenglish-archive.github.io/ron-english-paintings-2020s/detail/paintings/2020s/2020/Eminem-Grin.html" target="_blank" rel="noopener"><em>Eminem Grin</em></a>.</p></div><p class="notes-text">Signature not visible in the available image.</p></section>
 
+
+<section class="section-card" data-role="ancillary-documentation" data-category="artist-created-graphic-designs" data-ron-design-fit="v1"><h2>Artist-Created Graphic Designs</h2><div class="ron-design-fit-grid"><figure><a href="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-6/main/RE-012648g.jpg" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/ronenglish-archive/ron-english-sketches-and-drawings-6/main/RE-012648g.jpg" alt="Eminem Grin — graphic design" loading="lazy"></a></figure></div></section>
 <nav class="sequence-nav ron-bottom-prev-next-center" aria-label="Catalogue sequence"><a class="nav-pill sequence-pill" href="re-016205--dj-grin.html">&larr; Previous: DJ Grin</a><a class="nav-pill sequence-pill" href="re-016297--faze-banks-grin.html">Next: Faze Banks Grin &rarr;</a></nav>
 <footer>Published via GitHub Pages<br>for long-term public access.</footer>
 </div>
